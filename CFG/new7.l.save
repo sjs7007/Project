@@ -1,0 +1,15 @@
+%{
+	#include <iostream>
+	using namespace std;
+	#define YY_DECL extern "C" int yylex(
+%}
+
+%%
+[ \t \n] ;
+.                ;
+"<bb "[0-9]+">" { cout<<"block"<<endl; }
+"goto <bb "[0-9]+">" { cout<<"goto"<<endl;  }
+"if" { cout<<"if statement"<<endl; }
+"else" { cout<<"else "<<endl; }
+%%
+

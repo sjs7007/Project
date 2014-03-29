@@ -1,0 +1,1795 @@
+
+;; Function std::exception::exception() (null)
+;; enabled by -tree-original
+
+
+<<< Unknown tree: eh_spec_block
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct exception *) this)->_vptr.exception = &_ZTVSt9exception + 8) >>>
+>>;
+  }
+   >>>
+;
+
+
+
+;; Function std::bad_exception::bad_exception() (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  __base_ctor  (&((struct bad_exception *) this)->D.2438) >>>
+>>;
+    try
+      {
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct bad_exception *) this)->D.2438._vptr.exception = &_ZTVSt13bad_exception + 8) >>>
+>>;
+      }
+    catch
+      {
+        __base_dtor  ((struct exception *) this);
+      }
+  }
+   >>>
+;
+
+
+
+;; Function static void std::char_traits<char>::assign(char&, const char&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__c1 = (char) *__c2) >>>
+>>;
+
+
+
+;; Function static bool std::char_traits<char>::eq(const char&, const char&) (null)
+;; enabled by -tree-original
+
+return <retval> = (signed char) *__c1 == (signed char) *__c2;
+
+
+
+;; Function static bool std::char_traits<char>::lt(const char&, const char&) (null)
+;; enabled by -tree-original
+
+return <retval> = (signed char) *__c1 < (signed char) *__c2;
+
+
+
+;; Function static int std::char_traits<char>::compare(const char*, const char*, size_t) (null)
+;; enabled by -tree-original
+
+return <retval> = __builtin_memcmp ((const void *) __s1, (const void *) __s2, __n);
+
+
+
+;; Function static size_t std::char_traits<char>::length(const char*) (null)
+;; enabled by -tree-original
+
+return <retval> = __builtin_strlen (__s);
+
+
+
+;; Function static const char* std::char_traits<char>::find(const char*, size_t, const char&) (null)
+;; enabled by -tree-original
+
+return <retval> = (const char *) __builtin_memchr ((const void *) __s, (int) *__a, __n);
+
+
+
+;; Function static char* std::char_traits<char>::move(char*, const char*, size_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (char *) __builtin_memmove ((void *) __s1, (const void *) __s2, __n)>>;
+
+
+
+;; Function static char* std::char_traits<char>::copy(char*, const char*, size_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (char *) __builtin_memcpy ((void *) __s1, (const void *) __s2, __n)>>;
+
+
+
+;; Function static char* std::char_traits<char>::assign(char*, size_t, char) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (char *) __builtin_memset ((void *) __s, (int) __a, __n)>>;
+
+
+
+;; Function static char std::char_traits<char>::to_char_type(const int&) (null)
+;; enabled by -tree-original
+
+return <retval> = (char) *__c;
+
+
+
+;; Function static int std::char_traits<char>::to_int_type(const char&) (null)
+;; enabled by -tree-original
+
+return <retval> = (int) (unsigned char) *__c;
+
+
+
+;; Function static bool std::char_traits<char>::eq_int_type(const int&, const int&) (null)
+;; enabled by -tree-original
+
+return <retval> = (int) *__c1 == (int) *__c2;
+
+
+
+;; Function static int std::char_traits<char>::eof() (null)
+;; enabled by -tree-original
+
+return <retval> = -1;
+
+
+
+;; Function static int std::char_traits<char>::not_eof(const int&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (int) *__c != eof () ? (int) *__c : 0>>;
+
+
+
+;; Function static void std::char_traits<wchar_t>::assign(wchar_t&, const wchar_t&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__c1 = (wchar_t) *__c2) >>>
+>>;
+
+
+
+;; Function static bool std::char_traits<wchar_t>::eq(const wchar_t&, const wchar_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = (int) *__c1 == (int) *__c2;
+
+
+
+;; Function static bool std::char_traits<wchar_t>::lt(const wchar_t&, const wchar_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = (int) *__c1 < (int) *__c2;
+
+
+
+;; Function static int std::char_traits<wchar_t>::compare(const wchar_t*, const wchar_t*, size_t) (null)
+;; enabled by -tree-original
+
+return <retval> = wmemcmp (__s1, __s2, __n);
+
+
+
+;; Function static size_t std::char_traits<wchar_t>::length(const wchar_t*) (null)
+;; enabled by -tree-original
+
+return <retval> = wcslen (__s);
+
+
+
+;; Function static const wchar_t* std::char_traits<wchar_t>::find(const wchar_t*, size_t, const wchar_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = wmemchr (__s, *__a, __n);
+
+
+
+;; Function static wchar_t* std::char_traits<wchar_t>::move(wchar_t*, const wchar_t*, size_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = wmemmove (__s1, __s2, __n)>>;
+
+
+
+;; Function static wchar_t* std::char_traits<wchar_t>::copy(wchar_t*, const wchar_t*, size_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = wmemcpy (__s1, __s2, __n)>>;
+
+
+
+;; Function static wchar_t* std::char_traits<wchar_t>::assign(wchar_t*, size_t, wchar_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = wmemset (__s, __a, __n)>>;
+
+
+
+;; Function static wchar_t std::char_traits<wchar_t>::to_char_type(const wint_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = (wchar_t) *__c;
+
+
+
+;; Function static wint_t std::char_traits<wchar_t>::to_int_type(const wchar_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = (wint_t) *__c;
+
+
+
+;; Function static bool std::char_traits<wchar_t>::eq_int_type(const wint_t&, const wint_t&) (null)
+;; enabled by -tree-original
+
+return <retval> = (unsigned int) *__c1 == (unsigned int) *__c2;
+
+
+
+;; Function static wint_t std::char_traits<wchar_t>::eof() (null)
+;; enabled by -tree-original
+
+return <retval> = 4294967295;
+
+
+
+;; Function static wint_t std::char_traits<wchar_t>::not_eof(const wint_t&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = eq_int_type ((const wint_t &) (const wint_t *) __c, (const wint_t &) (const wint_t *) &TARGET_EXPR <D.4818, eof ()>) ? 0 : (unsigned int) *__c>>;
+
+
+
+;; Function int std::__convert_from_v(__locale_struct* const&, char*, int, const char*, ...) (null)
+;; enabled by -tree-original
+
+{
+  struct __locale_struct * __old;
+  char * __args;
+  const int __ret;
+
+    struct __locale_struct * __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = __uselocale (*__cloc)) >>>
+>>;
+    char * __args;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  __builtin_va_start ((char * &) &__args, __fmt) >>>
+>>;
+    const int __ret;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__ret = __builtin_vsnprintf (__out, (unsigned int) __size, __fmt, __args)) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  __builtin_va_end ((char * &) &__args) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __uselocale (__old) >>>
+>>;
+  return <retval> = (int) __ret;
+}
+
+
+
+;; Function __pthread_cleanup_class::__pthread_cleanup_class(void (*)(void*), void*) (null)
+;; enabled by -tree-original
+
+{
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct __pthread_cleanup_class *) this)->__cancel_routine = __fct) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct __pthread_cleanup_class *) this)->__cancel_arg = __arg) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct __pthread_cleanup_class *) this)->__do_it = 1) >>>
+>>;
+}
+
+
+
+;; Function __pthread_cleanup_class::~__pthread_cleanup_class() (null)
+;; enabled by -tree-original
+
+{
+  if (((struct __pthread_cleanup_class *) this)->__do_it != 0)
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  __pthread_cleanup_class::__cancel_routine (((struct __pthread_cleanup_class *) this)->__cancel_arg) >>>
+>>;
+    }
+}
+<D.5754>:;
+
+
+
+;; Function void __pthread_cleanup_class::__setdoit(int) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct __pthread_cleanup_class *) this)->__do_it = __newval) >>>
+>>;
+
+
+
+;; Function void __pthread_cleanup_class::__defer() (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) pthread_setcanceltype (0, &((struct __pthread_cleanup_class *) this)->__cancel_type) >>>
+>>;
+
+
+
+;; Function void __pthread_cleanup_class::__restore() const (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) pthread_setcanceltype (((const struct __pthread_cleanup_class *) this)->__cancel_type, 0B) >>>
+>>;
+
+
+
+;; Function int __gthread_active_p() (null)
+;; enabled by -tree-original
+
+{
+  static void * const __gthread_active_ptr = (void *) __gthrw_pthread_cancel;
+
+  <<cleanup_point   static void * const __gthread_active_ptr = (void *) __gthrw_pthread_cancel;>>;
+  return <retval> = (void *) __gthrw_pthread_cancel != 0B;
+}
+
+
+
+;; Function int __gthread_create(__gthread_t*, void* (*)(void*), void*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_create (__threadid, 0B, __func, __args)>>;
+
+
+
+;; Function int __gthread_join(__gthread_t, void**) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_join (__threadid, __value_ptr)>>;
+
+
+
+;; Function int __gthread_detach(__gthread_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_detach (__threadid)>>;
+
+
+
+;; Function int __gthread_equal(__gthread_t, __gthread_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_equal (__t1, __t2)>>;
+
+
+
+;; Function __gthread_t __gthread_self() (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_self ()>>;
+
+
+
+;; Function int __gthread_yield() (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_sched_yield ()>>;
+
+
+
+;; Function int __gthread_once(__gthread_once_t*, void (*)()) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_once (__once, __func)>>;
+  }
+else
+  {
+    return <retval> = -1;
+  }
+
+
+
+;; Function int __gthread_key_create(__gthread_key_t*, void (*)(void*)) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_key_create (__key, __dtor)>>;
+
+
+
+;; Function int __gthread_key_delete(__gthread_key_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_key_delete (__key)>>;
+
+
+
+;; Function void* __gthread_getspecific(__gthread_key_t) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_getspecific (__key)>>;
+
+
+
+;; Function int __gthread_setspecific(__gthread_key_t, const void*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_setspecific (__key, __ptr)>>;
+
+
+
+;; Function int __gthread_mutex_destroy(__gthread_mutex_t*) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_mutex_destroy (__mutex)>>;
+  }
+else
+  {
+    return <retval> = 0;
+  }
+
+
+
+;; Function int __gthread_mutex_lock(__gthread_mutex_t*) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_mutex_lock (__mutex)>>;
+  }
+else
+  {
+    return <retval> = 0;
+  }
+
+
+
+;; Function int __gthread_mutex_trylock(__gthread_mutex_t*) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_mutex_trylock (__mutex)>>;
+  }
+else
+  {
+    return <retval> = 0;
+  }
+
+
+
+;; Function int __gthread_mutex_timedlock(__gthread_mutex_t*, const __gthread_time_t*) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_mutex_timedlock (__mutex, __abs_timeout)>>;
+  }
+else
+  {
+    return <retval> = 0;
+  }
+
+
+
+;; Function int __gthread_mutex_unlock(__gthread_mutex_t*) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __gthrw_pthread_mutex_unlock (__mutex)>>;
+  }
+else
+  {
+    return <retval> = 0;
+  }
+
+
+
+;; Function int __gthread_recursive_mutex_lock(__gthread_recursive_mutex_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_mutex_lock (__mutex)>>;
+
+
+
+;; Function int __gthread_recursive_mutex_trylock(__gthread_recursive_mutex_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_mutex_trylock (__mutex)>>;
+
+
+
+;; Function int __gthread_recursive_mutex_timedlock(__gthread_recursive_mutex_t*, const __gthread_time_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_mutex_timedlock (__mutex, __abs_timeout)>>;
+
+
+
+;; Function int __gthread_recursive_mutex_unlock(__gthread_recursive_mutex_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_mutex_unlock (__mutex)>>;
+
+
+
+;; Function int __gthread_cond_broadcast(__gthread_cond_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_cond_broadcast (__cond)>>;
+
+
+
+;; Function int __gthread_cond_signal(__gthread_cond_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_cond_signal (__cond)>>;
+
+
+
+;; Function int __gthread_cond_wait(__gthread_cond_t*, __gthread_mutex_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_cond_wait (__cond, __mutex)>>;
+
+
+
+;; Function int __gthread_cond_timedwait(__gthread_cond_t*, __gthread_mutex_t*, const __gthread_time_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_cond_timedwait (__cond, __mutex, __abs_timeout)>>;
+
+
+
+;; Function int __gthread_cond_wait_recursive(__gthread_cond_t*, __gthread_recursive_mutex_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_cond_wait (__cond, __mutex)>>;
+
+
+
+;; Function int __gthread_cond_timedwait_recursive(__gthread_cond_t*, __gthread_recursive_mutex_t*, const __gthread_time_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthread_cond_timedwait (__cond, __mutex, __abs_timeout)>>;
+
+
+
+;; Function int __gthread_cond_destroy(__gthread_cond_t*) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __gthrw_pthread_cond_destroy (__cond)>>;
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add(volatile _Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (int) __sync_fetch_and_add_4 ((volatile void *) __mem, (unsigned int) __val)>>;
+
+
+
+;; Function void __gnu_cxx::__atomic_add(volatile _Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (int) __sync_fetch_and_add_4 ((volatile void *) __mem, (unsigned int) __val) >>>
+>>;
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add_single(_Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+{
+  _Atomic_word __result;
+
+    _Atomic_word __result;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__result = *__mem) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__mem = *__mem + __val) >>>
+>>;
+  return <retval> = __result;
+}
+
+
+
+;; Function void __gnu_cxx::__atomic_add_single(_Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__mem = *__mem + __val) >>>
+>>;
+
+
+
+;; Function _Atomic_word __gnu_cxx::__exchange_and_add_dispatch(_Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point return <retval> = __exchange_and_add ((volatile _Atomic_word *) __mem, __val)>>;
+  }
+else
+  {
+    <<cleanup_point return <retval> = __exchange_and_add_single (__mem, __val)>>;
+  }
+
+
+
+;; Function void __gnu_cxx::__atomic_add_dispatch(_Atomic_word*, int) (null)
+;; enabled by -tree-original
+
+if (<<cleanup_point __gthread_active_p () != 0>>)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  __atomic_add ((volatile _Atomic_word *) __mem, __val) >>>
+>>;
+  }
+else
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  __atomic_add_single (__mem, __val) >>>
+>>;
+  }
+
+
+
+;; Function std::bad_alloc::bad_alloc() (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  __base_ctor  (&((struct bad_alloc *) this)->D.6943) >>>
+>>;
+    try
+      {
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct bad_alloc *) this)->D.6943._vptr.exception = &_ZTVSt9bad_alloc + 8) >>>
+>>;
+      }
+    catch
+      {
+        __base_dtor  ((struct exception *) this);
+      }
+  }
+   >>>
+;
+
+
+
+;; Function void* operator new(size_t, void*) (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  return <retval> = __p
+   >>>
+;
+
+
+
+;; Function void* operator new [](size_t, void*) (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  return <retval> = __p
+   >>>
+;
+
+
+
+;; Function void operator delete(void*, void*) (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  
+   >>>
+;
+
+
+
+;; Function void operator delete [](void*, void*) (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  
+   >>>
+;
+
+
+
+;; Function bool std::locale::operator!=(const std::locale&) const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  <<cleanup_point return <retval> = !operator== ((const struct locale *) this, (const struct locale &) (const struct locale *) __other)>>
+   >>>
+;
+
+
+
+;; Function std::locale::facet::facet(size_t) (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct facet *) this)->_vptr.facet = &_ZTVNSt6locale5facetE + 8) >>>
+>>;
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct facet *) this)->_M_refcount = __refs != 0 ? 1 : 0) >>>
+>>;
+  }
+   >>>
+;
+
+
+
+;; Function void std::locale::facet::_M_add_reference() const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  __atomic_add_dispatch (&((const struct facet *) this)->_M_refcount, 1) >>>
+>>
+   >>>
+;
+
+
+
+;; Function void std::locale::facet::_M_remove_reference() const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  if (<<cleanup_point __exchange_and_add_dispatch (&((const struct facet *) this)->_M_refcount, -1) == 1>>)
+    {
+      <<< Unknown tree: try_block
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  if ((struct facet *) this != 0B)
+    {
+      OBJ_TYPE_REF(*(((struct facet *) this)->_vptr.facet + 4);(struct facet *) this->1) ((struct facet *) this);
+    }
+  else
+    {
+      0
+    } >>>
+>>
+  <<< Unknown tree: handler
+  
+  try
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __cxa_begin_catch (<<<exception object>>>) >>>
+>>;
+    }
+  finally
+    {
+      __cxa_end_catch ();
+    } >>>
+ >>>
+;
+    }
+   >>>
+;
+
+
+
+;; Function std::locale::id::id() (null)
+;; enabled by -tree-original
+
+{
+  
+}
+
+
+
+;; Function void std::locale::_Impl::_M_add_reference() (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  __atomic_add_dispatch (&((struct _Impl *) this)->_M_refcount, 1) >>>
+>>
+   >>>
+;
+
+
+
+;; Function void std::locale::_Impl::_M_remove_reference() (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  if (<<cleanup_point __exchange_and_add_dispatch (&((struct _Impl *) this)->_M_refcount, -1) == 1>>)
+    {
+      <<< Unknown tree: try_block
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  if ((struct _Impl *) this != 0B)
+    {
+      __comp_dtor  ((struct _Impl *) this);, operator delete ((void *) this);;
+    }
+  else
+    {
+      0
+    } >>>
+>>
+  <<< Unknown tree: handler
+  
+  try
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __cxa_begin_catch (<<<exception object>>>) >>>
+>>;
+    }
+  finally
+    {
+      __cxa_end_catch ();
+    } >>>
+ >>>
+;
+    }
+   >>>
+;
+
+
+
+;; Function bool std::locale::_Impl::_M_check_same_name() (null)
+;; enabled by -tree-original
+
+{
+  bool __ret = 1;
+
+  <<cleanup_point   bool __ret = 1;>>;
+  {
+    if (*(((struct _Impl *) this)->_M_names + 4) != 0B)
+      {
+        {
+          {
+            size_t __i = 0;
+
+            <<cleanup_point             size_t __i = 0;>>;
+            <<< Unknown tree: for_stmt
+  
+  __ret && __i <= 10
+  <<cleanup_point (void)  ++__i>>
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__ret = __builtin_strcmp ((const char *) *(((struct _Impl *) this)->_M_names + (unsigned int) (__i * 4)), (const char *) *(((struct _Impl *) this)->_M_names + ((unsigned int) __i + 1) * 4)) == 0) >>>
+>> >>>
+;
+          }
+        }
+      }
+  }
+  return <retval> = __ret;
+}
+
+
+
+;; Function std::_Ios_Fmtflags std::operator&(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Fmtflags) ((int) __a & (int) __b);
+
+
+
+;; Function std::_Ios_Fmtflags std::operator|(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Fmtflags) ((int) __a | (int) __b);
+
+
+
+;; Function std::_Ios_Fmtflags std::operator^(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Fmtflags) ((int) __a ^ (int) __b);
+
+
+
+;; Function std::_Ios_Fmtflags& std::operator|=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator| (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Fmtflags& std::operator&=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator& (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Fmtflags& std::operator^=(std::_Ios_Fmtflags&, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator^ (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Fmtflags std::operator~(std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+return <retval> = ~__a;
+
+
+
+;; Function std::_Ios_Openmode std::operator&(std::_Ios_Openmode, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Openmode) ((int) __a & (int) __b);
+
+
+
+;; Function std::_Ios_Openmode std::operator|(std::_Ios_Openmode, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Openmode) ((int) __a | (int) __b);
+
+
+
+;; Function std::_Ios_Openmode std::operator^(std::_Ios_Openmode, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Openmode) ((int) __a ^ (int) __b);
+
+
+
+;; Function std::_Ios_Openmode& std::operator|=(std::_Ios_Openmode&, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator| (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Openmode& std::operator&=(std::_Ios_Openmode&, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator& (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Openmode& std::operator^=(std::_Ios_Openmode&, std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator^ (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Openmode std::operator~(std::_Ios_Openmode) (null)
+;; enabled by -tree-original
+
+return <retval> = ~__a;
+
+
+
+;; Function std::_Ios_Iostate std::operator&(std::_Ios_Iostate, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Iostate) ((int) __a & (int) __b);
+
+
+
+;; Function std::_Ios_Iostate std::operator|(std::_Ios_Iostate, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Iostate) ((int) __a | (int) __b);
+
+
+
+;; Function std::_Ios_Iostate std::operator^(std::_Ios_Iostate, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Iostate) ((int) __a ^ (int) __b);
+
+
+
+;; Function std::_Ios_Iostate& std::operator|=(std::_Ios_Iostate&, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator| (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Iostate& std::operator&=(std::_Ios_Iostate&, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator& (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Iostate& std::operator^=(std::_Ios_Iostate&, std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = *__a = operator^ (*__a, __b);, __a>>;
+
+
+
+;; Function std::_Ios_Iostate std::operator~(std::_Ios_Iostate) (null)
+;; enabled by -tree-original
+
+return <retval> = ~__a;
+
+
+
+;; Function std::ios_base::_Callback_list::_Callback_list(void (*)(std::ios_base::event, std::ios_base&, int), int, std::ios_base::_Callback_list*) (null)
+;; enabled by -tree-original
+
+{
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Callback_list *) this)->_M_next = __cb) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Callback_list *) this)->_M_fn = __fn) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Callback_list *) this)->_M_index = __index) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Callback_list *) this)->_M_refcount = 0) >>>
+>>;
+}
+
+
+
+;; Function void std::ios_base::_Callback_list::_M_add_reference() (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  __atomic_add_dispatch (&((struct _Callback_list *) this)->_M_refcount, 1) >>>
+>>;
+
+
+
+;; Function int std::ios_base::_Callback_list::_M_remove_reference() (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = __exchange_and_add_dispatch (&((struct _Callback_list *) this)->_M_refcount, -1)>>;
+
+
+
+;; Function std::ios_base::_Words::_Words() (null)
+;; enabled by -tree-original
+
+{
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Words *) this)->_M_pword = 0B) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct _Words *) this)->_M_iword = 0) >>>
+>>;
+}
+
+
+
+;; Function std::_Ios_Fmtflags std::ios_base::flags() const (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Fmtflags) ((const struct ios_base *) this)->_M_flags;
+
+
+
+;; Function std::_Ios_Fmtflags std::ios_base::flags(std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+{
+  _Ios_Fmtflags __old;
+
+    _Ios_Fmtflags __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = ((struct ios_base *) this)->_M_flags) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct ios_base *) this)->_M_flags = __fmtfl) >>>
+>>;
+  return <retval> = __old;
+}
+
+
+
+;; Function std::_Ios_Fmtflags std::ios_base::setf(std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+{
+  _Ios_Fmtflags __old;
+
+    _Ios_Fmtflags __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = ((struct ios_base *) this)->_M_flags) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) operator|= ((_Ios_Fmtflags &) &((struct ios_base *) this)->_M_flags, __fmtfl) >>>
+>>;
+  return <retval> = __old;
+}
+
+
+
+;; Function std::_Ios_Fmtflags std::ios_base::setf(std::_Ios_Fmtflags, std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+{
+  _Ios_Fmtflags __old;
+
+    _Ios_Fmtflags __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = ((struct ios_base *) this)->_M_flags) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) operator&= ((_Ios_Fmtflags &) &((struct ios_base *) this)->_M_flags, operator~ (__mask)) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) operator|= ((_Ios_Fmtflags &) &((struct ios_base *) this)->_M_flags, operator& (__fmtfl, __mask)) >>>
+>>;
+  return <retval> = __old;
+}
+
+
+
+;; Function void std::ios_base::unsetf(std::_Ios_Fmtflags) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) operator&= ((_Ios_Fmtflags &) &((struct ios_base *) this)->_M_flags, operator~ (__mask)) >>>
+>>;
+
+
+
+;; Function std::streamsize std::ios_base::precision() const (null)
+;; enabled by -tree-original
+
+return <retval> = (int) ((const struct ios_base *) this)->_M_precision;
+
+
+
+;; Function std::streamsize std::ios_base::precision(std::streamsize) (null)
+;; enabled by -tree-original
+
+{
+  streamsize __old;
+
+    streamsize __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = ((struct ios_base *) this)->_M_precision) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct ios_base *) this)->_M_precision = __prec) >>>
+>>;
+  return <retval> = __old;
+}
+
+
+
+;; Function std::streamsize std::ios_base::width() const (null)
+;; enabled by -tree-original
+
+return <retval> = (int) ((const struct ios_base *) this)->_M_width;
+
+
+
+;; Function std::streamsize std::ios_base::width(std::streamsize) (null)
+;; enabled by -tree-original
+
+{
+  streamsize __old;
+
+    streamsize __old;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__old = ((struct ios_base *) this)->_M_width) >>>
+>>;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((struct ios_base *) this)->_M_width = __wide) >>>
+>>;
+  return <retval> = __old;
+}
+
+
+
+;; Function std::locale std::ios_base::getloc() const (null)
+;; enabled by -tree-original
+
+<<cleanup_point return *<retval> = TARGET_EXPR <D.13306, <<< Unknown tree: aggr_init_expr
+  5
+  __comp_ctor 
+  D.13306
+  0B
+  (const struct locale &) &((const struct ios_base *) this)->_M_ios_locale >>>
+>>>;
+
+
+
+;; Function const std::locale& std::ios_base::_M_getloc() const (null)
+;; enabled by -tree-original
+
+return <retval> = (const struct locale &) &((const struct ios_base *) this)->_M_ios_locale;
+
+
+
+;; Function long int& std::ios_base::iword(int) (null)
+;; enabled by -tree-original
+
+{
+  struct _Words & __word = (struct _Words &) (((struct ios_base *) this)->_M_word_size > __ix ? ((struct ios_base *) this)->_M_word + (unsigned int) ((unsigned int) __ix * 8) : (struct _Words *) _M_grow_words (this, __ix, 1));
+
+  <<cleanup_point   struct _Words & __word = (struct _Words &) (((struct ios_base *) this)->_M_word_size > __ix ? ((struct ios_base *) this)->_M_word + (unsigned int) ((unsigned int) __ix * 8) : (struct _Words *) _M_grow_words (this, __ix, 1));>>;
+  return <retval> = (long int &) &__word->_M_iword;
+}
+
+
+
+;; Function void*& std::ios_base::pword(int) (null)
+;; enabled by -tree-original
+
+{
+  struct _Words & __word = (struct _Words &) (((struct ios_base *) this)->_M_word_size > __ix ? ((struct ios_base *) this)->_M_word + (unsigned int) ((unsigned int) __ix * 8) : (struct _Words *) _M_grow_words (this, __ix, 0));
+
+  <<cleanup_point   struct _Words & __word = (struct _Words &) (((struct ios_base *) this)->_M_word_size > __ix ? ((struct ios_base *) this)->_M_word + (unsigned int) ((unsigned int) __ix * 8) : (struct _Words *) _M_grow_words (this, __ix, 0));>>;
+  return <retval> = (void * &) &__word->_M_pword;
+}
+
+
+
+;; Function std::ios_base& std::boolalpha(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 1) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::noboolalpha(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 1) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::showbase(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 512) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::noshowbase(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 512) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::showpoint(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 1024) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::noshowpoint(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 1024) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::showpos(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 2048) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::noshowpos(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 2048) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::skipws(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 4096) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::noskipws(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 4096) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::uppercase(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 16384) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::nouppercase(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 16384) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::unitbuf(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 8192) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::nounitbuf(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  unsetf ((struct ios_base *) __base, 8192) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::internal(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 16, 176) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::left(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 32, 176) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::right(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 128, 176) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::dec(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 2, 74) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::hex(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 8, 74) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::oct(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 64, 74) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::fixed(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 4, 260) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function std::ios_base& std::scientific(std::ios_base&) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) setf ((struct ios_base *) __base, 256, 260) >>>
+>>;
+return <retval> = (struct ios_base &) (struct ios_base *) __base;
+
+
+
+;; Function char std::ctype<char>::toupper(char) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 8);(const struct ctype *) this->2) ((const struct ctype *) this, (int) __c)>>;
+
+
+
+;; Function const char* std::ctype<char>::toupper(char*, const char*) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 12);(const struct ctype *) this->3) ((const struct ctype *) this, __lo, __hi)>>;
+
+
+
+;; Function char std::ctype<char>::tolower(char) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 16);(const struct ctype *) this->4) ((const struct ctype *) this, (int) __c)>>;
+
+
+
+;; Function const char* std::ctype<char>::tolower(char*, const char*) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 20);(const struct ctype *) this->5) ((const struct ctype *) this, __lo, __hi)>>;
+
+
+
+;; Function char std::ctype<char>::widen(char) const (null)
+;; enabled by -tree-original
+
+if ((signed char) ((const struct ctype *) this)->_M_widen_ok != 0)
+  {
+    return <retval> = ((const struct ctype *) this)->_M_widen[(int) (unsigned char) __c];
+  }
+<<cleanup_point <<< Unknown tree: expr_stmt
+  _M_widen_init ((const struct ctype *) this) >>>
+>>;
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 24);(const struct ctype *) this->6) ((const struct ctype *) this, (int) __c)>>;
+
+
+
+;; Function const char* std::ctype<char>::widen(const char*, const char*, char*) const (null)
+;; enabled by -tree-original
+
+if ((signed char) ((const struct ctype *) this)->_M_widen_ok == 1)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __builtin_memcpy ((void *) __to, (const void *) __lo, (unsigned int) ((int) __hi - (int) __lo)) >>>
+>>;
+    return <retval> = __hi;
+  }
+if ((signed char) ((const struct ctype *) this)->_M_widen_ok == 0)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  _M_widen_init (this) >>>
+>>;
+  }
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 28);(const struct ctype *) this->7) ((const struct ctype *) this, __lo, __hi, __to)>>;
+
+
+
+;; Function char std::ctype<char>::narrow(char, char) const (null)
+;; enabled by -tree-original
+
+{
+  const char __t;
+
+  if ((signed char) ((const struct ctype *) this)->_M_narrow[(int) (unsigned char) __c] != 0)
+    {
+      return <retval> = ((const struct ctype *) this)->_M_narrow[(int) (unsigned char) __c];
+    }
+    const char __t;
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (__t = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 32);this->8) (this, (int) __c, (int) __dfault)) >>>
+>>;
+  if ((signed char) __t != (signed char) __dfault)
+    {
+      <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (((const struct ctype *) this)->_M_narrow[(int) (unsigned char) __c] = (char) __t) >>>
+>>;
+    }
+  return <retval> = (char) __t;
+}
+
+
+
+;; Function const char* std::ctype<char>::narrow(const char*, const char*, char, char*) const (null)
+;; enabled by -tree-original
+
+if (__builtin_expect ((signed char) ((const struct ctype *) this)->_M_narrow_ok == 1, 1) != 0)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __builtin_memcpy ((void *) __to, (const void *) __lo, (unsigned int) ((int) __hi - (int) __lo)) >>>
+>>;
+    return <retval> = __hi;
+  }
+if ((signed char) ((const struct ctype *) this)->_M_narrow_ok == 0)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  _M_narrow_init (this) >>>
+>>;
+  }
+<<cleanup_point return <retval> = OBJ_TYPE_REF(*(((const struct ctype *) this)->D.15087._vptr.facet + 36);(const struct ctype *) this->9) ((const struct ctype *) this, __lo, __hi, (int) __dfault, __to)>>;
+
+
+
+;; Function const short unsigned int* std::ctype<char>::table() const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: eh_spec_block
+  return <retval> = (const short unsigned int *) ((const struct ctype *) this)->_M_table
+   >>>
+;
+
+
+
+;; Function virtual char std::ctype<char>::do_widen(char) const (null)
+;; enabled by -tree-original
+
+return <retval> = __c;
+
+
+
+;; Function virtual const char* std::ctype<char>::do_widen(const char*, const char*, char*) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __builtin_memcpy ((void *) __dest, (const void *) __lo, (unsigned int) ((int) __hi - (int) __lo)) >>>
+>>;
+return <retval> = __hi;
+
+
+
+;; Function virtual char std::ctype<char>::do_narrow(char, char) const (null)
+;; enabled by -tree-original
+
+return <retval> = __c;
+
+
+
+;; Function virtual const char* std::ctype<char>::do_narrow(const char*, const char*, char, char*) const (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __builtin_memcpy ((void *) __dest, (const void *) __lo, (unsigned int) ((int) __hi - (int) __lo)) >>>
+>>;
+return <retval> = __hi;
+
+
+
+;; Function bool std::ctype<char>::is(short unsigned int, char) const (null)
+;; enabled by -tree-original
+
+return <retval> = ((short unsigned int) *((const short unsigned int *) ((const struct ctype *) this)->_M_table + (unsigned int) ((unsigned int) (unsigned char) __c * 2)) & __m) != 0;
+
+
+
+;; Function const char* std::ctype<char>::is(const char*, const char*, short unsigned int*) const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: while_stmt
+  __low < __high
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) (*__vec++  = (short unsigned int) *((const short unsigned int *) ((const struct ctype *) this)->_M_table + (unsigned int) ((unsigned int) (unsigned char) *__low++  * 2))) >>>
+>> >>>
+;
+return <retval> = __high;
+
+
+
+;; Function const char* std::ctype<char>::scan_is(short unsigned int, const char*, const char*) const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: while_stmt
+  __low < __high && ((short unsigned int) *((const short unsigned int *) ((const struct ctype *) this)->_M_table + (unsigned int) ((unsigned int) (unsigned char) *__low * 2)) & __m) == 0
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void)  ++__low >>>
+>> >>>
+;
+return <retval> = __low;
+
+
+
+;; Function const char* std::ctype<char>::scan_not(short unsigned int, const char*, const char*) const (null)
+;; enabled by -tree-original
+
+<<< Unknown tree: while_stmt
+  __low < __high && ((short unsigned int) *((const short unsigned int *) ((const struct ctype *) this)->_M_table + (unsigned int) ((unsigned int) (unsigned char) *__low * 2)) & __m) != 0
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void)  ++__low >>>
+>> >>>
+;
+return <retval> = __low;
+
+
+
+;; Function int main() (null)
+;; enabled by -tree-original
+
+{
+  {
+    int i = 0;
+
+    <<cleanup_point     int i = 0;>>;
+    <<< Unknown tree: for_stmt
+  
+  i <= 2
+  <<cleanup_point (void) i++ >>
+  {
+    {
+      int j = 0;
+
+      <<cleanup_point       int j = 0;>>;
+      <<< Unknown tree: for_stmt
+  
+  j <= 2
+  <<cleanup_point (void) j++ >>
+  <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) operator<< ((struct basic_ostream *) operator<< ((struct basic_ostream *) operator<< ((struct basic_ostream &) (struct basic_ostream *) operator<< (&cout, i), (const char *) " "), j), endl) >>>
+>> >>>
+;
+    }
+  } >>>
+;
+  }
+}
+return <retval> = 0;
+
+
+
+;; Function std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*) [with _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+if (__s == 0B)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  setstate ((struct basic_ios *) (struct basic_ostream *) __out + (unsigned int) *(int *) (((struct basic_ostream *) __out)->_vptr.basic_ostream + -12), 1) >>>
+>>;
+  }
+else
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __ostream_insert ((struct basic_ostream &) (struct basic_ostream *) __out, __s, (streamsize) length (__s)) >>>
+>>;
+  }
+return <retval> = (struct basic_ostream &) (struct basic_ostream *) __out;
+
+
+
+;; Function std::basic_ostream<_CharT, _Traits>& std::endl(std::basic_ostream<_CharT, _Traits>&) [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (struct basic_ostream &) (struct basic_ostream *) flush ((struct basic_ostream &) (struct basic_ostream *) put ((struct basic_ostream *) __os, (int) widen ((struct basic_ios *) (struct basic_ostream *) __os + (unsigned int) *(int *) (((struct basic_ostream *) __os)->_vptr.basic_ostream + -12), 10)))>>;
+
+
+
+;; Function std::basic_ostream<_CharT, _Traits>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>& (*)(std::basic_ostream<_CharT, _Traits>&)) [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (struct basic_ostream &) (struct basic_ostream *) __pf ((struct basic_ostream &) (struct basic_ostream *) this)>>;
+
+
+
+;; Function void std::basic_ios<_CharT, _Traits>::setstate(std::_Ios_Iostate) [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  clear ((struct basic_ios *) this, operator| (rdstate ((struct basic_ios *) this), __state)) >>>
+>>;
+
+
+
+;; Function _CharT std::basic_ios<_CharT, _Traits>::widen(char) const [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = widen ((const struct ctype *) __check_facet (((const struct basic_ios *) this)->_M_ctype), (int) __c)>>;
+
+
+
+;; Function std::basic_ostream<_CharT, _Traits>& std::flush(std::basic_ostream<_CharT, _Traits>&) [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+<<cleanup_point return <retval> = (struct basic_ostream &) (struct basic_ostream *) flush ((struct basic_ostream *) __os)>>;
+
+
+
+;; Function std::_Ios_Iostate std::basic_ios<_CharT, _Traits>::rdstate() const [with _CharT = char, _Traits = std::char_traits<char>] (null)
+;; enabled by -tree-original
+
+return <retval> = (_Ios_Iostate) ((const struct basic_ios *) this)->D.18220._M_streambuf_state;
+
+
+
+;; Function const _Facet& std::__check_facet(const _Facet*) [with _Facet = std::ctype<char>] (null)
+;; enabled by -tree-original
+
+if (__f == 0B)
+  {
+    <<cleanup_point <<< Unknown tree: expr_stmt
+  __throw_bad_cast () >>>
+>>;
+  }
+return <retval> = (const struct ctype &) NON_LVALUE_EXPR <__f>;
+
+
+
+;; Function void __static_initialization_and_destruction_0(int, int) (null)
+;; enabled by -tree-original
+
+if (__initialize_p == 1)
+  {
+    if (__priority == 65535)
+      {
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  __comp_ctor  (&__ioinit) >>>
+>>;
+        <<cleanup_point <<< Unknown tree: expr_stmt
+  (void) __cxa_atexit ((void (*<Tbb>) (void *)) __comp_dtor , (void *) &__ioinit, (void *) &__dso_handle) >>>
+>>;
+      }
+  }
+
+
+
+;; Function (static initializers for test.cpp) (null)
+;; enabled by -tree-original
+
+<<cleanup_point <<< Unknown tree: expr_stmt
+  __static_initialization_and_destruction_0 (1, 65535) >>>
+>>;
+
+

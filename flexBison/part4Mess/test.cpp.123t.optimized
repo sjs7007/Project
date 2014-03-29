@@ -1,0 +1,98 @@
+
+;; Function int main() (main)
+
+Analyzing Edge Insertions.
+int main() ()
+{
+  int j;
+  int i;
+  int D.20852;
+  struct basic_ostream & D.20851;
+  struct basic_ostream & D.20850;
+  struct basic_ostream & D.20849;
+  bool D.20847;
+  bool D.20842;
+
+<bb 2>:
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  D.20849 = operator<< (&cout, i);
+  D.20850 = operator<< (D.20849, &" "[0]);
+  D.20851 = operator<< (D.20850, j);
+  operator<< (D.20851, endl);
+  j = j + 1;
+
+<bb 5>:
+  D.20847 = j <= 2;
+  if (D.20847 != 0)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  D.20842 = i <= 2;
+  if (D.20842 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  D.20852 = 0;
+  return D.20852;
+
+}
+
+
+
+;; Function void __static_initialization_and_destruction_0(int, int) (_Z41__static_initialization_and_destruction_0ii)
+
+Analyzing Edge Insertions.
+void __static_initialization_and_destruction_0(int, int) (int __initialize_p, int __priority)
+{
+  void (*<Tbb>) (void *) __comp_dtor .64;
+
+<bb 2>:
+  if (__initialize_p == 1)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 3>:
+  if (__priority == 65535)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+<bb 4>:
+  __comp_ctor  (&__ioinit);
+  __comp_dtor .64 = (void (*<Tbb>) (void *)) __comp_dtor ;
+  __cxa_atexit (__comp_dtor .64, &__ioinit, &__dso_handle);
+
+<bb 5>:
+  return;
+
+}
+
+
+
+;; Function (static initializers for test.cpp) (_GLOBAL__I_main)
+
+Analyzing Edge Insertions.
+(static initializers for test.cpp) ()
+{
+<bb 2>:
+  __static_initialization_and_destruction_0 (1, 65535);
+  return;
+
+}
+
+

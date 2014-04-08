@@ -62,11 +62,11 @@ number:
     ;
 
 initialization:
-    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<$<nval.fval>3<<endl; }
+    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl; }
     ;
 
 increment:
-    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<<$<nval.ival>5<<endl; }
+    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<< (($<nval.type>5 == $<nval.INTEGER>5) ? $<nval.ival>5 : $<nval.fval>5) <<endl; }
     ;
 
 goto:
@@ -79,7 +79,7 @@ printing:
 
 ifelse:
     IF IDENTIFIER comparison number GOTO ELSE GOTO
-    { cout <<"if "<<$2<<$3<<$<nval.ival>4<<", "<<$5<<",else, "<<$7<<endl; }
+    { cout <<"if "<<$2<<$3<<(($<nval.type>4 == $<nval.INTEGER>4) ? $<nval.ival>4 : $<nval.fval>4)<<", "<<$5<<",else, "<<$7<<endl; }
     ;
 
 comparison:
@@ -110,7 +110,7 @@ int main() {
     FILE *myfile = fopen("test.cfg", "r");
     // make sure it is valid:
     if (!myfile) {
-        cout << "I can't open a.snazzle.file!" << endl;
+        cout << "I can't open a .cfg file!" << endl;
         return -1;
     }
     // set flex to read from it instead of defaulting to STDIN:

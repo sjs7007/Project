@@ -1418,14 +1418,14 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 65 "new11.y"
-    { cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval.fval)<<endl; ;}
+    { cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(((yyvsp[(3) - (3)].nval.type) == (yyvsp[(3) - (3)].nval.INTEGER)) ? (yyvsp[(3) - (3)].nval.ival) : (yyvsp[(3) - (3)].nval.fval))<<endl; ;}
     break;
 
   case 8:
 
 /* Line 1455 of yacc.c  */
 #line 69 "new11.y"
-    { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<<(yyvsp[(5) - (5)].nval.ival)<<endl; ;}
+    { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<< (((yyvsp[(5) - (5)].nval.type) == (yyvsp[(5) - (5)].nval.INTEGER)) ? (yyvsp[(5) - (5)].nval.ival) : (yyvsp[(5) - (5)].nval.fval)) <<endl; ;}
     break;
 
   case 9:
@@ -1446,7 +1446,7 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 82 "new11.y"
-    { cout <<"if "<<(yyvsp[(2) - (7)].sval)<<(yyvsp[(3) - (7)].sval)<<(yyvsp[(4) - (7)].nval.ival)<<", "<<(yyvsp[(5) - (7)].sval)<<",else, "<<(yyvsp[(7) - (7)].sval)<<endl; ;}
+    { cout <<"if "<<(yyvsp[(2) - (7)].sval)<<(yyvsp[(3) - (7)].sval)<<(((yyvsp[(4) - (7)].nval.type) == (yyvsp[(4) - (7)].nval.INTEGER)) ? (yyvsp[(4) - (7)].nval.ival) : (yyvsp[(4) - (7)].nval.fval))<<", "<<(yyvsp[(5) - (7)].sval)<<",else, "<<(yyvsp[(7) - (7)].sval)<<endl; ;}
     break;
 
   case 12:
@@ -1700,7 +1700,7 @@ int main() {
     FILE *myfile = fopen("test.cfg", "r");
     // make sure it is valid:
     if (!myfile) {
-        cout << "I can't open a.snazzle.file!" << endl;
+        cout << "I can't open a .cfg file!" << endl;
         return -1;
     }
     // set flex to read from it instead of defaulting to STDIN:

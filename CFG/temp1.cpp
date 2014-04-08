@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <iostream>
+using namespace std;
 
  struct Number
     {
@@ -17,6 +19,8 @@ int main()
 	Number n;
 	n.type=n.INTEGER;
 	n.ival=3;
-	printf("%d %f /n",n.ival,n.fval);
+	int a=4,b=5;
+
+	cout<<((n.type==n.INTEGER) ? n.ival  :n.fval);
 
 }

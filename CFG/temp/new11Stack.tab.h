@@ -67,24 +67,15 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 20 "new11.y"
+#line 14 "new11Stack.y"
 
-    struct Number
-{
-    enum { INTEGER, FLOAT } type;
-    union
-    {
-        float fval;
-        int   ival;
-    };
-};
     Number nval;
     char  *sval;
 
 
 
 /* Line 1676 of yacc.c  */
-#line 88 "new11.tab.h"
+#line 79 "new11Stack.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

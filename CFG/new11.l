@@ -15,7 +15,8 @@
 "int ". ;
 "%d" ;
 
-[0-9]+ { yylval.ival = atoi(yytext); return INTEGER; }
+[0-9]+ { yylval.nval.type=INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
+[0-9]+"."[0-9]+ { yylval.nval.type=FLOAT; yylval.nval.fval = atof(yytext); return FLOAT; }
 "<bb "[0-9]+">" { yylval.sval = strdup(yytext); return BLOCK; }
 "goto <bb "[0-9]+">" { yylval.sval = strdup(yytext); return GOTO; }
 "if" { return IF; }

@@ -6,7 +6,7 @@ void main()
 	{
 		for(j=0;j<=3;j++)
 		{
-			k=k+3;
+			k = 5;
 			printf("%d %d",i,j);
 		}
 	}

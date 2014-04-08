@@ -40,16 +40,23 @@
       know about them.  */
    enum yytokentype {
      INTEGER = 258,
-     BLOCK = 259,
-     GOTO = 260,
-     PRINT = 261,
-     IF = 262,
-     ELSE = 263,
-     EQUALTO = 264,
-     LESSTHANEQUALTO = 265,
-     PLUS = 266,
-     RETURN = 267,
-     IDENTIFIER = 268
+     FLOAT = 259,
+     BLOCK = 260,
+     GOTO = 261,
+     PRINT = 262,
+     IF = 263,
+     ELSE = 264,
+     RETURN = 265,
+     LESSTHAN = 266,
+     LESSTHANEQUALTO = 267,
+     GREATERTHAN = 268,
+     GREATERTHANEQUALTO = 269,
+     EQUALTO = 270,
+     ADD = 271,
+     SUB = 272,
+     MUL = 273,
+     DIV = 274,
+     IDENTIFIER = 275
    };
 #endif
 
@@ -60,15 +67,16 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 18 "new10.y"
+#line 18 "new11.y"
 
 	int ival;
+	float fval;
 	char *sval;
 
 
 
 /* Line 1676 of yacc.c  */
-#line 72 "new10.tab.h"
+#line 80 "new11.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

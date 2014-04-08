@@ -68,22 +68,21 @@
 /* Copy the first part of user declarations.  */
 
 /* Line 189 of yacc.c  */
-#line 1 "new11.y"
+#line 1 "new11Stack.y"
 
-	#include <cstdio>
-	#include <iostream>
-	using namespace std;
-
-	//stuff from flex that bison needs to know about
-	extern "C" int yylex();
-	extern "C" int yyparse();
-	extern "C" FILE *yyin;
-
-	void yyerror(const char *s);
+struct Number
+{
+    enum { INTEGER, FLOAT } type;
+    union
+    {
+        floa fval;
+        int   ival;
+    };
+};
 
 
 /* Line 189 of yacc.c  */
-#line 87 "new11.tab.c"
+#line 86 "new11Stack.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -138,24 +137,15 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 20 "new11.y"
+#line 14 "new11Stack.y"
 
-    struct Number
-{
-    enum { INTEGER, FLOAT } type;
-    union
-    {
-        float fval;
-        int   ival;
-    };
-};
     Number nval;
     char  *sval;
 
 
 
 /* Line 214 of yacc.c  */
-#line 159 "new11.tab.c"
+#line 149 "new11Stack.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -167,7 +157,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 171 "new11.tab.c"
+#line 161 "new11Stack.tab.c"
 
 #ifdef short
 # undef short
@@ -458,9 +448,9 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    50,    50,    51,    55,    59,    60,    64,    68,    72,
-      76,    80,    85,    86,    87,    88,    92,    93,    94,    95,
-      96,    97,   101,   102
+       0,    35,    35,    36,    40,    44,    45,    49,    53,    57,
+      61,    65,    70,    71,    72,    73,    77,    78,    79,    80,
+      81,    82,    86,    87
 };
 #endif
 
@@ -1381,105 +1371,105 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 50 "new11.y"
+#line 35 "new11Stack.y"
     { ; ;}
     break;
 
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 51 "new11.y"
+#line 36 "new11Stack.y"
     { ; ;}
     break;
 
   case 4:
 
 /* Line 1455 of yacc.c  */
-#line 55 "new11.y"
+#line 40 "new11Stack.y"
     { cout<<"Block : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
   case 5:
 
 /* Line 1455 of yacc.c  */
-#line 59 "new11.y"
-    { (yyval.nval)=(yyvsp[(1) - (1)].ival) ;}
+#line 44 "new11Stack.y"
+    { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 60 "new11.y"
-    { (yyval.nval)=(yyvsp[(1) - (1)].fval) ;}
+#line 45 "new11Stack.y"
+    { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 7:
 
 /* Line 1455 of yacc.c  */
-#line 64 "new11.y"
+#line 49 "new11Stack.y"
     { cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval)<<endl; ;}
     break;
 
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 68 "new11.y"
+#line 53 "new11Stack.y"
     { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<<(yyvsp[(5) - (5)].nval)<<endl; ;}
     break;
 
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 72 "new11.y"
+#line 57 "new11Stack.y"
     { cout<<"GOTO : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 76 "new11.y"
+#line 61 "new11Stack.y"
     { cout<<"printf(...)"<<endl; ;}
     break;
 
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 81 "new11.y"
+#line 66 "new11Stack.y"
     { cout <<"if "<<(yyvsp[(2) - (7)].sval)<<(yyvsp[(3) - (7)].sval)<<(yyvsp[(4) - (7)].nval)<<", "<<(yyvsp[(5) - (7)].sval)<<",else, "<<(yyvsp[(7) - (7)].sval)<<endl; ;}
     break;
 
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 85 "new11.y"
+#line 70 "new11Stack.y"
     { (yyval.sval)="<"; ;}
     break;
 
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 86 "new11.y"
+#line 71 "new11Stack.y"
     { (yyval.sval)="<=" ;}
     break;
 
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 87 "new11.y"
+#line 72 "new11Stack.y"
     { (yyval.sval)=">" ;}
     break;
 
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 88 "new11.y"
+#line 73 "new11Stack.y"
     { (yyval.sval)=">=" ;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1483 "new11.tab.c"
+#line 1473 "new11Stack.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1691,7 +1681,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 105 "new11.y"
+#line 90 "new11Stack.y"
 
 
 int main() {

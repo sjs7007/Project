@@ -15,13 +15,26 @@
 //It could be of any arbitrary data type so we define a C union which holds
 //each of the types of tokens that flex could return
 
-%union{
-	int ival;
-	char *sval;
+
+%union
+{
+    struct Number
+    {
+        enum { INTEGER, FLOAT } type;
+        union
+        {
+            float fval;
+            int   ival;
+        };
+    };
+
+    Number nval;
+    char  *sval;
 }
 
 // define the terminal symbol token types
-%token <ival> INTEGER
+%token <nval> INTEGER
+%token <nval> FLOAT
 %token <sval> BLOCK
 %token <sval> GOTO
 %token PRINT IF ELSE RETURN
@@ -29,80 +42,87 @@
 %token ADD SUB MUL DIV
 %token <sval> IDENTIFIER 
 %type <sval> comparison
+%type <nval> number
 
 %%
 //grammar which bison will parse
 
 start:
-	block statements { ; }
-	| start block statements { ; }
-	;
+    block statements { ; }
+    | start block statements { ; }
+    ;
 
 block:
-	BLOCK { cout<<"Block : "<<$1<<endl; }
-	;
+    BLOCK { cout<<"Block : "<<$1<<endl; }
+    ;
+
+number:
+    INTEGER { $$=$1 }
+    | FLOAT { $$=$1 }
+    ;
 
 initialization:
-	IDENTIFIER EQUALTO INTEGER { cout<<$1<<" = "<<$3<<endl; }
-	;
+    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<$3<<endl; }
+    ;
 
 increment:
-	IDENTIFIER EQUALTO IDENTIFIER ADD INTEGER { cout <<$1<<" = "<<$3<<" + "<<$5<<endl; }
-	;
+    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<<$5<<endl; }
+    ;
 
 goto:
-	GOTO { cout<<"GOTO : "<<$1<<endl; }
-	;
+    GOTO { cout<<"GOTO : "<<$1<<endl; }
+    ;
 
 printing:
-	PRINT { cout<<"printf(...)"<<endl; }
-	;
+    PRINT { cout<<"printf(...)"<<endl; }
+    ;
 
 ifelse:
-	IF IDENTIFIER comparison INTEGER GOTO ELSE GOTO
-	{ cout <<"if "<<$2<<$3<<$4<<", "<<$5<<",else, "<<$7<<endl; }
-	;
+    IF IDENTIFIER comparison number GOTO ELSE GOTO
+    { cout <<"if "<<$2<<$3<<$4<<", "<<$5<<",else, "<<$7<<endl; }
+    ;
 
 comparison:
-	LESSTHAN { $$="<"; }
-	| LESSTHANEQUALTO { $$="<=" }
-	| GREATERTHAN { $$=">" }
-	| GREATERTHANEQUALTO { $$=">=" }
-	;
+    LESSTHAN { $$="<"; }
+    | LESSTHANEQUALTO { $$="<=" }
+    | GREATERTHAN { $$=">" }
+    | GREATERTHANEQUALTO { $$=">=" }
+    ;
 
 statement:
-	initialization
-	| printing
-	| goto
-	| increment
-	| ifelse
-	| RETURN
-	;
+    initialization
+    | printing
+    | goto
+    | increment
+    | ifelse
+    | RETURN
+    ;
 
 statements:
-	statements statement 
-	| statement
-	;
+    statements statement 
+    | statement
+    ;
+
 %%
 
-main() {
-	// open a file handle to a particular file:
-	FILE *myfile = fopen("test.cfg", "r");
-	// make sure it is valid:
-	if (!myfile) {
-		cout << "I can't open a.snazzle.file!" << endl;
-		return -1;
-	}
-	// set flex to read from it instead of defaulting to STDIN:
-	yyin = myfile;
-	// parse through the input until there is no more:
-	do {
-		yyparse();
-	} while (!feof(yyin));
+int main() {
+    // open a file handle to a particular file:
+    FILE *myfile = fopen("test.cfg", "r");
+    // make sure it is valid:
+    if (!myfile) {
+        cout << "I can't open a.snazzle.file!" << endl;
+        return -1;
+    }
+    // set flex to read from it instead of defaulting to STDIN:
+    yyin = myfile;
+    // parse through the input until there is no more:
+    do {
+        yyparse();
+    } while (!feof(yyin));
 }
 
 void yyerror(const char *s) {
-	cout << "EEK, parse error!  Message: " << s << endl;
-	// might as well halt now:
-	exit(-1);
+    cout << "EEK, parse error!  Message: " << s << endl;
+    // might as well halt now:
+    exit(-1);
 }

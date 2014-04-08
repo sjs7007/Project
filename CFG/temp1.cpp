@@ -15,7 +15,7 @@ int main()
 {
 	
 	Number n;
-	n.fval=4.5;
+	n.type=n.INTEGER;
 	n.ival=3;
 	printf("%d %f /n",n.ival,n.fval);
 

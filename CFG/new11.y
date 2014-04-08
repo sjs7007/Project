@@ -62,11 +62,11 @@ number:
     ;
 
 initialization:
-    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<$3<<endl; }
+    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<$<nval.fval>3<<endl; }
     ;
 
 increment:
-    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<<$5<<endl; }
+    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<<$<nval.ival>5<<endl; }
     ;
 
 goto:
@@ -79,7 +79,7 @@ printing:
 
 ifelse:
     IF IDENTIFIER comparison number GOTO ELSE GOTO
-    { cout <<"if "<<$2<<$3<<$4<<", "<<$5<<",else, "<<$7<<endl; }
+    { cout <<"if "<<$2<<$3<<$<nval.ival>4<<", "<<$5<<",else, "<<$7<<endl; }
     ;
 
 comparison:

@@ -1418,14 +1418,14 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 65 "new11.y"
-    { cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval)<<endl; ;}
+    { cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval.fval)<<endl; ;}
     break;
 
   case 8:
 
 /* Line 1455 of yacc.c  */
 #line 69 "new11.y"
-    { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<<(yyvsp[(5) - (5)].nval)<<endl; ;}
+    { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<<(yyvsp[(5) - (5)].nval.ival)<<endl; ;}
     break;
 
   case 9:
@@ -1446,7 +1446,7 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 82 "new11.y"
-    { cout <<"if "<<(yyvsp[(2) - (7)].sval)<<(yyvsp[(3) - (7)].sval)<<(yyvsp[(4) - (7)].nval)<<", "<<(yyvsp[(5) - (7)].sval)<<",else, "<<(yyvsp[(7) - (7)].sval)<<endl; ;}
+    { cout <<"if "<<(yyvsp[(2) - (7)].sval)<<(yyvsp[(3) - (7)].sval)<<(yyvsp[(4) - (7)].nval.ival)<<", "<<(yyvsp[(5) - (7)].sval)<<",else, "<<(yyvsp[(7) - (7)].sval)<<endl; ;}
     break;
 
   case 12:

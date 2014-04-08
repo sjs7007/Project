@@ -974,12 +974,12 @@ YY_RULE_SETUP
 case 8:
 YY_RULE_SETUP
 #line 18 "new11.l"
-{ yylval.nval.type=INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
+{ yylval.Number.type=INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 19 "new11.l"
-{ yylval.nval.type=FLOAT; yylval.nval.fval = atof(yytext); return FLOAT; }
+{ yylval.Number.type=FLOAT; yylval.nval.fval = atof(yytext); return FLOAT; }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP

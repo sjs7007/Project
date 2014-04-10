@@ -92,7 +92,14 @@ initialization:
     IDENTIFIER EQUALTO number 
 	{ 
 		cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl;
-		cout<<"Initialization found for "<<getSymbolTableId($1)<<endl;
+		int loc = getSymbolTableId($1); 
+		cout<<"Initialization found for "<<loc<<endl;
+		if( $<nval.type>3 == $<nval.INTEGER>3)
+		{
+				symbolTable[loc].ival = $<nval.ival>3;
+			//symbolTable[loc].ival=1;
+		}
+
 	}
     ;
 
@@ -156,7 +163,7 @@ int main() {
 
 	for(int i=0;i<nSymbols;i++)
 	{
-		cout<<"Symbol "<<i<<" : "<<symbolTable[i].name<<endl;
+		cout<<"Symbol "<<i<<" : "<<symbolTable[i].name<<", Value : "<<symbolTable[i].ival<<endl;
 	}
 }
 

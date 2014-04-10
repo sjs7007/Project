@@ -2,6 +2,7 @@
 void main()
 {
 	int i,j,k=0;
+	int a=45,b=56,c=67;
 	for(i=0;i<3;i++)
 	{
 		for(j=0;j<=3;j++)

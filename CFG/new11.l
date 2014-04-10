@@ -7,6 +7,7 @@
 	#include "new11.tab.h" // to get token types that we return
 
 	float getFloat(string s);
+	char* extractName(string input);
 %}
 
 %%
@@ -15,8 +16,9 @@
 "Function" ;
 "main" ;
 "restrict" ;
-"int ". ;
-"float ". ;
+
+"int "[a-zA-Z] { extractName(yytext); };
+"float " ;
 "%d" ;
 
 [-]?[0-9]+ { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
@@ -43,19 +45,26 @@
 .                ;
 %%
 
- float getFloat(string s)
-        {
-            int pos = s.find("e");
-
-            //cout<<pos<<endl;
+float getFloat(string s)
+{
+    int pos = s.find("e");
+    //cout<<pos<<endl;
             
-            string number = s.substr(0,pos);
-            //cout<<number<<endl;
+    string number = s.substr(0,pos);
+    //cout<<number<<endl;
 
-            string power = s.substr(pos+1,s.length()-(pos+1));
-            //cout<<power<<endl;
+    string power = s.substr(pos+1,s.length()-(pos+1));
+    //cout<<power<<endl;
 
-            float floatVal = atof(number.c_str()) * pow(10,atoi(power.c_str()));
-            //cout<<floatVal<<endl;
-            return floatVal;
-        }
+    float floatVal = atof(number.c_str()) * pow(10,atoi(power.c_str()));
+    //cout<<floatVal<<endl;
+    return floatVal;
+}
+
+char* extractName(string input) //returning C++ string creates problems later, so use C string(char* )
+{
+    //"int "[a-zA-Z] { yylval.symbol.type=yylval.symbol.INTEGER; yylval.symbol.name = extractName(yytext); };
+    //cout<<input<<endl;
+    string temp =  input.substr((input.find(" ")+1),(input.length()-(input.find(" ")+1)));
+    cout<<"Identifier of name : "<<temp<<" found."<<endl;
+}

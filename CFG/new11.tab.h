@@ -67,7 +67,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 20 "new11.y"
+#line 23 "new11.y"
 
     struct Number
     {

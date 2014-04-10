@@ -9,6 +9,9 @@
 	extern "C" FILE *yyin;
 
 	void yyerror(const char *s);
+
+    int maxSymbolTableCount=100;
+    
 %}
 
 //Bison asks flex to get next token which is returned as an object of yystype.

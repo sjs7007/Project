@@ -9,6 +9,7 @@ void main()
 		{
 			k = -5;
 			k = 6-5*5+3*k;
+			float d=4.5,e=4.55,f=3.56;
 			/*float p = 45.54 * 2 + 35;
 			float q = 4.5 + p * 2 - 34 + p/4+6;
 			float r=0.45;

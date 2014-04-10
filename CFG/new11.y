@@ -59,7 +59,7 @@
 %token <sval> IDENTIFIER 
 %type <sval> comparison
 %type <nval> number
-%token intDECL // for int declaration like, int a;
+%token intDECL floatDECL // for int declaration like, int a;
 
 %%
 //grammar which bison will parse
@@ -85,8 +85,15 @@ declaration:
 		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
 		symbolTable[nSymbols].name = $2;
 		nSymbols++;
-	}
-	;
+	};
+
+    | floatDECL IDENTIFIER
+    {
+        cout<<"Idenitifier of type float found : "<<$2<<endl ;
+        symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
+        symbolTable[nSymbols].name = $2;
+        nSymbols++;
+    };
 
 initialization:
     IDENTIFIER EQUALTO number 
@@ -94,10 +101,13 @@ initialization:
 		cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl;
 		int loc = getSymbolTableId($1); 
 		cout<<"Initialization found for "<<loc<<endl;
-		if( $<nval.type>3 == $<nval.INTEGER>3)
+		if($<nval.type>3 == $<nval.INTEGER>3)
 		{
-				symbolTable[loc].ival = $<nval.ival>3;
-			//symbolTable[loc].ival=1;
+			symbolTable[loc].ival = $<nval.ival>3;
+		}
+		else if($<nval.type>3 == $<nval.FLOAT>3)
+		{
+			symbolTable[loc].fval = $<nval.fval>3;
 		}
 
 	}
@@ -163,7 +173,15 @@ int main() {
 
 	for(int i=0;i<nSymbols;i++)
 	{
-		cout<<"Symbol "<<i<<" : "<<symbolTable[i].name<<", Value : "<<symbolTable[i].ival<<endl;
+        cout<<"Symbol "<<i<<" : "<<symbolTable[i].name;
+        if(symbolTable[i].type==symbolTable[i].INTEGER)
+        {
+            cout<<", Value : "<<symbolTable[i].ival<<endl;
+        }
+        else if(symbolTable[i].type==symbolTable[i].FLOAT)
+        {
+            cout<<", Value : "<<symbolTable[i].fval<<endl;
+        }
 	}
 }
 

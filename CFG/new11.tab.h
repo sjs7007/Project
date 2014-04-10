@@ -57,7 +57,8 @@
      MUL = 273,
      DIV = 274,
      IDENTIFIER = 275,
-     intDECL = 276
+     intDECL = 276,
+     floatDECL = 277
    };
 #endif
 
@@ -86,7 +87,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 90 "new11.tab.h"
+#line 91 "new11.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

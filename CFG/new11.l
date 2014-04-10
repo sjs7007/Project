@@ -17,7 +17,7 @@
 "restrict" ;
 
 "int" { return intDECL; } 
-"float" ;
+"float" { return floatDECL; };
 "%d" ;
 
 [-]?[0-9]+ { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }

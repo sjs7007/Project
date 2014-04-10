@@ -995,7 +995,7 @@ YY_RULE_SETUP
 case 7:
 YY_RULE_SETUP
 #line 20 "new11.l"
-;
+{ return floatDECL; };
 	YY_BREAK
 case 8:
 YY_RULE_SETUP

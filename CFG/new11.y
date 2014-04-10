@@ -9,8 +9,6 @@
 	extern "C" FILE *yyin;
 
 	void yyerror(const char *s);
-
-    int maxSymbolTableCount=100;
     
     struct Symbol
     {
@@ -23,6 +21,9 @@
             int   ival;
         };
     };
+
+	Symbol symbolTable[100];
+	int nSymbols=0;
 %}
 
 //Bison asks flex to get next token which is returned as an object of yystype.
@@ -77,7 +78,13 @@ number:
     ;
 
 declaration:
-	intDECL IDENTIFIER { cout<<"Idenitifier of type integer found : "<<$2<<endl ; }
+	intDECL IDENTIFIER 
+	{
+		cout<<"Idenitifier of type integer found : "<<$2<<endl ;
+		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
+		symbolTable[nSymbols].name = $2;
+		nSymbols++;
+	}
 	;
 
 initialization:
@@ -139,6 +146,13 @@ int main() {
     do {
         yyparse();
     } while (!feof(yyin));
+
+	cout<<"Symbol table : -"<<endl; 
+
+	for(int i=0;i<nSymbols;i++)
+	{
+		cout<<"Symbol "<<symbolTable[i].name<<endl;
+	}
 }
 
 void yyerror(const char *s) {

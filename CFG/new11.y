@@ -24,6 +24,7 @@
 
 	Symbol symbolTable[100];
 	int nSymbols=0;
+	int getSymbolTableId(string input);
 %}
 
 //Bison asks flex to get next token which is returned as an object of yystype.
@@ -88,7 +89,11 @@ declaration:
 	;
 
 initialization:
-    IDENTIFIER EQUALTO number { cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl; }
+    IDENTIFIER EQUALTO number 
+	{ 
+		cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl;
+		cout<<"Initialization found for "<<getSymbolTableId($1)<<endl;
+	}
     ;
 
 increment:
@@ -151,7 +156,7 @@ int main() {
 
 	for(int i=0;i<nSymbols;i++)
 	{
-		cout<<"Symbol "<<symbolTable[i].name<<endl;
+		cout<<"Symbol "<<i<<" : "<<symbolTable[i].name<<endl;
 	}
 }
 
@@ -159,4 +164,18 @@ void yyerror(const char *s) {
     cout << "EEK, parse error!  Message: " << s << endl;
     // might as well halt now:
     exit(-1);
+}
+
+int getSymbolTableId(string input)
+{
+	int loc=-1;
+	for(int i=0;i<100;i++)
+	{
+		if(input==symbolTable[i].name)
+		{
+			loc=i;
+			break;
+		}
+	}
+	return loc;
 }

@@ -56,7 +56,8 @@
      SUB = 272,
      MUL = 273,
      DIV = 274,
-     IDENTIFIER = 275
+     IDENTIFIER = 275,
+     intDECL = 276
    };
 #endif
 
@@ -67,7 +68,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 23 "new11.y"
+#line 34 "new11.y"
 
     struct Number
     {
@@ -85,7 +86,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 89 "new11.tab.h"
+#line 90 "new11.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

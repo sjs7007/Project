@@ -12,6 +12,17 @@
 
     int maxSymbolTableCount=100;
     
+    struct Symbol
+    {
+        enum { INTEGER, FLOAT } type;
+        string name;
+
+        union
+        {
+            float fval;
+            int   ival;
+        };
+    };
 %}
 
 //Bison asks flex to get next token which is returned as an object of yystype.
@@ -46,13 +57,14 @@
 %token <sval> IDENTIFIER 
 %type <sval> comparison
 %type <nval> number
+%token intDECL // for int declaration like, int a;
 
 %%
 //grammar which bison will parse
 
 start:
-    block statements { ; }
-    | start block statements { ; }
+    statements block statements { ; }
+    | start statements block statements { ; }
     ;
 
 block:
@@ -63,6 +75,10 @@ number:
     INTEGER { $$=$1 }
     | FLOAT { $$=$1 }
     ;
+
+declaration:
+	intDECL IDENTIFIER { cout<<"Idenitifier of type integer found : "<<$2<<endl ; }
+	;
 
 initialization:
     IDENTIFIER EQUALTO number { cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl; }
@@ -93,7 +109,8 @@ comparison:
     ;
 
 statement:
-    initialization
+	 declaration
+    |initialization
     | printing
     | goto
     | increment
@@ -102,7 +119,7 @@ statement:
     ;
 
 statements:
-    statements statement 
+    | statements statement 
     | statement
     ;
 

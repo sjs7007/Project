@@ -1,15 +1,10 @@
 #include<stdio.h>
 void main()
 {
-	int i,j,k=0;
-	int a=45,b=56,c=67;
-	for(i=0;i<3;i++)
+	int f=1,n=5,i;
+	for(i=1;i<=n;i++)
 	{
-		for(j=0;j<=3;j++)
-		{
-			k = -5;
-			k = 6-5*5+3*k;
-			int p = 45 *5 + k + 3*k + 4 * 10 *k + 32*k;
-		}
+		f = f * i;
 	}
+	printf("Factorial of %d is : %d\n",n,f);
 }

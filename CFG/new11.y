@@ -79,10 +79,15 @@ number:
     | FLOAT { $$=$1 }
     | IDENTIFIER 
     {
-        if($<nval.type>1 ==$<nval.INTEGER>1)
+        if(symbolTable[getSymbolTableId($1)].type==symbolTable[getSymbolTableId($1)].INTEGER)
         {
+             cout<<"finding : "<<$1<<endl;
             $<nval.type>$=$<nval.INTEGER>$;
             $<nval.ival>$=symbolTable[getSymbolTableId($1)].ival;
+        }
+        else
+        {
+            cout<<"here"<<endl;
         }    
     };
 

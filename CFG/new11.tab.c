@@ -480,10 +480,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    69,    69,    70,    74,    78,    79,    80,    90,    98,
-     107,   124,   125,   134,   146,   150,   154,   159,   160,   161,
-     162,   166,   167,   168,   169,   170,   171,   172,   175,   176,
-     177
+       0,    69,    69,    70,    74,    78,    79,    80,    95,   103,
+     112,   129,   130,   139,   151,   155,   159,   164,   165,   166,
+     167,   171,   172,   173,   174,   175,   176,   177,   180,   181,
+     182
 };
 #endif
 
@@ -1453,10 +1453,15 @@ yyreduce:
 /* Line 1455 of yacc.c  */
 #line 81 "new11.y"
     {
-        if((yyvsp[(1) - (1)].nval.type) ==(yyvsp[(1) - (1)].nval.INTEGER))
+        if(symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].type==symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].INTEGER)
         {
+             cout<<"finding : "<<(yyvsp[(1) - (1)].sval)<<endl;
             (yyval.nval.type)=(yyval.nval.INTEGER);
             (yyval.nval.ival)=symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].ival;
+        }
+        else
+        {
+            cout<<"here"<<endl;
         }    
     ;}
     break;
@@ -1464,7 +1469,7 @@ yyreduce:
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 91 "new11.y"
+#line 96 "new11.y"
     {
 		//cout<<"Idenitifier of type integer found : "<<$2<<endl ;
 		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
@@ -1476,7 +1481,7 @@ yyreduce:
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 99 "new11.y"
+#line 104 "new11.y"
     {
         //cout<<"Idenitifier of type float found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
@@ -1488,7 +1493,7 @@ yyreduce:
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 108 "new11.y"
+#line 113 "new11.y"
     { 
 		cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(((yyvsp[(3) - (3)].nval.type) == (yyvsp[(3) - (3)].nval.INTEGER)) ? (yyvsp[(3) - (3)].nval.ival) : (yyvsp[(3) - (3)].nval.fval))<<endl;
 		int loc = getSymbolTableId((yyvsp[(1) - (3)].sval)); 
@@ -1508,7 +1513,7 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 126 "new11.y"
+#line 131 "new11.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].type == symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].INTEGER )
 		{
@@ -1522,7 +1527,7 @@ yyreduce:
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 135 "new11.y"
+#line 140 "new11.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].type == symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].INTEGER )
         {
@@ -1536,56 +1541,56 @@ yyreduce:
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 146 "new11.y"
+#line 151 "new11.y"
     { cout <<(yyvsp[(1) - (5)].sval)<<" = "<<(yyvsp[(3) - (5)].sval)<<" + "<< (((yyvsp[(5) - (5)].nval.type) == (yyvsp[(5) - (5)].nval.INTEGER)) ? (yyvsp[(5) - (5)].nval.ival) : (yyvsp[(5) - (5)].nval.fval)) <<endl; ;}
     break;
 
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 150 "new11.y"
+#line 155 "new11.y"
     { cout<<"printf(...)"<<endl; ;}
     break;
 
   case 16:
 
 /* Line 1455 of yacc.c  */
-#line 155 "new11.y"
+#line 160 "new11.y"
     { cout <<"if "<<(yyvsp[(2) - (8)].sval)<<(yyvsp[(3) - (8)].sval)<<(((yyvsp[(4) - (8)].nval.type) == (yyvsp[(4) - (8)].nval.INTEGER)) ? (yyvsp[(4) - (8)].nval.ival) : (yyvsp[(4) - (8)].nval.fval))<<", "<<(yyvsp[(5) - (8)].sval)<<",else, "<<(yyvsp[(8) - (8)].sval)<<endl; ;}
     break;
 
   case 17:
 
 /* Line 1455 of yacc.c  */
-#line 159 "new11.y"
+#line 164 "new11.y"
     { (yyval.sval)="<"; ;}
     break;
 
   case 18:
 
 /* Line 1455 of yacc.c  */
-#line 160 "new11.y"
+#line 165 "new11.y"
     { (yyval.sval)="<=" ;}
     break;
 
   case 19:
 
 /* Line 1455 of yacc.c  */
-#line 161 "new11.y"
+#line 166 "new11.y"
     { (yyval.sval)=">" ;}
     break;
 
   case 20:
 
 /* Line 1455 of yacc.c  */
-#line 162 "new11.y"
+#line 167 "new11.y"
     { (yyval.sval)=">=" ;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1589 "new11.tab.c"
+#line 1594 "new11.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1797,7 +1802,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 180 "new11.y"
+#line 185 "new11.y"
 
 
 int main() {

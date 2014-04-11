@@ -77,7 +77,14 @@ block:
 number:
     INTEGER { $$=$1 }
     | FLOAT { $$=$1 }
-    ;
+    | IDENTIFIER 
+    {
+        if($<nval.type>1 ==$<nval.INTEGER>1)
+        {
+            $<nval.type>$=$<nval.INTEGER>$;
+            $<nval.ival>$=symbolTable[getSymbolTableId($1)].ival;
+        }    
+    };
 
 declaration:
 	intDECL IDENTIFIER 
@@ -124,6 +131,16 @@ expression:
 			//cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
 		}
 	}; 
+    | IDENTIFIER ADD number 
+    {
+        if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].INTEGER )
+        {
+            $<nval.type>$ = $<nval.INTEGER>$;
+            $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival + $<nval.ival>3 ;
+            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
+        }
+    }; 
+
 
 increment:
     IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<< (($<nval.type>5 == $<nval.INTEGER>5) ? $<nval.ival>5 : $<nval.fval>5) <<endl; }

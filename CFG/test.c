@@ -1,10 +1,10 @@
 #include<stdio.h>
 void main()
 {
-	int f=1,n=5,i;
+	int _fac109 =1,n=5,i;
 	for(i=1;i<=n;i++)
 	{
-		f = f * i;
+	 _fac109  = _fac109  * i;
 	}
-	printf("Factorial of %d is : %d\n",n,f);
+	printf("Factorial of %d is : %d\n",n,_fac109 );
 }

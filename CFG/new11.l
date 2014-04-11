@@ -41,7 +41,7 @@
 ";;" {}
 
 
-[a-zA-Z] { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]* { yylval.sval = strdup(yytext); return IDENTIFIER; }
 "D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
 [ \t \n] ;
 .        ;

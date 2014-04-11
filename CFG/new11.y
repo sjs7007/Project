@@ -60,6 +60,7 @@
 %type <sval> comparison
 %type <nval> number
 %token intDECL floatDECL // for int declaration like, int a;
+%type <sval> goto
 
 %%
 //grammar which bison will parse
@@ -118,7 +119,7 @@ increment:
     ;
 
 goto:
-    GOTO { cout<<"GOTO : "<<$1<<endl; }
+    GOTO { $$=$1 }
     ;
 
 printing:
@@ -126,7 +127,7 @@ printing:
     ;
 
 ifelse:
-    IF IDENTIFIER comparison number GOTO ELSE GOTO
+    IF IDENTIFIER comparison number goto ELSE goto
     { cout <<"if "<<$2<<$3<<(($<nval.type>4 == $<nval.INTEGER>4) ? $<nval.ival>4 : $<nval.fval>4)<<", "<<$5<<",else, "<<$7<<endl; }
     ;
 
@@ -138,18 +139,18 @@ comparison:
     ;
 
 statement:
-	 declaration
-    |initialization
-    | printing
-    | goto
-    | increment
-    | ifelse
-    | RETURN
+	 declaration ';' 
+    |initialization ';' 
+    | printing 
+    | goto ';'
+    | increment 
+    | ifelse 
+    | RETURN 
     ;
 
 statements:
     | statements statement 
-    | statement
+    | statement 
     ;
 
 %%

@@ -37,6 +37,9 @@
 "<=" { return LESSTHANEQUALTO; }
 ">" { return GREATERTHAN; }
 ">=" { return GREATERTHANEQUALTO;}
+";" { return yytext[0]; }
+";;" {}
+
 
 [a-zA-Z] { yylval.sval = strdup(yytext); return IDENTIFIER; }
 ^.*D.[0-9]+.*$  ;

@@ -139,18 +139,18 @@ comparison:
     ;
 
 statement:
-	 declaration ';' 
-    |initialization ';' 
+	 declaration  
+    |initialization 
     | printing 
-    | goto ';'
+    | goto 
     | increment 
     | ifelse 
     | RETURN 
     ;
 
 statements:
-    | statements statement 
-    | statement 
+    | statements statement ';'
+    | statement ';'
     ;
 
 %%

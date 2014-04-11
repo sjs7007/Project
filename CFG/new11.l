@@ -44,7 +44,7 @@
 [a-zA-Z] { yylval.sval = strdup(yytext); return IDENTIFIER; }
 "D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
 [ \t \n] ;
-.                ;
+.        ;
 %%
 
 float getFloat(string s)

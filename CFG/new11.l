@@ -14,7 +14,7 @@
 "char" ;
 "Function" ;
 "main" ;
-"restrict" ;
+^.*restrict.*$ ;
 
 "int" { return intDECL; } 
 "float" { return floatDECL; };
@@ -27,7 +27,7 @@
 "if" { return IF; }
 "else" { return ELSE; }
 "return" { return RETURN; }
-^.*printf.*$ { return PRINT; }
+"printf (".*")"   { cout<<"Print : "<<yytext<<endl; return PRINT; }
 "=" { return EQUALTO; }
 "+" { return ADD; }
 "-" { return SUB; }
@@ -42,7 +42,7 @@
 
 
 [a-zA-Z] { yylval.sval = strdup(yytext); return IDENTIFIER; }
-^.*D.[0-9]+.*$  ;
+"D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
 [ \t \n] ;
 .                ;
 %%

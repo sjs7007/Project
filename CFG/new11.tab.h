@@ -70,7 +70,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 62 "new11.y"
+#line 63 "new11.y"
 
     struct Number
     {
@@ -83,26 +83,27 @@ typedef union YYSTYPE
         };
 
 		string displayNumber()
-		{
-			string temp="CONVERSION REMAINING.";
+        {
+            
+            //conversion code from references2.cpp
+            ostringstream ss;
+            string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
-			{
-				//cout<<ival;
-               // itoa(ival,string,10);
-			 
+            {
+                ss<<ival;
             }
-			else if(type==FLOAT)
-			{
-				//cout<<fval; 
-			}
-			else if(type==DOUBLE)
-			{
-				//cout<<dval;
-                
-			}
+            else if(type==FLOAT)
+            {
+               ss<<fval;
+            }
+            else if(type==DOUBLE)
+            {
+                ss<<dval;
+            }
+            temp = ss.str(); 
             return temp;
-		}
+        }
     };
 
     Number nval;
@@ -111,7 +112,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 115 "new11.tab.h"
+#line 116 "new11.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

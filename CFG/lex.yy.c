@@ -688,13 +688,15 @@ char *yytext;
 #line 2 "new11.l"
 	#include <iostream>
 	#include <math.h> //for pow function
-	using namespace std;
+	#include <sstream>
+    using namespace std;
+
 	#define YY_DECL extern "C" int yylex()
 
 	#include "new11.tab.h" // to get token types that we return
 
 	float getFloat(string s);
-#line 698 "lex.yy.c"
+#line 700 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -884,9 +886,9 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 12 "new11.l"
+#line 14 "new11.l"
 
-#line 890 "lex.yy.c"
+#line 892 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -972,22 +974,22 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 13 "new11.l"
+#line 15 "new11.l"
 ;
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 14 "new11.l"
+#line 16 "new11.l"
 ;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 15 "new11.l"
+#line 17 "new11.l"
 ;
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 16 "new11.l"
+#line 18 "new11.l"
 ;
 	YY_BREAK
 case 5:
@@ -995,161 +997,161 @@ case 5:
 (yy_c_buf_p) = yy_cp -= 1;
 YY_DO_BEFORE_ACTION; /* set up yytext again */
 YY_RULE_SETUP
-#line 17 "new11.l"
+#line 19 "new11.l"
 ;
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 19 "new11.l"
+#line 21 "new11.l"
 { return intDECL; } 
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 20 "new11.l"
+#line 22 "new11.l"
 { return floatDECL; };
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 21 "new11.l"
+#line 23 "new11.l"
 { return doubleDECL; };
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 22 "new11.l"
+#line 24 "new11.l"
 {;}
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 23 "new11.l"
+#line 25 "new11.l"
 {;}
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 25 "new11.l"
+#line 27 "new11.l"
 ;
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 27 "new11.l"
+#line 29 "new11.l"
 { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 28 "new11.l"
+#line 30 "new11.l"
 { yylval.nval.type=yylval.nval.FLOAT; yylval.nval.fval = getFloat(yytext); return FLOAT; }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 29 "new11.l"
+#line 31 "new11.l"
 { yylval.sval = strdup(yytext); return BLOCK; }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 30 "new11.l"
+#line 32 "new11.l"
 { yylval.sval = strdup(yytext); return GOTO; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 31 "new11.l"
+#line 33 "new11.l"
 { return IF; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 32 "new11.l"
+#line 34 "new11.l"
 { return ELSE; }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 33 "new11.l"
+#line 35 "new11.l"
 { return RETURN; }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 34 "new11.l"
+#line 36 "new11.l"
 { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 35 "new11.l"
+#line 37 "new11.l"
 { return EQUALTO; }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 36 "new11.l"
+#line 38 "new11.l"
 { return ADD; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 37 "new11.l"
+#line 39 "new11.l"
 { return SUB; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 38 "new11.l"
+#line 40 "new11.l"
 { return DIV; }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 39 "new11.l"
+#line 41 "new11.l"
 { return MUL; }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 40 "new11.l"
+#line 42 "new11.l"
 { return LESSTHAN; }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 41 "new11.l"
+#line 43 "new11.l"
 { return LESSTHANEQUALTO; }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 42 "new11.l"
+#line 44 "new11.l"
 { return GREATERTHAN; }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 43 "new11.l"
+#line 45 "new11.l"
 { return GREATERTHANEQUALTO;}
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 44 "new11.l"
+#line 46 "new11.l"
 { return yytext[0]; }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 45 "new11.l"
+#line 47 "new11.l"
 {}
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 48 "new11.l"
+#line 50 "new11.l"
 { yylval.sval = strdup(yytext); return IDENTIFIER; }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 49 "new11.l"
+#line 51 "new11.l"
 { yylval.sval = strdup(yytext); return IDENTIFIER; }
 	YY_BREAK
 case 33:
 /* rule 33 can match eol */
 YY_RULE_SETUP
-#line 50 "new11.l"
+#line 52 "new11.l"
 ;
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 51 "new11.l"
+#line 53 "new11.l"
 ;
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 52 "new11.l"
+#line 54 "new11.l"
 ECHO;
 	YY_BREAK
-#line 1153 "lex.yy.c"
+#line 1155 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2150,7 +2152,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 52 "new11.l"
+#line 54 "new11.l"
 
 
 

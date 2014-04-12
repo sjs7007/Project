@@ -1,7 +1,9 @@
 %{
 	#include <iostream>
 	#include <math.h> //for pow function
-	using namespace std;
+	#include <sstream>
+    using namespace std;
+
 	#define YY_DECL extern "C" int yylex()
 
 	#include "new11.tab.h" // to get token types that we return

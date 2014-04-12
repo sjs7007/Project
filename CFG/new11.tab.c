@@ -72,7 +72,7 @@
 
 	#include <cstdio>
 	#include <iostream>
-	#include <stdlib.h> //itoa
+	#include <sstream>
 	using namespace std;
    
 
@@ -98,23 +98,24 @@
 
         string displayNumber()
         {
+            
+            //conversion code from references2.cpp
+            ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
             {
-                //cout<<ival;
-               // itoa(ival,string,10);
-             
+                ss<<ival;
             }
             else if(type==FLOAT)
             {
-                //cout<<fval; 
+               ss<<fval;
             }
             else if(type==DOUBLE)
             {
-                //cout<<dval;
-                
+                ss<<dval;
             }
+            temp = ss.str(); 
             return temp;
         }
     };
@@ -125,7 +126,7 @@
 
 
 /* Line 189 of yacc.c  */
-#line 129 "new11.tab.c"
+#line 130 "new11.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -183,7 +184,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 62 "new11.y"
+#line 63 "new11.y"
 
     struct Number
     {
@@ -196,26 +197,27 @@ typedef union YYSTYPE
         };
 
 		string displayNumber()
-		{
-			string temp="CONVERSION REMAINING.";
+        {
+            
+            //conversion code from references2.cpp
+            ostringstream ss;
+            string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
-			{
-				//cout<<ival;
-               // itoa(ival,string,10);
-			 
+            {
+                ss<<ival;
             }
-			else if(type==FLOAT)
-			{
-				//cout<<fval; 
-			}
-			else if(type==DOUBLE)
-			{
-				//cout<<dval;
-                
-			}
+            else if(type==FLOAT)
+            {
+               ss<<fval;
+            }
+            else if(type==DOUBLE)
+            {
+                ss<<dval;
+            }
+            temp = ss.str(); 
             return temp;
-		}
+        }
     };
 
     Number nval;
@@ -224,7 +226,7 @@ typedef union YYSTYPE
 
 
 /* Line 214 of yacc.c  */
-#line 228 "new11.tab.c"
+#line 230 "new11.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -236,7 +238,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 240 "new11.tab.c"
+#line 242 "new11.tab.c"
 
 #ifdef short
 # undef short
@@ -530,10 +532,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   119,   119,   120,   124,   128,   129,   130,   153,   161,
-     168,   178,   195,   196,   197,   198,   202,   203,   284,   288,
-     293,   294,   295,   296,   300,   301,   302,   303,   304,   305,
-     308,   309,   310
+       0,   121,   121,   122,   126,   130,   131,   132,   155,   163,
+     170,   180,   197,   198,   199,   200,   204,   205,   286,   290,
+     295,   296,   297,   298,   302,   303,   304,   305,   306,   307,
+     310,   311,   312
 };
 #endif
 
@@ -1471,42 +1473,42 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 119 "new11.y"
+#line 121 "new11.y"
     { ; ;}
     break;
 
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 120 "new11.y"
+#line 122 "new11.y"
     { ; ;}
     break;
 
   case 4:
 
 /* Line 1455 of yacc.c  */
-#line 124 "new11.y"
+#line 126 "new11.y"
     { cout<<"Block : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
   case 5:
 
 /* Line 1455 of yacc.c  */
-#line 128 "new11.y"
+#line 130 "new11.y"
     { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 129 "new11.y"
+#line 131 "new11.y"
     { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 7:
 
 /* Line 1455 of yacc.c  */
-#line 131 "new11.y"
+#line 133 "new11.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].type==symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].INTEGER)
         {
@@ -1532,7 +1534,7 @@ yyreduce:
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 154 "new11.y"
+#line 156 "new11.y"
     {
 		//cout<<"Idenitifier of type integer found : "<<$2<<endl ;
 		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
@@ -1544,7 +1546,7 @@ yyreduce:
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 162 "new11.y"
+#line 164 "new11.y"
     {
         //cout<<"Idenitifier of type float found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
@@ -1556,7 +1558,7 @@ yyreduce:
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 169 "new11.y"
+#line 171 "new11.y"
     {
         //cout<<"Idenitifier of type double found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].DOUBLE;
@@ -1568,7 +1570,7 @@ yyreduce:
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 179 "new11.y"
+#line 181 "new11.y"
     { 
 		cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval.displayNumber())<<endl;
 		int loc = getSymbolTableId((yyvsp[(1) - (3)].sval)); 
@@ -1588,35 +1590,35 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 195 "new11.y"
+#line 197 "new11.y"
     { (yyval.sval)="+" ;}
     break;
 
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 196 "new11.y"
+#line 198 "new11.y"
     { (yyval.sval)="-" ;}
     break;
 
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 197 "new11.y"
+#line 199 "new11.y"
     { (yyval.sval)="*" ;}
     break;
 
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 198 "new11.y"
+#line 200 "new11.y"
     { (yyval.sval)="/" ;}
     break;
 
   case 17:
 
 /* Line 1455 of yacc.c  */
-#line 204 "new11.y"
+#line 206 "new11.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].type == symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].INTEGER )
 		{
@@ -1700,49 +1702,49 @@ yyreduce:
   case 18:
 
 /* Line 1455 of yacc.c  */
-#line 284 "new11.y"
+#line 286 "new11.y"
     { cout<<"printf(...)"<<endl; ;}
     break;
 
   case 19:
 
 /* Line 1455 of yacc.c  */
-#line 289 "new11.y"
+#line 291 "new11.y"
     { cout <<"if "<<(yyvsp[(2) - (8)].sval)<<(yyvsp[(3) - (8)].sval)<<(yyvsp[(4) - (8)].nval.displayNumber())<<", "<<(yyvsp[(5) - (8)].sval)<<",else, "<<(yyvsp[(8) - (8)].sval)<<endl; ;}
     break;
 
   case 20:
 
 /* Line 1455 of yacc.c  */
-#line 293 "new11.y"
+#line 295 "new11.y"
     { (yyval.sval)="<"; ;}
     break;
 
   case 21:
 
 /* Line 1455 of yacc.c  */
-#line 294 "new11.y"
+#line 296 "new11.y"
     { (yyval.sval)="<=" ;}
     break;
 
   case 22:
 
 /* Line 1455 of yacc.c  */
-#line 295 "new11.y"
+#line 297 "new11.y"
     { (yyval.sval)=">" ;}
     break;
 
   case 23:
 
 /* Line 1455 of yacc.c  */
-#line 296 "new11.y"
+#line 298 "new11.y"
     { (yyval.sval)=">=" ;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1746 "new11.tab.c"
+#line 1748 "new11.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1954,7 +1956,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 313 "new11.y"
+#line 315 "new11.y"
 
 
 int main() {

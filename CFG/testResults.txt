@@ -1,0 +1,32 @@
+Integer Level 1 
+
+Description : Identifiers are of only type int. No internal identifiers generated.
+C Code :
+CFG File : 
+Output : 
+Result : Everything is proper except loop values don't change in symbol table.
+------------------------------
+Integer Level 2
+
+Description: Identifiers are of only type int. Internal identifiers are generated.
+C Code : 
+CFG File : 
+Output : 
+Result : Everything is proper except loop values don't change in symbol table.
+------------------------------
+Float level 1 
+
+Description : Identifiers are of only type float. No internal identifiers generated.
+C Code :
+CFG File :
+Output :  
+Result : Everything is proper except loop values don't change in symbol table.
+-------------------------------
+Float level 2
+
+Description : Identifiers are of only type float. Internal identifiers generated which are of type Double.
+C Code :
+CFG File : 
+Output : 
+Result : Because of type mixing symbol table is not proper for double values. 
+--------------------------------

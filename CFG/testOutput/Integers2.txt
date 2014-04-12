@@ -1,0 +1,27 @@
+Idenitifier of type integer found : k
+Idenitifier of type integer found : j
+Idenitifier of type integer found : i
+Idenitifier of type integer found : D.1710
+Block : <bb 2>
+k = 0
+i = 0
+Block : <bb 3>
+j = 0
+Block : <bb 4>
+k = 5
+D.1710 = 35
+k = 2433
+printf(...)
+j = 1
+Block : <bb 5>
+if j<=3, goto <bb 4>,else, goto <bb 6>
+Block : <bb 6>
+i = 1
+Block : <bb 7>
+if i<=2, goto <bb 3>,else, goto <bb 8>
+Block : <bb 8>
+Symbol table : -
+Symbol 0 : k, Value : 2433
+Symbol 1 : j, Value : 1
+Symbol 2 : i, Value : 1
+Symbol 3 : D.1710, Value : 35

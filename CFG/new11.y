@@ -154,7 +154,7 @@ number:
 declaration:
 	intDECL IDENTIFIER 
 	{
-		//cout<<"Idenitifier of type integer found : "<<$2<<endl ;
+		cout<<"Idenitifier of type integer found : "<<$2<<endl ;
 		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
 		symbolTable[nSymbols].name = $2;
 		nSymbols++;
@@ -162,14 +162,14 @@ declaration:
 
     |floatDECL IDENTIFIER
     {
-        //cout<<"Idenitifier of type float found : "<<$2<<endl ;
+        cout<<"Idenitifier of type float found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
         symbolTable[nSymbols].name = $2;
         nSymbols++;
     };
 	|doubleDECL IDENTIFIER
     {
-        //cout<<"Idenitifier of type double found : "<<$2<<endl ;
+        cout<<"Idenitifier of type double found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].DOUBLE;
         symbolTable[nSymbols].name = $2;
         nSymbols++;
@@ -190,6 +190,10 @@ initialization:
 		{
 			symbolTable[loc].fval = $<nval.fval>3;
 		}
+        else
+        {
+            symbolTable[loc].dval = $<nval.dval>3;
+        }
 
 	};
 

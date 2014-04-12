@@ -110,6 +110,7 @@
 %type <nval> number
 %token intDECL floatDECL doubleDECL // for int declaration like, int a;
 %type <nval> expression
+%type <sval> operator
 
 %%
 //grammar which bison will parse
@@ -166,7 +167,7 @@ declaration:
     };
 	|doubleDECL IDENTIFIER
     {
-        //cout<<"Idenitifier of type float found : "<<$2<<endl ;
+        //cout<<"Idenitifier of type double found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].DOUBLE;
         symbolTable[nSymbols].name = $2;
         nSymbols++;
@@ -190,35 +191,94 @@ initialization:
 
 	};
 
+operator:
+    ADD { $$="+" }
+    | SUB { $$="-" }
+    | MUL { $$="*" }
+    | DIV { $$="/" }
+    ;
+
 expression:
 	number 
-	| IDENTIFIER MUL number 
+	| IDENTIFIER operator number 
 	{
         if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].INTEGER )
 		{
 			$<nval.type>$ = $<nval.INTEGER>$;
-			$<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3 ;
-			//cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
+            if($2=="*")
+            {
+                $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3;
+            }
+            else if($2=="+")
+            {
+                $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival + $<nval.ival>3;
+            }
+            else if($2=="-")
+            {
+                $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival - $<nval.ival>3;
+            }
+            else if($2=="/")
+            {
+                $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival / $<nval.ival>3;
+            }
+            else
+            {
+                cout<<"ADD MORE CASES!"<<endl;
+            }
+			//$<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3 ;
 		}
+        else if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].FLOAT )
+        {
+            $<nval.type>$ = $<nval.FLOAT>$;
+            if($2=="*")
+            {
+                $<nval.fval>$ = symbolTable[getSymbolTableId($1)].fval * $<nval.fval>3;
+            }
+            else if($2=="+")
+            {
+                $<nval.fval>$ = symbolTable[getSymbolTableId($1)].fval + $<nval.fval>3;
+            }
+            else if($2=="-")
+            {
+                $<nval.fval>$ = symbolTable[getSymbolTableId($1)].fval - $<nval.fval>3;
+            }
+            else if($2=="/")
+            {
+                $<nval.fval>$ = symbolTable[getSymbolTableId($1)].fval / $<nval.fval>3;
+            }
+            else
+            {
+                cout<<"ADD MORE CASES!"<<endl;
+            }
+            //$<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3 ;
+        }
+        else if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].DOUBLE )
+        {
+            $<nval.type>$ = $<nval.DOUBLE>$;
+            if($2=="*")
+            {
+                $<nval.dval>$ = symbolTable[getSymbolTableId($1)].dval * $<nval.dval>3;
+            }
+            else if($2=="+")
+            {
+                $<nval.dval>$ = symbolTable[getSymbolTableId($1)].dval + $<nval.dval>3;
+            }
+            else if($2=="-")
+            {
+                $<nval.dval>$ = symbolTable[getSymbolTableId($1)].dval - $<nval.dval>3;
+            }
+            else if($2=="/")
+            {
+                $<nval.dval>$ = symbolTable[getSymbolTableId($1)].dval / $<nval.dval>3;
+            }
+            else
+            {
+                cout<<"ADD MORE CASES!"<<endl;
+            }
+            //$<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3 ;
+        }
+
 	}; 
-    | IDENTIFIER ADD number 
-    {
-        if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].INTEGER )
-        {
-            $<nval.type>$ = $<nval.INTEGER>$;
-            $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival + $<nval.ival>3 ;
-            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
-        }
-    }; 
-	| IDENTIFIER SUB number 
-    {
-        if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].INTEGER )
-        {
-            $<nval.type>$ = $<nval.INTEGER>$;
-            $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival - $<nval.ival>3 ;
-            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
-        }
-    }; 
 
 printing:
     PRINT { cout<<"printf(...)"<<endl; }
@@ -272,14 +332,6 @@ int main() {
 	for(int i=0;i<nSymbols;i++)
 	{
         cout<<"Symbol "<<i<<" : "<<symbolTable[i].name;
-        /*if(symbolTable[i].type==symbolTable[i].INTEGER)
-        {
-            cout<<", Value : "<<symbolTable[i].ival<<endl;
-        }
-        else if(symbolTable[i].type==symbolTable[i].FLOAT)
-        {
-            cout<<", Value : "<<symbolTable[i].fval<<endl;
-        }*/
         cout<<", Value : "<<symbolTable[i].displayNumber()<<endl;
 	}
 }

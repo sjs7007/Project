@@ -2,9 +2,9 @@
 void main()
 {
 	int _fac109 =1,n=5,i;
-	for(i=1;i<=n;i++)
+	for(i=2;i<=n;i++)
 	{
-	 _fac109  = _fac109  * i;
+		n = 3 * 3 + 1 * 1 + -1 + 2*n+ -_fac109;
 	}
-	printf("Factorial of %d is : %d\n",n,_fac109 );
+	//printf("%d,d\n",n,_fac109 );
 }

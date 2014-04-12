@@ -27,7 +27,7 @@
 "if" { return IF; }
 "else" { return ELSE; }
 "return" { return RETURN; }
-"printf (".*")"   { cout<<"Print : "<<yytext<<endl; return PRINT; }
+"printf (".*")"   { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
 "=" { return EQUALTO; }
 "+" { return ADD; }
 "-" { return SUB; }
@@ -51,13 +51,10 @@ float getFloat(string s)
 {
     int pos = s.find("e");
     //cout<<pos<<endl;
-            
     string number = s.substr(0,pos);
     //cout<<number<<endl;
-
     string power = s.substr(pos+1,s.length()-(pos+1));
     //cout<<power<<endl;
-
     float floatVal = atof(number.c_str()) * pow(10,atoi(power.c_str()));
     //cout<<floatVal<<endl;
     return floatVal;

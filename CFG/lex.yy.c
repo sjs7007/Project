@@ -1025,7 +1025,7 @@ YY_RULE_SETUP
 case 16:
 YY_RULE_SETUP
 #line 30 "new11.l"
-{ cout<<"Print : "<<yytext<<endl; return PRINT; }
+{ /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
@@ -2117,13 +2117,10 @@ float getFloat(string s)
 {
     int pos = s.find("e");
     //cout<<pos<<endl;
-            
     string number = s.substr(0,pos);
     //cout<<number<<endl;
-
     string power = s.substr(pos+1,s.length()-(pos+1));
     //cout<<power<<endl;
-
     float floatVal = atof(number.c_str()) * pow(10,atoi(power.c_str()));
     //cout<<floatVal<<endl;
     return floatVal;

@@ -81,7 +81,7 @@ number:
     {
         if(symbolTable[getSymbolTableId($1)].type==symbolTable[getSymbolTableId($1)].INTEGER)
         {
-             cout<<"finding : "<<$1<<endl;
+            //cout<<"finding : "<<$1<<endl;
             $<nval.type>$=$<nval.INTEGER>$;
             $<nval.ival>$=symbolTable[getSymbolTableId($1)].ival;
         }
@@ -145,11 +145,21 @@ expression:
             //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
         }
     }; 
+	| IDENTIFIER SUB number 
+    {
+        if(symbolTable[getSymbolTableId($1)].type == symbolTable[getSymbolTableId($1)].INTEGER )
+        {
+            $<nval.type>$ = $<nval.INTEGER>$;
+            $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival - $<nval.ival>3 ;
+            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
+        }
+    }; 
 
 
-increment:
-    IDENTIFIER EQUALTO IDENTIFIER ADD number { cout <<$1<<" = "<<$3<<" + "<< (($<nval.type>5 == $<nval.INTEGER>5) ? $<nval.ival>5 : $<nval.fval>5) <<endl; }
-    ;
+
+
+
+
 
 printing:
     PRINT { cout<<"printf(...)"<<endl; }
@@ -171,8 +181,7 @@ statement:
 	 declaration  
     |initialization 
     | printing 
-    | GOTO 
-    | increment 
+    | GOTO  
     | ifelse 
     | RETURN 
     ;

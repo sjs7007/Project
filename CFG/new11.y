@@ -4,8 +4,6 @@
 	#include <sstream>
 	using namespace std;
    
-
-
 	//stuff from flex that bison needs to know about
 	extern "C" int yylex();
 	extern "C" int yyparse();
@@ -175,7 +173,6 @@ declaration:
         nSymbols++;
     };
 
-
 initialization:
     IDENTIFIER EQUALTO expression 
 	{ 
@@ -192,7 +189,7 @@ initialization:
 		}
         else
         {
-            symbolTable[loc].dval = $<nval.dval>3;
+            symbolTable[loc].dval = $<nval.dclval>3;
         }
 
 	};
@@ -318,18 +315,21 @@ statements:
 
 %%
 
-int main() {
+int main() 
+{
     // open a file handle to a particular file:
     FILE *myfile = fopen("test.cfg", "r");
     // make sure it is valid:
-    if (!myfile) {
+    if(!myfile) 
+    {
         cout << "I can't open a .cfg file!" << endl;
         return -1;
     }
     // set flex to read from it instead of defaulting to STDIN:
     yyin = myfile;
     // parse through the input until there is no more:
-    do {
+    do 
+    {
         yyparse();
     } while (!feof(yyin));
 
@@ -342,7 +342,8 @@ int main() {
 	}
 }
 
-void yyerror(const char *s) {
+void yyerror(const char *s) 
+{
     cout << "EEK, parse error!  Message: " << s << endl;
     // might as well halt now:
     exit(-1);

@@ -16,7 +16,7 @@ testIntegers1: genCFGI1 runCFG
 testFloat1: genCFGF1 runCFG
 	./CFGParser | tee testOutput/Float1.txt
 
-testAll: cleanOutput testIntegers1 testFloat1
+testAll: cleanCFG cleanOutput testIntegers1 testFloat1
 	
 runCFG:
 	bison -d CFGParser.y

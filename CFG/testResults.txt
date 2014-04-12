@@ -1,7 +1,7 @@
 Integer Level 1 
 
 Description : Identifiers are of only type int. No internal identifiers generated.
-C Code : [Integers1.c] https://github.com/sjs7007/Project/blob/master/CFG/test/Integers1.c
+C Code : [Integers1.c](https://github.com/sjs7007/Project/blob/master/CFG/test/Integers1.c)
 CFG File : https://github.com/sjs7007/Project/blob/master/CFG/testCFG/Integers1.cfg
 Output :  https://github.com/sjs7007/Project/blob/master/CFG/testOutput/Integers1.txt
 Result : Everything is proper except loop values don't change in symbol table.

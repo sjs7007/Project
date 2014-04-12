@@ -1,3 +1,5 @@
+.PHONY: CFGParser testAll
+
 genCFGI1:
 	gcc -fdump-tree-cfg test/Integers1.c 
 	mv Integers1.c.013t.cfg test.cfg

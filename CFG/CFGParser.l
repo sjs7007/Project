@@ -6,7 +6,7 @@
 
 	#define YY_DECL extern "C" int yylex()
 
-	#include "new11.tab.h" // to get token types that we return
+	#include "CFGParser.tab.h" // to get token types that we return
 
 	float getFloat(string s);
 %}

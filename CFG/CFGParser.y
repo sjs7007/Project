@@ -189,7 +189,7 @@ initialization:
 		}
         else
         {
-            symbolTable[loc].dval = $<nval.dclval>3;
+            symbolTable[loc].dval = $<nval.dval>3;
         }
 
 	};

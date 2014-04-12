@@ -58,7 +58,8 @@
      DIV = 274,
      IDENTIFIER = 275,
      intDECL = 276,
-     floatDECL = 277
+     floatDECL = 277,
+     doubleDECL = 278
    };
 #endif
 
@@ -69,16 +70,39 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 36 "new11.y"
+#line 62 "new11.y"
 
     struct Number
     {
-        enum { INTEGER, FLOAT } type;
+        enum { INTEGER, FLOAT, DOUBLE } type;
         union
         {
             float fval;
+			double dval;
             int   ival;
         };
+
+		string displayNumber()
+		{
+			string temp="CONVERSION REMAINING.";
+            
+            if(type==INTEGER)
+			{
+				//cout<<ival;
+               // itoa(ival,string,10);
+			 
+            }
+			else if(type==FLOAT)
+			{
+				//cout<<fval; 
+			}
+			else if(type==DOUBLE)
+			{
+				//cout<<dval;
+                
+			}
+            return temp;
+		}
     };
 
     Number nval;
@@ -87,7 +111,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 91 "new11.tab.h"
+#line 115 "new11.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

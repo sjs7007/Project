@@ -18,6 +18,10 @@
 
 "int" { return intDECL; } 
 "float" { return floatDECL; };
+"double" { return doubleDECL; };
+"(float)" {;}
+"(double)" {;}
+
 "%d" ;
 
 [-]?[0-9]+ { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }

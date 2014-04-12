@@ -1,7 +1,10 @@
 %{
 	#include <cstdio>
 	#include <iostream>
+	#include <stdlib.h> //itoa
 	using namespace std;
+   
+
 
 	//stuff from flex that bison needs to know about
 	extern "C" int yylex();
@@ -12,14 +15,37 @@
     
     struct Symbol
     {
-        enum { INTEGER, FLOAT } type;
+        enum { INTEGER, FLOAT,DOUBLE } type;
         string name;
 
         union
         {
             float fval;
+			double dval;
             int   ival;
         };
+
+        string displayNumber()
+        {
+            string temp="CONVERSION REMAINING.";
+            
+            if(type==INTEGER)
+            {
+                //cout<<ival;
+               // itoa(ival,string,10);
+             
+            }
+            else if(type==FLOAT)
+            {
+                //cout<<fval; 
+            }
+            else if(type==DOUBLE)
+            {
+                //cout<<dval;
+                
+            }
+            return temp;
+        }
     };
 
 	Symbol symbolTable[100];
@@ -36,12 +62,35 @@
 {
     struct Number
     {
-        enum { INTEGER, FLOAT } type;
+        enum { INTEGER, FLOAT, DOUBLE } type;
         union
         {
             float fval;
+			double dval;
             int   ival;
         };
+
+		string displayNumber()
+		{
+			string temp="CONVERSION REMAINING.";
+            
+            if(type==INTEGER)
+			{
+				//cout<<ival;
+               // itoa(ival,string,10);
+			 
+            }
+			else if(type==FLOAT)
+			{
+				//cout<<fval; 
+			}
+			else if(type==DOUBLE)
+			{
+				//cout<<dval;
+                
+			}
+            return temp;
+		}
     };
 
     Number nval;
@@ -59,7 +108,7 @@
 %token <sval> IDENTIFIER 
 %type <sval> comparison
 %type <nval> number
-%token intDECL floatDECL // for int declaration like, int a;
+%token intDECL floatDECL doubleDECL // for int declaration like, int a;
 %type <nval> expression
 
 %%
@@ -85,10 +134,18 @@ number:
             $<nval.type>$=$<nval.INTEGER>$;
             $<nval.ival>$=symbolTable[getSymbolTableId($1)].ival;
         }
-        else
+		else if(symbolTable[getSymbolTableId($1)].type==symbolTable[getSymbolTableId($1)].FLOAT)
         {
-            cout<<"here"<<endl;
-        }    
+            //cout<<"finding : "<<$1<<endl;
+            $<nval.type>$=$<nval.FLOAT>$;
+            $<nval.fval>$=symbolTable[getSymbolTableId($1)].fval;
+        }
+		else if(symbolTable[getSymbolTableId($1)].type==symbolTable[getSymbolTableId($1)].DOUBLE)
+        {
+            //cout<<"finding : "<<$1<<endl;
+            $<nval.type>$=$<nval.DOUBLE>$;
+            $<nval.dval>$=symbolTable[getSymbolTableId($1)].dval;
+        }
     };
 
 declaration:
@@ -100,18 +157,26 @@ declaration:
 		nSymbols++;
 	};
 
-    | floatDECL IDENTIFIER
+    |floatDECL IDENTIFIER
     {
         //cout<<"Idenitifier of type float found : "<<$2<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
         symbolTable[nSymbols].name = $2;
         nSymbols++;
     };
+	|doubleDECL IDENTIFIER
+    {
+        //cout<<"Idenitifier of type float found : "<<$2<<endl ;
+        symbolTable[nSymbols].type = symbolTable[nSymbols].DOUBLE;
+        symbolTable[nSymbols].name = $2;
+        nSymbols++;
+    };
+
 
 initialization:
     IDENTIFIER EQUALTO expression 
 	{ 
-		cout<<$1<<" = "<<(($<nval.type>3 == $<nval.INTEGER>3) ? $<nval.ival>3 : $<nval.fval>3)<<endl;
+		cout<<$1<<" = "<<$<nval.displayNumber()>3<<endl;
 		int loc = getSymbolTableId($1); 
 		//cout<<"Initialization found for "<<symbolTable[loc].name<<endl;
 		if($<nval.type>3 == $<nval.INTEGER>3)
@@ -133,7 +198,7 @@ expression:
 		{
 			$<nval.type>$ = $<nval.INTEGER>$;
 			$<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival * $<nval.ival>3 ;
-			//cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
+			//cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
 		}
 	}; 
     | IDENTIFIER ADD number 
@@ -142,7 +207,7 @@ expression:
         {
             $<nval.type>$ = $<nval.INTEGER>$;
             $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival + $<nval.ival>3 ;
-            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
+            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
         }
     }; 
 	| IDENTIFIER SUB number 
@@ -151,15 +216,9 @@ expression:
         {
             $<nval.type>$ = $<nval.INTEGER>$;
             $<nval.ival>$ = symbolTable[getSymbolTableId($1)].ival - $<nval.ival>3 ;
-            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].ival<<endl;
+            //cout<<"Yo : "<<$1<<" "<<symbolTable[getSymbolTableId($1)].displayNumber()<<endl;
         }
     }; 
-
-
-
-
-
-
 
 printing:
     PRINT { cout<<"printf(...)"<<endl; }
@@ -167,7 +226,7 @@ printing:
 
 ifelse:
     IF IDENTIFIER comparison number GOTO ';' ELSE GOTO 
-    { cout <<"if "<<$2<<$3<<(($<nval.type>4 == $<nval.INTEGER>4) ? $<nval.ival>4 : $<nval.fval>4)<<", "<<$5<<",else, "<<$8<<endl; }
+    { cout <<"if "<<$2<<$3<<$<nval.displayNumber()>4<<", "<<$5<<",else, "<<$8<<endl; }
     ;
 
 comparison:
@@ -213,14 +272,15 @@ int main() {
 	for(int i=0;i<nSymbols;i++)
 	{
         cout<<"Symbol "<<i<<" : "<<symbolTable[i].name;
-        if(symbolTable[i].type==symbolTable[i].INTEGER)
+        /*if(symbolTable[i].type==symbolTable[i].INTEGER)
         {
             cout<<", Value : "<<symbolTable[i].ival<<endl;
         }
         else if(symbolTable[i].type==symbolTable[i].FLOAT)
         {
             cout<<", Value : "<<symbolTable[i].fval<<endl;
-        }
+        }*/
+        cout<<", Value : "<<symbolTable[i].displayNumber()<<endl;
 	}
 }
 

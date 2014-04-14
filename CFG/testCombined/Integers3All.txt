@@ -39,6 +39,12 @@ void main()
 
 		case 3:
 			printf("New line here case 3.\n");
+			printf("3.2");
+			printf("3.3");
+			printf("3.4");
+			int p = 45;
+			int q = 56;
+			int r  = p +1;
 			break;
 
 		default:
@@ -52,17 +58,23 @@ void main()
 
 main ()
 {
+  int r;
+  int q;
+  int p;
   int x;
-  const char * restrict D.1709;
-  const char * restrict D.1708;
-  const char * restrict D.1707;
+  const char * restrict D.1715;
+  const char * restrict D.1714;
+  const char * restrict D.1713;
+  const char * restrict D.1712;
+  const char * restrict D.1711;
+  const char * restrict D.1710;
 
 <bb 2>:
   x = 1;
-  D.1707 = (const char * restrict) "New line here. /n";
-  printf (D.1707);
-  D.1708 = (const char * restrict) "No new line.";
-  printf (D.1708);
+  D.1710 = (const char * restrict) "New line here. /n";
+  printf (D.1710);
+  D.1711 = (const char * restrict) "No new line.";
+  printf (D.1711);
   switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
 
 <L0>:
@@ -70,12 +82,21 @@ main ()
   goto <bb 7>;
 
 <L1>:
-  D.1709 = (const char * restrict) "No new line case 2";
-  printf (D.1709);
+  D.1712 = (const char * restrict) "No new line case 2";
+  printf (D.1712);
   goto <bb 7>;
 
 <L2>:
   __builtin_puts (&"New line here case 3."[0]);
+  D.1713 = (const char * restrict) "3.2";
+  printf (D.1713);
+  D.1714 = (const char * restrict) "3.3";
+  printf (D.1714);
+  D.1715 = (const char * restrict) "3.4";
+  printf (D.1715);
+  p = 45;
+  q = 56;
+  r = p + 1;
   goto <bb 7>;
 
 <L3>:
@@ -89,6 +110,9 @@ main ()
 
 
 --------------------------------------------------
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
 Idenitifier of type integer found : x
 Block : <bb 2>
 x = 1
@@ -96,16 +120,22 @@ printf(...)
 printf(...)
 Switch Case : switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
 Switch Case Block : <L0>:
-Puts : __builtin_puts (&"New line here case 1."[0])
 printf(...)
 Switch Case Block : <L1>:
 printf(...)
 Switch Case Block : <L2>:
-Puts : __builtin_puts (&"New line here case 3."[0])
 printf(...)
+printf(...)
+printf(...)
+printf(...)
+p = 45
+q = 56
+r = 46
 Switch Case Block : <L3>:
-Puts : __builtin_puts (&"Make more cases "[0])
 printf(...)
 Block : <bb 7>
 Symbol table : -
-Symbol 0 : x, Value : 1
+Symbol 0 : r, Value : 46
+Symbol 1 : q, Value : 56
+Symbol 2 : p, Value : 45
+Symbol 3 : x, Value : 1

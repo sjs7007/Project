@@ -1150,7 +1150,7 @@ YY_RULE_SETUP
 case 15:
 YY_RULE_SETUP
 #line 32 "CFGParser.l"
-{ cout<<"Switch Case Block : "<<yytext<<endl; return switchBLOCK; }
+{ /*cout<<"Switch Case Block : "<<yytext<<endl;*/ yylval.sval=strdup(yytext); return switchBLOCK; }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
@@ -1180,12 +1180,12 @@ YY_RULE_SETUP
 case 21:
 YY_RULE_SETUP
 #line 38 "CFGParser.l"
-{ cout<<"Puts : "<<yytext<<endl; return PRINT; }
+{ /*cout<<"Puts : "<<yytext<<endl;*/ return PRINT; }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 39 "CFGParser.l"
-{ cout<<"Switch Case : "<<yytext<<endl; return SWITCH; }
+{ /*cout<<"Switch Case : "<<yytext<<endl;*/ yylval.sval = strdup(yytext); return SWITCH; }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP

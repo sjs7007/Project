@@ -39,6 +39,12 @@ void main()
 
 		case 3:
 			printf("New line here case 3.\n");
+			printf("3.2");
+			printf("3.3");
+			printf("3.4");
+			int p = 45;
+			int q = 56;
+			int r  = p +1;
 			break;
 
 		default:

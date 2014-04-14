@@ -29,14 +29,14 @@
 [-]?[0-9]+ { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
 [-]?[1-9]"."[0-9]+"e"[+/-][0-9]+ { yylval.nval.type=yylval.nval.FLOAT; yylval.nval.fval = getFloat(yytext); return FLOAT; }
 "<bb "[0-9]+">" { yylval.sval = strdup(yytext); return BLOCK; }
-"<L"[0-9]+">:" { cout<<"Switch Case Block : "<<yytext<<endl; return switchBLOCK; }
+"<L"[0-9]+">:" { /*cout<<"Switch Case Block : "<<yytext<<endl;*/ yylval.sval=strdup(yytext); return switchBLOCK; }
 "goto <bb "[0-9]+">" { yylval.sval = strdup(yytext); return GOTO; }
 "if" { return IF; }
 "else" { return ELSE; }
 "return" { return RETURN; }
 "printf (".*")"   { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
-"__builtin_puts (".*"[0])" { cout<<"Puts : "<<yytext<<endl; return PRINT; }
-"switch (".*">>" { cout<<"Switch Case : "<<yytext<<endl; return SWITCH; }
+"__builtin_puts (".*"[0])" { /*cout<<"Puts : "<<yytext<<endl;*/ return PRINT; }
+"switch (".*">>" { /*cout<<"Switch Case : "<<yytext<<endl;*/ yylval.sval = strdup(yytext); return SWITCH; }
 "=" { return EQUALTO; }
 "+" { return ADD; }
 "-" { return SUB; }

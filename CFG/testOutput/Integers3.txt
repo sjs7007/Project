@@ -1,3 +1,6 @@
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
 Idenitifier of type integer found : x
 Block : <bb 2>
 x = 1
@@ -5,16 +8,22 @@ printf(...)
 printf(...)
 Switch Case : switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
 Switch Case Block : <L0>:
-Puts : __builtin_puts (&"New line here case 1."[0])
 printf(...)
 Switch Case Block : <L1>:
 printf(...)
 Switch Case Block : <L2>:
-Puts : __builtin_puts (&"New line here case 3."[0])
 printf(...)
+printf(...)
+printf(...)
+printf(...)
+p = 45
+q = 56
+r = 46
 Switch Case Block : <L3>:
-Puts : __builtin_puts (&"Make more cases "[0])
 printf(...)
 Block : <bb 7>
 Symbol table : -
-Symbol 0 : x, Value : 1
+Symbol 0 : r, Value : 46
+Symbol 1 : q, Value : 56
+Symbol 2 : p, Value : 45
+Symbol 3 : x, Value : 1

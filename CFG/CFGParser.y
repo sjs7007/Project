@@ -111,7 +111,10 @@
 %token intDECL floatDECL doubleDECL // for int declaration like, int a;
 %type <nval> expression
 %type <sval> operator
-%token SWITCH switchBLOCK 
+
+//for switch case
+%token <sval> SWITCH 
+%token <sval> switchBLOCK 
 
 %%
 //grammar which bison will parse
@@ -303,12 +306,21 @@ comparison:
 //Switch case addition starts
 
 switchBlocks:
-    switchBLOCK statements 
-    | switchBlocks switchBLOCK statements 
+    switchblock statements 
+    | switchBlocks switchblock statements 
     ;
 
+switchblock:
+    switchBLOCK 
+    {
+        cout<<"Switch Case Block : "<<$1<<endl; 
+    };
+
 switchCase:
-    SWITCH switchBlocks
+    switch switchBlocks
+
+switch:
+    SWITCH { cout<<"Switch Case : "<<$1<<endl; }
 //Part of switch case addition ends, next added "switchCase" ins statements
 
 statement:

@@ -1,0 +1,1 @@
+cat test/$1.c temp/dashes.txt testCFG/$1.cfg temp/dashes.txt testOutput/$1.txt > testCombined/$1All.txt

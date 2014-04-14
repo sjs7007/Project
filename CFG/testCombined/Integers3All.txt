@@ -1,0 +1,82 @@
+//Integer level 3 : Level 2 + while 
+
+#include<stdio.h>
+void main()
+{
+	/*int i,j,k=0;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<=3;j++)
+		{
+			k = 5;
+			k = 7*k + 55 *43 -34 +23 + 3*4 + 32;
+			printf("%d %d",i,j);
+		}
+	}*/
+
+	//Level 3
+	int x=1;
+	while(x<=5)
+	{
+		printf("%d /n",x);
+		x++;
+	}
+	/*
+	switch(x)
+	{
+		case 1:	
+			printf("Testing Case 1\n");
+			break;
+
+		case 2:
+			printf("Testing Case 2");
+			break;
+
+		default:
+			printf("Make more cases \n");
+	}*/
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+main ()
+{
+  int x;
+  const char * restrict D.1705;
+
+<bb 2>:
+  x = 1;
+  goto <bb 4>;
+
+<bb 3>:
+  D.1705 = (const char * restrict) "%d /n";
+  printf (D.1705, x);
+  x = x + 1;
+
+<bb 4>:
+  if (x <= 5)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  return;
+
+}
+
+
+
+--------------------------------------------------
+Idenitifier of type integer found : x
+Block : <bb 2>
+x = 1
+Block : <bb 3>
+printf(...)
+x = 2
+Block : <bb 4>
+if x<=5, goto <bb 3>,else, goto <bb 5>
+Block : <bb 5>
+Symbol table : -
+Symbol 0 : x, Value : 2

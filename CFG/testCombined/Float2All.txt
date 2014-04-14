@@ -1,0 +1,117 @@
+//basic inetger mixed with float file level 2, double internally generated
+
+#include<stdio.h>
+void main()
+{
+	int i,j,k=0;
+	float f=4.5,g=6.7;
+	for(i=0;i<3;i++)
+	{
+		for(j=0;j<=3;j++)
+		{
+			k = 5;
+			printf("%d %d",i,j);
+			g = 3.0 * f + 4.5 * 67;
+		}
+	}
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+main ()
+{
+  float g;
+  float f;
+  int k;
+  int j;
+  int i;
+  double D.1715;
+  double D.1714;
+  double D.1713;
+  const char * restrict D.1712;
+
+<bb 2>:
+  k = 0;
+  f = 4.5e+0;
+  g = 6.69999980926513671875e+0;
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  k = 5;
+  D.1712 = (const char * restrict) "%d %d";
+  printf (D.1712, i, j);
+  D.1713 = (double) f;
+  D.1714 = D.1713 * 3.0e+0;
+  D.1715 = D.1714 + 3.015e+2;
+  g = (float) D.1715;
+  j = j + 1;
+
+<bb 5>:
+  if (j <= 3)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  if (i <= 2)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  return;
+
+}
+
+
+
+--------------------------------------------------
+Idenitifier of type float found : g
+Idenitifier of type float found : f
+Idenitifier of type integer found : k
+Idenitifier of type integer found : j
+Idenitifier of type integer found : i
+Idenitifier of type double found : D.1715
+Idenitifier of type double found : D.1714
+Idenitifier of type double found : D.1713
+Block : <bb 2>
+k = 0
+f = 4.5
+g = 6.7
+i = 0
+Block : <bb 3>
+j = 0
+Block : <bb 4>
+k = 5
+printf(...)
+D.1713 = 4.5
+D.1714 = 0
+D.1715 = 5.60247e-315
+g = 5.60247e-315
+j = 1
+Block : <bb 5>
+if j<=3, goto <bb 4>,else, goto <bb 6>
+Block : <bb 6>
+i = 1
+Block : <bb 7>
+if i<=2, goto <bb 3>,else, goto <bb 8>
+Block : <bb 8>
+Symbol table : -
+Symbol 0 : g, Value : 301.5
+Symbol 1 : f, Value : 4.5
+Symbol 2 : k, Value : 5
+Symbol 3 : j, Value : 1
+Symbol 4 : i, Value : 1
+Symbol 5 : D.1715, Value : 5.60247e-315
+Symbol 6 : D.1714, Value : 0
+Symbol 7 : D.1713, Value : 5.35162e-315

@@ -1,11 +1,17 @@
 Idenitifier of type integer found : x
 Block : <bb 2>
 x = 1
-Block : <bb 3>
 printf(...)
-x = 2
-Block : <bb 4>
-if x<=5, goto <bb 3>,else, goto <bb 5>
-Block : <bb 5>
+printf(...)
+Switch Case : switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
+SC Block : <L0>:
+Puts : __builtin_puts (&"New line here case 1."[0]);
+SC Block : <L1>:
+printf(...)
+SC Block : <L2>:
+Puts : __builtin_puts (&"New line here case 3."[0]);
+SC Block : <L3>:
+Puts : __builtin_puts (&"Make more cases "[0]);
+Block : <bb 7>
 Symbol table : -
-Symbol 0 : x, Value : 2
+Symbol 0 : x, Value : 1

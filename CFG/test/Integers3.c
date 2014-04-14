@@ -15,24 +15,33 @@ void main()
 	}*/
 
 	//Level 3
+	
 	int x=1;
-	while(x<=5)
+	
+	/*while(x<=5)
 	{
 		printf("%d /n",x);
 		x++;
-	}
-	/*
+	}*/
+	
+	printf("New line here. /n");
+	printf("No new line.");
+
 	switch(x)
 	{
 		case 1:	
-			printf("Testing Case 1\n");
+			printf("New line here case 1.\n");
 			break;
 
 		case 2:
-			printf("Testing Case 2");
+			printf("No new line case 2");
+			break;
+
+		case 3:
+			printf("New line here case 3.\n");
 			break;
 
 		default:
 			printf("Make more cases \n");
-	}*/
+	}
 }

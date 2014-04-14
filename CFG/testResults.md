@@ -1,5 +1,5 @@
 Test Case | Description | C Code | CFG File | Parsing Output |All Combined |Result 
-----------|-------------|--------|----------|----------------|--------
+----------|-------------|--------|----------|----------------|-------------|------
 Integers Level 1 | Identifiers are of only type int. No internal identifiers generated.| [Integers1.c] (test/Integers1.c) | [Integers1.cfg] (testCFG/Integers1.cfg)| [Integers1.txt] (testOutput/Integers1.txt)| [Integers1All.txt] (testCombined/Integers1All.txt) |Everything is proper except loop values don't change in symbol table.
 Integers Level 2 | Identifiers are of only type int. Internal identifiers are generated.| [Integers2.c] (test/Integers2.c) | [Integers2.cfg] (testCFG/Integers2.cfg)| [Integers2.txt] (testOutput/Integers2.txt)| [Integers2All.txt] (testCombined/Integers2All.txt) |Everything is proper except loop values don't change in symbol table.
 Integers Level 3 | Switch Case and While block used. | [Integers3.c] (test/Integers3.c) | [Integers3.cfg] (testCFG/Integers3.cfg)| [Integers3.txt] (testOutput/Integers2.txt)| [Integers3All.txt] (testCombined/Integers3All.txt) |Everything is proper except loop values don't change in symbol table.

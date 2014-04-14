@@ -18,11 +18,11 @@ void main()
 	
 	int x=1;
 	
-	/*while(x<=5)
+	while(x<=5)
 	{
 		printf("%d /n",x);
 		x++;
-	}*/
+	}
 	
 	printf("New line here. /n");
 	printf("No new line.");

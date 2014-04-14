@@ -4,14 +4,20 @@ Idenitifier of type integer found : p
 Idenitifier of type integer found : x
 Block : <bb 2>
 x = 1
+Block : <bb 3>
+printf(...)
+x = 2
+Block : <bb 4>
+if x<=5, goto <bb 3>,else, goto <bb 5>
+Block : <bb 5>
 printf(...)
 printf(...)
-Switch Case : switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
-Switch Case Block : <L0>:
+Switch Case : switch (x) <default: <L6>, case 1: <L3>, case 2: <L4>, case 3: <L5>>
+Switch Case Block : <L3>:
 printf(...)
-Switch Case Block : <L1>:
+Switch Case Block : <L4>:
 printf(...)
-Switch Case Block : <L2>:
+Switch Case Block : <L5>:
 printf(...)
 printf(...)
 printf(...)
@@ -19,11 +25,11 @@ printf(...)
 p = 45
 q = 56
 r = 46
-Switch Case Block : <L3>:
+Switch Case Block : <L6>:
 printf(...)
-Block : <bb 7>
+Block : <bb 10>
 Symbol table : -
 Symbol 0 : r, Value : 46
 Symbol 1 : q, Value : 56
 Symbol 2 : p, Value : 45
-Symbol 3 : x, Value : 1
+Symbol 3 : x, Value : 2

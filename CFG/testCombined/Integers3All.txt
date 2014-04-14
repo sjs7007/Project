@@ -18,11 +18,11 @@ void main()
 	
 	int x=1;
 	
-	/*while(x<=5)
+	while(x<=5)
 	{
 		printf("%d /n",x);
 		x++;
-	}*/
+	}
 	
 	printf("New line here. /n");
 	printf("No new line.");
@@ -62,47 +62,62 @@ main ()
   int q;
   int p;
   int x;
+  const char * restrict D.1719;
+  const char * restrict D.1718;
+  const char * restrict D.1717;
+  const char * restrict D.1716;
   const char * restrict D.1715;
   const char * restrict D.1714;
   const char * restrict D.1713;
-  const char * restrict D.1712;
-  const char * restrict D.1711;
-  const char * restrict D.1710;
 
 <bb 2>:
   x = 1;
-  D.1710 = (const char * restrict) "New line here. /n";
-  printf (D.1710);
-  D.1711 = (const char * restrict) "No new line.";
-  printf (D.1711);
-  switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
+  goto <bb 4>;
 
-<L0>:
-  __builtin_puts (&"New line here case 1."[0]);
-  goto <bb 7>;
+<bb 3>:
+  D.1713 = (const char * restrict) "%d /n";
+  printf (D.1713, x);
+  x = x + 1;
 
-<L1>:
-  D.1712 = (const char * restrict) "No new line case 2";
-  printf (D.1712);
-  goto <bb 7>;
+<bb 4>:
+  if (x <= 5)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
 
-<L2>:
-  __builtin_puts (&"New line here case 3."[0]);
-  D.1713 = (const char * restrict) "3.2";
-  printf (D.1713);
-  D.1714 = (const char * restrict) "3.3";
+<bb 5>:
+  D.1714 = (const char * restrict) "New line here. /n";
   printf (D.1714);
-  D.1715 = (const char * restrict) "3.4";
+  D.1715 = (const char * restrict) "No new line.";
   printf (D.1715);
+  switch (x) <default: <L6>, case 1: <L3>, case 2: <L4>, case 3: <L5>>
+
+<L3>:
+  __builtin_puts (&"New line here case 1."[0]);
+  goto <bb 10>;
+
+<L4>:
+  D.1716 = (const char * restrict) "No new line case 2";
+  printf (D.1716);
+  goto <bb 10>;
+
+<L5>:
+  __builtin_puts (&"New line here case 3."[0]);
+  D.1717 = (const char * restrict) "3.2";
+  printf (D.1717);
+  D.1718 = (const char * restrict) "3.3";
+  printf (D.1718);
+  D.1719 = (const char * restrict) "3.4";
+  printf (D.1719);
   p = 45;
   q = 56;
   r = p + 1;
-  goto <bb 7>;
+  goto <bb 10>;
 
-<L3>:
+<L6>:
   __builtin_puts (&"Make more cases "[0]);
 
-<bb 7>:
+<bb 10>:
   return;
 
 }
@@ -116,14 +131,20 @@ Idenitifier of type integer found : p
 Idenitifier of type integer found : x
 Block : <bb 2>
 x = 1
+Block : <bb 3>
+printf(...)
+x = 2
+Block : <bb 4>
+if x<=5, goto <bb 3>,else, goto <bb 5>
+Block : <bb 5>
 printf(...)
 printf(...)
-Switch Case : switch (x) <default: <L3>, case 1: <L0>, case 2: <L1>, case 3: <L2>>
-Switch Case Block : <L0>:
+Switch Case : switch (x) <default: <L6>, case 1: <L3>, case 2: <L4>, case 3: <L5>>
+Switch Case Block : <L3>:
 printf(...)
-Switch Case Block : <L1>:
+Switch Case Block : <L4>:
 printf(...)
-Switch Case Block : <L2>:
+Switch Case Block : <L5>:
 printf(...)
 printf(...)
 printf(...)
@@ -131,11 +152,11 @@ printf(...)
 p = 45
 q = 56
 r = 46
-Switch Case Block : <L3>:
+Switch Case Block : <L6>:
 printf(...)
-Block : <bb 7>
+Block : <bb 10>
 Symbol table : -
 Symbol 0 : r, Value : 46
 Symbol 1 : q, Value : 56
 Symbol 2 : p, Value : 45
-Symbol 3 : x, Value : 1
+Symbol 3 : x, Value : 2

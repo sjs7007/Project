@@ -1,0 +1,53 @@
+//Integer level 4 : do while + structures
+
+#include<stdio.h>
+void main()
+{
+	int x=1;
+	do
+	{
+		printf("%d",x);
+		x++;
+	}
+	while(x<=5);
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+main ()
+{
+  int x;
+  const char * restrict D.1704;
+
+<bb 2>:
+  x = 1;
+
+<bb 3>:
+  D.1704 = (const char * restrict) "%d";
+  printf (D.1704, x);
+  x = x + 1;
+  if (x <= 5)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+<bb 4>:
+  return;
+
+}
+
+
+
+--------------------------------------------------
+Idenitifier of type integer found : x
+Block : <bb 2>
+x = 1
+Block : <bb 3>
+printf(...)
+x = 2
+if x<=5, goto <bb 3>,else, goto <bb 4>
+Block : <bb 4>
+Symbol table : -
+Symbol 0 : x, Value : 2

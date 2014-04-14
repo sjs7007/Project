@@ -15,6 +15,12 @@ genCFGI3:
 	mv Integers3.c.013t.cfg test.cfg
 	cp test.cfg testCFG/Integers3.cfg
 
+genCFGI4:
+	gcc -fdump-tree-cfg test/Integers4.c 
+	mv Integers4.c.013t.cfg test.cfg
+	cp test.cfg testCFG/Integers4.cfg
+
+
 genCFGF1:
 	gcc -fdump-tree-cfg test/Float1.c 
 	mv Float1.c.013t.cfg test.cfg
@@ -37,6 +43,10 @@ testIntegers3: genCFGI3 runCFG
 	 ./CFGParser | tee testOutput/Integers3.txt
 	 sh combineAll.sh Integers3
 
+testIntegers4: genCFGI4 runCFG
+	 ./CFGParser | tee testOutput/Integers4.txt
+	 sh combineAll.sh Integers4
+
 
 testFloat1: genCFGF1 runCFG
 	./CFGParser | tee testOutput/Float1.txt
@@ -46,7 +56,7 @@ testFloat2: genCFGF2 runCFG
 	./CFGParser | tee testOutput/Float2.txt
 	sh combineAll.sh Float2
 
-testAll: cleanCFG cleanOutput testIntegers1 testFloat1 testFloat2 testIntegers2 testIntegers3
+testAll: cleanCFG cleanOutput testIntegers1 testFloat1 testFloat2 testIntegers2 testIntegers3 testIntegers4
 	
 runCFG:
 	bison -d CFGParser.y

@@ -1,0 +1,10 @@
+Idenitifier of type integer found : x
+Block : <bb 2>
+x = 1
+Block : <bb 3>
+printf(...)
+x = 2
+if x<=5, goto <bb 3>,else, goto <bb 4>
+Block : <bb 4>
+Symbol table : -
+Symbol 0 : x, Value : 2

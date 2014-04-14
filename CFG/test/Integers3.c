@@ -1,4 +1,4 @@
-//Integer level 3 : Level 2 + while 
+//Integer level 3 : Level 2 + while + switch case 
 
 #include<stdio.h>
 void main()

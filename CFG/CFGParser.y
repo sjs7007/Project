@@ -111,6 +111,7 @@
 %token intDECL floatDECL doubleDECL // for int declaration like, int a;
 %type <nval> expression
 %type <sval> operator
+%token SWITCH switchBLOCK 
 
 %%
 //grammar which bison will parse
@@ -299,6 +300,17 @@ comparison:
     | GREATERTHANEQUALTO { $$=">=" }
     ;
 
+//Switch case addition starts
+
+switchBlocks:
+    switchBLOCK statements 
+    | switchBlocks switchBLOCK statements 
+    ;
+
+switchCase:
+    SWITCH switchBlocks
+//Part of switch case addition ends, next added "switchCase" ins statements
+
 statement:
 	 declaration  
     |initialization 
@@ -311,7 +323,10 @@ statement:
 statements:
     | statements statement ';'
     | statement ';'
+    | switchCase
     ;
+
+
 
 %%
 

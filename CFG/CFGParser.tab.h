@@ -59,7 +59,9 @@
      IDENTIFIER = 275,
      intDECL = 276,
      floatDECL = 277,
-     doubleDECL = 278
+     doubleDECL = 278,
+     SWITCH = 279,
+     switchBLOCK = 280
    };
 #endif
 
@@ -112,7 +114,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 116 "CFGParser.tab.h"
+#line 118 "CFGParser.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

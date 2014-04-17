@@ -43,11 +43,11 @@ main ()
 --------------------------------------------------
 Idenitifier of type integer found : x
 Block : <bb 2>
-x = 1
+x = <integerValue>
 Block : <bb 3>
 printf(...)
-x = 2
-if x<=5, goto <bb 3>,else, goto <bb 4>
+x = <integerValue>
+if x<=<integerValue>, goto <bb 3>,else, goto <bb 4>
 Block : <bb 4>
 Symbol table : -
-Symbol 0 : x, Value : 2
+Symbol 0 : x, Value : <integerValue>

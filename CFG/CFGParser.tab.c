@@ -98,7 +98,7 @@
         {
             
             //conversion code from references2.cpp
-            ostringstream ss;
+            /*ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
@@ -113,7 +113,22 @@
             {
                 ss<<dval;
             }
-            temp = ss.str(); 
+            temp = ss.str();*/
+			//just display <integerValue> for now
+
+			string temp="CONVERSION REMAINING.";
+			if(type==INTEGER)
+            {
+            	temp="<integerValue>"; 
+            }
+            else if(type==FLOAT)
+            {
+              	temp="<floatValue>"; 
+            }
+            else if(type==DOUBLE)
+            {
+                temp="<doubleValue>";
+            }
             return temp;
         }
     };
@@ -124,7 +139,7 @@
 
 
 /* Line 189 of yacc.c  */
-#line 128 "CFGParser.tab.c"
+#line 143 "CFGParser.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -184,7 +199,7 @@ typedef union YYSTYPE
 {
 
 /* Line 214 of yacc.c  */
-#line 61 "CFGParser.y"
+#line 76 "CFGParser.y"
 
     struct Number
     {
@@ -196,11 +211,11 @@ typedef union YYSTYPE
             int   ival;
         };
 
-		string displayNumber()
+        string displayNumber()
         {
             
             //conversion code from references2.cpp
-            ostringstream ss;
+            /*ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
@@ -215,7 +230,22 @@ typedef union YYSTYPE
             {
                 ss<<dval;
             }
-            temp = ss.str(); 
+            temp = ss.str();*/
+			//just display <integerValue> for now
+
+			string temp="CONVERSION REMAINING.";
+			if(type==INTEGER)
+            {
+            	temp="<integerValue>"; 
+            }
+            else if(type==FLOAT)
+            {
+              	temp="<floatValue>"; 
+            }
+            else if(type==DOUBLE)
+            {
+                temp="<doubleValue>";
+            }
             return temp;
         }
     };
@@ -226,7 +256,7 @@ typedef union YYSTYPE
 
 
 /* Line 214 of yacc.c  */
-#line 230 "CFGParser.tab.c"
+#line 260 "CFGParser.tab.c"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */
@@ -238,7 +268,7 @@ typedef union YYSTYPE
 
 
 /* Line 264 of yacc.c  */
-#line 242 "CFGParser.tab.c"
+#line 272 "CFGParser.tab.c"
 
 #ifdef short
 # undef short
@@ -535,10 +565,10 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint16 yyrline[] =
 {
-       0,   123,   123,   124,   128,   132,   133,   134,   157,   165,
-     172,   181,   202,   203,   204,   205,   209,   210,   291,   295,
-     300,   301,   302,   303,   309,   310,   314,   320,   323,   327,
-     328,   329,   330,   331,   332,   335,   336,   337,   338
+       0,   153,   153,   154,   158,   162,   163,   164,   187,   195,
+     202,   211,   232,   233,   234,   235,   239,   240,   321,   325,
+     330,   331,   332,   333,   339,   340,   344,   350,   353,   357,
+     358,   359,   360,   361,   362,   365,   366,   367,   368
 };
 #endif
 
@@ -1484,42 +1514,42 @@ yyreduce:
         case 2:
 
 /* Line 1455 of yacc.c  */
-#line 123 "CFGParser.y"
+#line 153 "CFGParser.y"
     { ; ;}
     break;
 
   case 3:
 
 /* Line 1455 of yacc.c  */
-#line 124 "CFGParser.y"
+#line 154 "CFGParser.y"
     { ; ;}
     break;
 
   case 4:
 
 /* Line 1455 of yacc.c  */
-#line 128 "CFGParser.y"
+#line 158 "CFGParser.y"
     { cout<<"Block : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
   case 5:
 
 /* Line 1455 of yacc.c  */
-#line 132 "CFGParser.y"
+#line 162 "CFGParser.y"
     { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 6:
 
 /* Line 1455 of yacc.c  */
-#line 133 "CFGParser.y"
+#line 163 "CFGParser.y"
     { (yyval.nval)=(yyvsp[(1) - (1)].nval) ;}
     break;
 
   case 7:
 
 /* Line 1455 of yacc.c  */
-#line 135 "CFGParser.y"
+#line 165 "CFGParser.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].type==symbolTable[getSymbolTableId((yyvsp[(1) - (1)].sval))].INTEGER)
         {
@@ -1545,7 +1575,7 @@ yyreduce:
   case 8:
 
 /* Line 1455 of yacc.c  */
-#line 158 "CFGParser.y"
+#line 188 "CFGParser.y"
     {
 		cout<<"Idenitifier of type integer found : "<<(yyvsp[(2) - (2)].sval)<<endl ;
 		symbolTable[nSymbols].type = symbolTable[nSymbols].INTEGER;
@@ -1557,7 +1587,7 @@ yyreduce:
   case 9:
 
 /* Line 1455 of yacc.c  */
-#line 166 "CFGParser.y"
+#line 196 "CFGParser.y"
     {
         cout<<"Idenitifier of type float found : "<<(yyvsp[(2) - (2)].sval)<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].FLOAT;
@@ -1569,7 +1599,7 @@ yyreduce:
   case 10:
 
 /* Line 1455 of yacc.c  */
-#line 173 "CFGParser.y"
+#line 203 "CFGParser.y"
     {
         cout<<"Idenitifier of type double found : "<<(yyvsp[(2) - (2)].sval)<<endl ;
         symbolTable[nSymbols].type = symbolTable[nSymbols].DOUBLE;
@@ -1581,7 +1611,7 @@ yyreduce:
   case 11:
 
 /* Line 1455 of yacc.c  */
-#line 182 "CFGParser.y"
+#line 212 "CFGParser.y"
     { 
 		cout<<(yyvsp[(1) - (3)].sval)<<" = "<<(yyvsp[(3) - (3)].nval.displayNumber())<<endl;
 		int loc = getSymbolTableId((yyvsp[(1) - (3)].sval)); 
@@ -1605,35 +1635,35 @@ yyreduce:
   case 12:
 
 /* Line 1455 of yacc.c  */
-#line 202 "CFGParser.y"
+#line 232 "CFGParser.y"
     { (yyval.sval)="+" ;}
     break;
 
   case 13:
 
 /* Line 1455 of yacc.c  */
-#line 203 "CFGParser.y"
+#line 233 "CFGParser.y"
     { (yyval.sval)="-" ;}
     break;
 
   case 14:
 
 /* Line 1455 of yacc.c  */
-#line 204 "CFGParser.y"
+#line 234 "CFGParser.y"
     { (yyval.sval)="*" ;}
     break;
 
   case 15:
 
 /* Line 1455 of yacc.c  */
-#line 205 "CFGParser.y"
+#line 235 "CFGParser.y"
     { (yyval.sval)="/" ;}
     break;
 
   case 17:
 
 /* Line 1455 of yacc.c  */
-#line 211 "CFGParser.y"
+#line 241 "CFGParser.y"
     {
         if(symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].type == symbolTable[getSymbolTableId((yyvsp[(1) - (3)].sval))].INTEGER )
 		{
@@ -1717,49 +1747,49 @@ yyreduce:
   case 18:
 
 /* Line 1455 of yacc.c  */
-#line 291 "CFGParser.y"
+#line 321 "CFGParser.y"
     { cout<<"printf(...)"<<endl; ;}
     break;
 
   case 19:
 
 /* Line 1455 of yacc.c  */
-#line 296 "CFGParser.y"
+#line 326 "CFGParser.y"
     { cout <<"if "<<(yyvsp[(2) - (8)].sval)<<(yyvsp[(3) - (8)].sval)<<(yyvsp[(4) - (8)].nval.displayNumber())<<", "<<(yyvsp[(5) - (8)].sval)<<",else, "<<(yyvsp[(8) - (8)].sval)<<endl; ;}
     break;
 
   case 20:
 
 /* Line 1455 of yacc.c  */
-#line 300 "CFGParser.y"
+#line 330 "CFGParser.y"
     { (yyval.sval)="<"; ;}
     break;
 
   case 21:
 
 /* Line 1455 of yacc.c  */
-#line 301 "CFGParser.y"
+#line 331 "CFGParser.y"
     { (yyval.sval)="<=" ;}
     break;
 
   case 22:
 
 /* Line 1455 of yacc.c  */
-#line 302 "CFGParser.y"
+#line 332 "CFGParser.y"
     { (yyval.sval)=">" ;}
     break;
 
   case 23:
 
 /* Line 1455 of yacc.c  */
-#line 303 "CFGParser.y"
+#line 333 "CFGParser.y"
     { (yyval.sval)=">=" ;}
     break;
 
   case 26:
 
 /* Line 1455 of yacc.c  */
-#line 315 "CFGParser.y"
+#line 345 "CFGParser.y"
     {
         cout<<"Switch Case Block : "<<(yyvsp[(1) - (1)].sval)<<endl; 
     ;}
@@ -1768,14 +1798,14 @@ yyreduce:
   case 28:
 
 /* Line 1455 of yacc.c  */
-#line 323 "CFGParser.y"
+#line 353 "CFGParser.y"
     { cout<<"Switch Case : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
 
 
 /* Line 1455 of yacc.c  */
-#line 1779 "CFGParser.tab.c"
+#line 1809 "CFGParser.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1987,7 +2017,7 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 343 "CFGParser.y"
+#line 373 "CFGParser.y"
 
 
 int main() 

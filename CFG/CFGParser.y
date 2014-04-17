@@ -27,7 +27,7 @@
         {
             
             //conversion code from references2.cpp
-            ostringstream ss;
+            /*ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
@@ -42,7 +42,22 @@
             {
                 ss<<dval;
             }
-            temp = ss.str(); 
+            temp = ss.str();*/
+			//just display <integerValue> for now
+
+			string temp="CONVERSION REMAINING.";
+			if(type==INTEGER)
+            {
+            	temp="<integerValue>"; 
+            }
+            else if(type==FLOAT)
+            {
+              	temp="<floatValue>"; 
+            }
+            else if(type==DOUBLE)
+            {
+                temp="<doubleValue>";
+            }
             return temp;
         }
     };
@@ -69,11 +84,11 @@
             int   ival;
         };
 
-		string displayNumber()
+        string displayNumber()
         {
             
             //conversion code from references2.cpp
-            ostringstream ss;
+            /*ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
@@ -88,7 +103,22 @@
             {
                 ss<<dval;
             }
-            temp = ss.str(); 
+            temp = ss.str();*/
+			//just display <integerValue> for now
+
+			string temp="CONVERSION REMAINING.";
+			if(type==INTEGER)
+            {
+            	temp="<integerValue>"; 
+            }
+            else if(type==FLOAT)
+            {
+              	temp="<floatValue>"; 
+            }
+            else if(type==DOUBLE)
+            {
+                temp="<doubleValue>";
+            }
             return temp;
         }
     };

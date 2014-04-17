@@ -76,27 +76,27 @@ Idenitifier of type integer found : k
 Idenitifier of type integer found : j
 Idenitifier of type integer found : i
 Block : <bb 2>
-k = 0
-f = 4.5
-g = 6.7
-i = 0
+k = <integerValue>
+f = <floatValue>
+g = <floatValue>
+i = <integerValue>
 Block : <bb 3>
-j = 0
+j = <integerValue>
 Block : <bb 4>
-k = 5
+k = <integerValue>
 printf(...)
-g = 13.5
-j = 1
+g = <floatValue>
+j = <integerValue>
 Block : <bb 5>
-if j<=3, goto <bb 4>,else, goto <bb 6>
+if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
 Block : <bb 6>
-i = 1
+i = <integerValue>
 Block : <bb 7>
-if i<=2, goto <bb 3>,else, goto <bb 8>
+if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
 Block : <bb 8>
 Symbol table : -
-Symbol 0 : g, Value : 13.5
-Symbol 1 : f, Value : 4.5
-Symbol 2 : k, Value : 5
-Symbol 3 : j, Value : 1
-Symbol 4 : i, Value : 1
+Symbol 0 : g, Value : <floatValue>
+Symbol 1 : f, Value : <floatValue>
+Symbol 2 : k, Value : <integerValue>
+Symbol 3 : j, Value : <integerValue>
+Symbol 4 : i, Value : <integerValue>

@@ -72,7 +72,7 @@ typedef union YYSTYPE
 {
 
 /* Line 1676 of yacc.c  */
-#line 61 "CFGParser.y"
+#line 76 "CFGParser.y"
 
     struct Number
     {
@@ -84,11 +84,11 @@ typedef union YYSTYPE
             int   ival;
         };
 
-		string displayNumber()
+        string displayNumber()
         {
             
             //conversion code from references2.cpp
-            ostringstream ss;
+            /*ostringstream ss;
             string temp="CONVERSION REMAINING.";
             
             if(type==INTEGER)
@@ -103,7 +103,22 @@ typedef union YYSTYPE
             {
                 ss<<dval;
             }
-            temp = ss.str(); 
+            temp = ss.str();*/
+			//just display <integerValue> for now
+
+			string temp="CONVERSION REMAINING.";
+			if(type==INTEGER)
+            {
+            	temp="<integerValue>"; 
+            }
+            else if(type==FLOAT)
+            {
+              	temp="<floatValue>"; 
+            }
+            else if(type==DOUBLE)
+            {
+                temp="<doubleValue>";
+            }
             return temp;
         }
     };
@@ -114,7 +129,7 @@ typedef union YYSTYPE
 
 
 /* Line 1676 of yacc.c  */
-#line 118 "CFGParser.tab.h"
+#line 133 "CFGParser.tab.h"
 } YYSTYPE;
 # define YYSTYPE_IS_TRIVIAL 1
 # define yystype YYSTYPE /* obsolescent; will be withdrawn */

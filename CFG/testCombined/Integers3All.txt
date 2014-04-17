@@ -130,12 +130,12 @@ Idenitifier of type integer found : q
 Idenitifier of type integer found : p
 Idenitifier of type integer found : x
 Block : <bb 2>
-x = 1
+x = <integerValue>
 Block : <bb 3>
 printf(...)
-x = 2
+x = <integerValue>
 Block : <bb 4>
-if x<=5, goto <bb 3>,else, goto <bb 5>
+if x<=<integerValue>, goto <bb 3>,else, goto <bb 5>
 Block : <bb 5>
 printf(...)
 printf(...)
@@ -149,14 +149,14 @@ printf(...)
 printf(...)
 printf(...)
 printf(...)
-p = 45
-q = 56
-r = 46
+p = <integerValue>
+q = <integerValue>
+r = <integerValue>
 Switch Case Block : <L6>:
 printf(...)
 Block : <bb 10>
 Symbol table : -
-Symbol 0 : r, Value : 46
-Symbol 1 : q, Value : 56
-Symbol 2 : p, Value : 45
-Symbol 3 : x, Value : 2
+Symbol 0 : r, Value : <integerValue>
+Symbol 1 : q, Value : <integerValue>
+Symbol 2 : p, Value : <integerValue>
+Symbol 3 : x, Value : <integerValue>

@@ -66,22 +66,22 @@ Idenitifier of type integer found : k
 Idenitifier of type integer found : j
 Idenitifier of type integer found : i
 Block : <bb 2>
-k = 0
-i = 0
+k = <integerValue>
+i = <integerValue>
 Block : <bb 3>
-j = 0
+j = <integerValue>
 Block : <bb 4>
-k = 5
+k = <integerValue>
 printf(...)
-j = 1
+j = <integerValue>
 Block : <bb 5>
-if j<=3, goto <bb 4>,else, goto <bb 6>
+if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
 Block : <bb 6>
-i = 1
+i = <integerValue>
 Block : <bb 7>
-if i<=2, goto <bb 3>,else, goto <bb 8>
+if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
 Block : <bb 8>
 Symbol table : -
-Symbol 0 : k, Value : 5
-Symbol 1 : j, Value : 1
-Symbol 2 : i, Value : 1
+Symbol 0 : k, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>

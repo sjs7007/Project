@@ -85,33 +85,33 @@ Idenitifier of type double found : D.1715
 Idenitifier of type double found : D.1714
 Idenitifier of type double found : D.1713
 Block : <bb 2>
-k = 0
-f = 4.5
-g = 6.7
-i = 0
+k = <integerValue>
+f = <floatValue>
+g = <floatValue>
+i = <integerValue>
 Block : <bb 3>
-j = 0
+j = <integerValue>
 Block : <bb 4>
-k = 5
+k = <integerValue>
 printf(...)
-D.1713 = 4.5
-D.1714 = 0
-D.1715 = 5.60247e-315
-g = 5.60247e-315
-j = 1
+D.1713 = <floatValue>
+D.1714 = <doubleValue>
+D.1715 = <doubleValue>
+g = <doubleValue>
+j = <integerValue>
 Block : <bb 5>
-if j<=3, goto <bb 4>,else, goto <bb 6>
+if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
 Block : <bb 6>
-i = 1
+i = <integerValue>
 Block : <bb 7>
-if i<=2, goto <bb 3>,else, goto <bb 8>
+if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
 Block : <bb 8>
 Symbol table : -
-Symbol 0 : g, Value : 301.5
-Symbol 1 : f, Value : 4.5
-Symbol 2 : k, Value : 5
-Symbol 3 : j, Value : 1
-Symbol 4 : i, Value : 1
-Symbol 5 : D.1715, Value : 5.60247e-315
-Symbol 6 : D.1714, Value : 0
-Symbol 7 : D.1713, Value : 5.35162e-315
+Symbol 0 : g, Value : <floatValue>
+Symbol 1 : f, Value : <floatValue>
+Symbol 2 : k, Value : <integerValue>
+Symbol 3 : j, Value : <integerValue>
+Symbol 4 : i, Value : <integerValue>
+Symbol 5 : D.1715, Value : <doubleValue>
+Symbol 6 : D.1714, Value : <doubleValue>
+Symbol 7 : D.1713, Value : <doubleValue>

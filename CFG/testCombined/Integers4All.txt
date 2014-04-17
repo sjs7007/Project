@@ -1,9 +1,58 @@
-//Integer level 4 : do while + structures
+//Integer level 4 : All leves combined + do while
 
 #include<stdio.h>
 void main()
 {
+	int p,q,r;
+
+	//for loop testing + internal identifiers
+	int i,j;
+	for(i=0;i<4;i++)
+	{
+		for(j=0;j<5;j++)
+		{
+			p=4*50+45+56+2*i;
+			q=p+10;
+			r=3*q;
+		}
+	}
+	
+
+	//while loop testing
 	int x=1;
+	while(x<=5)
+	{
+		x++;
+		printf("%d",x);
+	}
+
+	//switch case testing
+	switch(x)
+	{
+		case 1:	
+			printf("New line here case 1.\n");
+			break;
+
+		case 2:
+			printf("No new line case 2");
+			break;
+
+		case 3:
+			printf("New line here case 3.\n");
+			printf("3.2");
+			printf("3.3");
+			printf("3.4");
+			int p = 45;
+			int q = 56;
+			int r  = p +1;
+			break;
+
+		default:
+			printf("Make more cases \n");
+	}
+
+	//do while loop testing
+	x=1;
 	do
 	{
 		printf("%d",x);
@@ -18,22 +67,109 @@ void main()
 
 main ()
 {
+  int r;
+  int q;
+  int p;
   int x;
-  const char * restrict D.1704;
+  int j;
+  int i;
+  int r;
+  int q;
+  int p;
+  const char * restrict D.1732;
+  const char * restrict D.1731;
+  const char * restrict D.1730;
+  const char * restrict D.1729;
+  const char * restrict D.1728;
+  const char * restrict D.1727;
+  int D.1726;
 
 <bb 2>:
-  x = 1;
+  i = 0;
+  goto <bb 7>;
 
 <bb 3>:
-  D.1704 = (const char * restrict) "%d";
-  printf (D.1704, x);
-  x = x + 1;
-  if (x <= 5)
-    goto <bb 3>;
-  else
-    goto <bb 4>;
+  j = 0;
+  goto <bb 5>;
 
 <bb 4>:
+  D.1726 = i * 2;
+  p = D.1726 + 301;
+  q = p + 10;
+  r = q * 3;
+  j = j + 1;
+
+<bb 5>:
+  if (j <= 4)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  if (i <= 3)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  x = 1;
+  goto <bb 10>;
+
+<bb 9>:
+  x = x + 1;
+  D.1727 = (const char * restrict) "%d";
+  printf (D.1727, x);
+
+<bb 10>:
+  if (x <= 5)
+    goto <bb 9>;
+  else
+    goto <bb 11>;
+
+<bb 11>:
+  switch (x) <default: <L12>, case 1: <L9>, case 2: <L10>, case 3: <L11>>
+
+<L9>:
+  __builtin_puts (&"New line here case 1."[0]);
+  goto <bb 16>;
+
+<L10>:
+  D.1728 = (const char * restrict) "No new line case 2";
+  printf (D.1728);
+  goto <bb 16>;
+
+<L11>:
+  __builtin_puts (&"New line here case 3."[0]);
+  D.1729 = (const char * restrict) "3.2";
+  printf (D.1729);
+  D.1730 = (const char * restrict) "3.3";
+  printf (D.1730);
+  D.1731 = (const char * restrict) "3.4";
+  printf (D.1731);
+  p = 45;
+  q = 56;
+  r = p + 1;
+  goto <bb 16>;
+
+<L12>:
+  __builtin_puts (&"Make more cases "[0]);
+
+<bb 16>:
+  x = 1;
+
+<bb 17>:
+  D.1732 = (const char * restrict) "%d";
+  printf (D.1732, x);
+  x = x + 1;
+  if (x <= 5)
+    goto <bb 17>;
+  else
+    goto <bb 18>;
+
+<bb 18>:
   return;
 
 }
@@ -41,13 +177,70 @@ main ()
 
 
 --------------------------------------------------
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
 Idenitifier of type integer found : x
+Idenitifier of type integer found : j
+Idenitifier of type integer found : i
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
+Idenitifier of type integer found : D.1726
 Block : <bb 2>
-x = <integerValue>
+i = <integerValue>
 Block : <bb 3>
+j = <integerValue>
+Block : <bb 4>
+D.1726 = <integerValue>
+p = <integerValue>
+q = <integerValue>
+r = <integerValue>
+j = <integerValue>
+Block : <bb 5>
+if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
+Block : <bb 6>
+i = <integerValue>
+Block : <bb 7>
+if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
+Block : <bb 8>
+x = <integerValue>
+Block : <bb 9>
+x = <integerValue>
+printf(...)
+Block : <bb 10>
+if x<=<integerValue>, goto <bb 9>,else, goto <bb 11>
+Block : <bb 11>
+Switch Case : switch (x) <default: <L12>, case 1: <L9>, case 2: <L10>, case 3: <L11>>
+Switch Case Block : <L9>:
+printf(...)
+Switch Case Block : <L10>:
+printf(...)
+Switch Case Block : <L11>:
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+p = <integerValue>
+q = <integerValue>
+r = <integerValue>
+Switch Case Block : <L12>:
+printf(...)
+Block : <bb 16>
+x = <integerValue>
+Block : <bb 17>
 printf(...)
 x = <integerValue>
-if x<=<integerValue>, goto <bb 3>,else, goto <bb 4>
-Block : <bb 4>
+if x<=<integerValue>, goto <bb 17>,else, goto <bb 18>
+Block : <bb 18>
 Symbol table : -
-Symbol 0 : x, Value : <integerValue>
+Symbol 0 : r, Value : <integerValue>
+Symbol 1 : q, Value : <integerValue>
+Symbol 2 : p, Value : <integerValue>
+Symbol 3 : x, Value : <integerValue>
+Symbol 4 : j, Value : <integerValue>
+Symbol 5 : i, Value : <integerValue>
+Symbol 6 : r, Value : <integerValue>
+Symbol 7 : q, Value : <integerValue>
+Symbol 8 : p, Value : <integerValue>
+Symbol 9 : D.1726, Value : <integerValue>

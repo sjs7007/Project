@@ -1,10 +1,67 @@
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
 Idenitifier of type integer found : x
+Idenitifier of type integer found : j
+Idenitifier of type integer found : i
+Idenitifier of type integer found : r
+Idenitifier of type integer found : q
+Idenitifier of type integer found : p
+Idenitifier of type integer found : D.1726
 Block : <bb 2>
-x = <integerValue>
+i = <integerValue>
 Block : <bb 3>
+j = <integerValue>
+Block : <bb 4>
+D.1726 = <integerValue>
+p = <integerValue>
+q = <integerValue>
+r = <integerValue>
+j = <integerValue>
+Block : <bb 5>
+if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
+Block : <bb 6>
+i = <integerValue>
+Block : <bb 7>
+if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
+Block : <bb 8>
+x = <integerValue>
+Block : <bb 9>
+x = <integerValue>
+printf(...)
+Block : <bb 10>
+if x<=<integerValue>, goto <bb 9>,else, goto <bb 11>
+Block : <bb 11>
+Switch Case : switch (x) <default: <L12>, case 1: <L9>, case 2: <L10>, case 3: <L11>>
+Switch Case Block : <L9>:
+printf(...)
+Switch Case Block : <L10>:
+printf(...)
+Switch Case Block : <L11>:
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+p = <integerValue>
+q = <integerValue>
+r = <integerValue>
+Switch Case Block : <L12>:
+printf(...)
+Block : <bb 16>
+x = <integerValue>
+Block : <bb 17>
 printf(...)
 x = <integerValue>
-if x<=<integerValue>, goto <bb 3>,else, goto <bb 4>
-Block : <bb 4>
+if x<=<integerValue>, goto <bb 17>,else, goto <bb 18>
+Block : <bb 18>
 Symbol table : -
-Symbol 0 : x, Value : <integerValue>
+Symbol 0 : r, Value : <integerValue>
+Symbol 1 : q, Value : <integerValue>
+Symbol 2 : p, Value : <integerValue>
+Symbol 3 : x, Value : <integerValue>
+Symbol 4 : j, Value : <integerValue>
+Symbol 5 : i, Value : <integerValue>
+Symbol 6 : r, Value : <integerValue>
+Symbol 7 : q, Value : <integerValue>
+Symbol 8 : p, Value : <integerValue>
+Symbol 9 : D.1726, Value : <integerValue>

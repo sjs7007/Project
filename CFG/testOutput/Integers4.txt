@@ -54,6 +54,10 @@ printf(...)
 x = <integerValue>
 if x<=<integerValue>, goto <bb 17>,else, goto <bb 18>
 Block : <bb 18>
+if x><integerValue>, goto <bb 19>,else, goto <bb 20>
+Block : <bb 19>
+printf(...)
+Block : <bb 20>
 Symbol table : -
 Symbol 0 : r, Value : <integerValue>
 Symbol 1 : q, Value : <integerValue>

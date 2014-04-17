@@ -59,4 +59,10 @@ void main()
 		x++;
 	}
 	while(x<=5);
+
+	//if condition testing
+	if(x>=5)
+	{
+		printf("yes");
+	}
 }

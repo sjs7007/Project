@@ -364,7 +364,7 @@ statement:
 	 declaration  
     |initialization 
     | printing 
-    | GOTO  
+    | GOTO { cout<<$1<<endl; }  
     | ifelse 
     | RETURN 
     ;

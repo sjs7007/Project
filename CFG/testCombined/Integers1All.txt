@@ -68,8 +68,10 @@ Identifier of type integer found : i
 Block : <bb 2>
 k = <integerValue>
 i = <integerValue>
+goto <bb 7>
 Block : <bb 3>
 j = <integerValue>
+goto <bb 5>
 Block : <bb 4>
 k = <integerValue>
 printf(...)

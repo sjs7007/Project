@@ -73,7 +73,7 @@ test: runCFG
 	./CFGParser | tee testOutput/test.txt
 	sh combineAll.sh test
 	
-testAll: cleanCFG cleanOutput testIntegers1 testFloat1 testFloat2 testIntegers2 testIntegers3 testIntegers4 test testIntegers5
+testAll: cleanCFG cleanOutput testIntegers1 testFloat1 testFloat2 testIntegers2 testIntegers3 testIntegers4 testIntegers5
 	
 runCFG:
 	bison -d CFGParser.y

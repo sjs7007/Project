@@ -37,40 +37,53 @@ Identifier of type integer found : r
 Identifier of type integer found : q
 Identifier of type integer found : p
 Identifier of type integer found : D.1726
+
 Block : <bb 2>
 i = <integerValue>
 goto <bb 7>
+
 Block : <bb 3>
 j = <integerValue>
 goto <bb 5>
+
 Block : <bb 4>
 D.1726 = <integerValue>
 p = <integerValue>
 q = <integerValue>
 r = <integerValue>
 j = <integerValue>
+
 Block : <bb 5>
 if j<= <integerValue>, goto <bb 4>,else, goto <bb 6>
+
 Block : <bb 6>
 i = <integerValue>
+
 Block : <bb 7>
 if i<= <integerValue>, goto <bb 3>,else, goto <bb 8>
+
 Block : <bb 8>
 x = <integerValue>
 goto <bb 10>
+
 Block : <bb 9>
 x = <integerValue>
 printf(...)
+
 Block : <bb 10>
 if x<= <integerValue>, goto <bb 9>,else, goto <bb 11>
+
 Block : <bb 11>
 Switch Case : switch (x) <default: <L12>, case 1: <L9>, case 2: <L10>, case 3: <L11>>
+
 Switch Case Block : <L9>:
 printf(...)
 goto <bb 16>
+
 Switch Case Block : <L10>:
 printf(...)
 goto <bb 16>
+
 Switch Case Block : <L11>:
 printf(...)
 printf(...)
@@ -80,19 +93,26 @@ p = <integerValue>
 q = <integerValue>
 r = <integerValue>
 goto <bb 16>
+
 Switch Case Block : <L12>:
 printf(...)
+
 Block : <bb 16>
 x = <integerValue>
+
 Block : <bb 17>
 printf(...)
 x = <integerValue>
 if x<= <integerValue>, goto <bb 17>,else, goto <bb 18>
+
 Block : <bb 18>
 if x> <integerValue>, goto <bb 19>,else, goto <bb 20>
+
 Block : <bb 19>
 printf(...)
+
 Block : <bb 20>
+
 Symbol table : -
 Symbol 0 : r, Value : <integerValue>
 Symbol 1 : q, Value : <integerValue>

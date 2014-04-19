@@ -84,15 +84,18 @@ Identifier of type integer found : i
 Identifier of type double found : D.1715
 Identifier of type double found : D.1714
 Identifier of type double found : D.1713
+
 Block : <bb 2>
 k = <integerValue>
 f = <floatValue>
 g = <floatValue>
 i = <integerValue>
 goto <bb 7>
+
 Block : <bb 3>
 j = <integerValue>
 goto <bb 5>
+
 Block : <bb 4>
 k = <integerValue>
 printf(...)
@@ -101,13 +104,18 @@ D.1714 = <doubleValue>
 D.1715 = <doubleValue>
 g = <doubleValue>
 j = <integerValue>
+
 Block : <bb 5>
 if j<= <integerValue>, goto <bb 4>,else, goto <bb 6>
+
 Block : <bb 6>
 i = <integerValue>
+
 Block : <bb 7>
 if i<= <integerValue>, goto <bb 3>,else, goto <bb 8>
+
 Block : <bb 8>
+
 Symbol table : -
 Symbol 0 : g, Value : <floatValue>
 Symbol 1 : f, Value : <floatValue>

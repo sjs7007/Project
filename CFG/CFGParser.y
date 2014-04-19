@@ -158,7 +158,7 @@ start:
     ;
 
 block:
-    BLOCK { cout<<"Block : "<<$1<<endl; }
+    BLOCK { cout<<endl<<"Block : "<<$1<<endl; }
     ;
 
 number:
@@ -350,7 +350,7 @@ switchBlocks:
 switchblock:
     switchBLOCK 
     {
-        cout<<"Switch Case Block : "<<$1<<endl; 
+        cout<<endl<<"Switch Case Block : "<<$1<<endl; 
     };
 
 switchCase:
@@ -397,7 +397,7 @@ int main()
         yyparse();
     } while (!feof(yyin));
 
-	cout<<"Symbol table : -"<<endl; 
+	cout<<endl<<"Symbol table : -"<<endl; 
 
 	for(int i=0;i<nSymbols;i++)
 	{

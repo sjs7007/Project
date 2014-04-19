@@ -1532,7 +1532,7 @@ yyreduce:
 
 /* Line 1455 of yacc.c  */
 #line 161 "CFGParser.y"
-    { cout<<"Block : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
+    { cout<<endl<<"Block : "<<(yyvsp[(1) - (1)].sval)<<endl; ;}
     break;
 
   case 5:
@@ -1803,7 +1803,7 @@ yyreduce:
 /* Line 1455 of yacc.c  */
 #line 352 "CFGParser.y"
     {
-        cout<<"Switch Case Block : "<<(yyvsp[(1) - (1)].sval)<<endl; 
+        cout<<endl<<"Switch Case Block : "<<(yyvsp[(1) - (1)].sval)<<endl; 
     ;}
     break;
 
@@ -2057,7 +2057,7 @@ int main()
         yyparse();
     } while (!feof(yyin));
 
-	cout<<"Symbol table : -"<<endl; 
+	cout<<endl<<"Symbol table : -"<<endl; 
 
 	for(int i=0;i<nSymbols;i++)
 	{

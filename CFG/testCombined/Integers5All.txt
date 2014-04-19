@@ -129,21 +129,21 @@ main ()
 
 
 --------------------------------------------------
-Idenitifier of type integer found : temp
-Idenitifier of type integer found : j
-Idenitifier of type integer found : index
-Idenitifier of type integer found : a[5]
-Idenitifier of type integer found : D.1727
-Idenitifier of type integer found : index.6
-Idenitifier of type integer found : j.5
-Idenitifier of type integer found : D.1723
-Idenitifier of type integer found : j.4
-Idenitifier of type integer found : index.3
-Idenitifier of type integer found : index.2
-Idenitifier of type integer found : D.1717
-Idenitifier of type integer found : j.1
-Idenitifier of type integer found : D.1715
-Idenitifier of type integer found : index.0
+Identifier of type integer found : temp
+Identifier of type integer found : j
+Identifier of type integer found : index
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1727
+Identifier of type integer found : index.6
+Identifier of type integer found : j.5
+Identifier of type integer found : D.1723
+Identifier of type integer found : j.4
+Identifier of type integer found : index.3
+Identifier of type integer found : index.2
+Identifier of type integer found : D.1717
+Identifier of type integer found : j.1
+Identifier of type integer found : D.1715
+Identifier of type integer found : index.0
 Block : <bb 2>
 a[0] = <integerValue>
 a[1] = <integerValue>
@@ -192,15 +192,14 @@ Symbol table : -
 Symbol 0 : temp, Value : <integerValue>
 Symbol 1 : j, Value : <integerValue>
 Symbol 2 : index, Value : <integerValue>
-Symbol 3 : a[5], Value : <integerValue>
-Symbol 4 : D.1727, Value : <integerValue>
-Symbol 5 : index.6, Value : <integerValue>
-Symbol 6 : j.5, Value : <integerValue>
-Symbol 7 : D.1723, Value : <integerValue>
-Symbol 8 : j.4, Value : <integerValue>
-Symbol 9 : index.3, Value : <integerValue>
-Symbol 10 : index.2, Value : <integerValue>
-Symbol 11 : D.1717, Value : <integerValue>
-Symbol 12 : j.1, Value : <integerValue>
-Symbol 13 : D.1715, Value : <integerValue>
-Symbol 14 : index.0, Value : <integerValue>
+Symbol 3 : D.1727, Value : <integerValue>
+Symbol 4 : index.6, Value : <integerValue>
+Symbol 5 : j.5, Value : <integerValue>
+Symbol 6 : D.1723, Value : <integerValue>
+Symbol 7 : j.4, Value : <integerValue>
+Symbol 8 : index.3, Value : <integerValue>
+Symbol 9 : index.2, Value : <integerValue>
+Symbol 10 : D.1717, Value : <integerValue>
+Symbol 11 : j.1, Value : <integerValue>
+Symbol 12 : D.1715, Value : <integerValue>
+Symbol 13 : index.0, Value : <integerValue>

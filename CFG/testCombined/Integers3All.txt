@@ -125,17 +125,17 @@ main ()
 
 
 --------------------------------------------------
-Idenitifier of type integer found : r
-Idenitifier of type integer found : q
-Idenitifier of type integer found : p
-Idenitifier of type integer found : x
+Identifier of type integer found : r
+Identifier of type integer found : q
+Identifier of type integer found : p
+Identifier of type integer found : x
 Block : <bb 2>
 x = <integerValue>
 Block : <bb 3>
 printf(...)
 x = <integerValue>
 Block : <bb 4>
-if x<=<integerValue>, goto <bb 3>,else, goto <bb 5>
+if x<= <integerValue>, goto <bb 3>,else, goto <bb 5>
 Block : <bb 5>
 printf(...)
 printf(...)

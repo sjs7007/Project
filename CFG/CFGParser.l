@@ -19,6 +19,7 @@
 ^.*restrict.*$ ;
 
 "int" { return intDECL; } 
+"int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
 "float" { return floatDECL; };
 "double" { return doubleDECL; };
 "(float)" {;}
@@ -53,8 +54,8 @@
 
 [a-zA-Z_][a-zA-Z_0-9]* { yylval.sval = strdup(yytext); return IDENTIFIER; }
 "D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
-[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
-[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; } //of type a[j.5]
+[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; } //of type a[2]
 [a-zA-Z_][a-zA-Z_0-9]*"["[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
 
 [ \t \n] ;

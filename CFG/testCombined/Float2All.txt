@@ -76,14 +76,14 @@ main ()
 
 
 --------------------------------------------------
-Idenitifier of type float found : g
-Idenitifier of type float found : f
-Idenitifier of type integer found : k
-Idenitifier of type integer found : j
-Idenitifier of type integer found : i
-Idenitifier of type double found : D.1715
-Idenitifier of type double found : D.1714
-Idenitifier of type double found : D.1713
+Identifier of type float found : g
+Identifier of type float found : f
+Identifier of type integer found : k
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type double found : D.1715
+Identifier of type double found : D.1714
+Identifier of type double found : D.1713
 Block : <bb 2>
 k = <integerValue>
 f = <floatValue>
@@ -100,11 +100,11 @@ D.1715 = <doubleValue>
 g = <doubleValue>
 j = <integerValue>
 Block : <bb 5>
-if j<=<integerValue>, goto <bb 4>,else, goto <bb 6>
+if j<= <integerValue>, goto <bb 4>,else, goto <bb 6>
 Block : <bb 6>
 i = <integerValue>
 Block : <bb 7>
-if i<=<integerValue>, goto <bb 3>,else, goto <bb 8>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 8>
 Block : <bb 8>
 Symbol table : -
 Symbol 0 : g, Value : <floatValue>

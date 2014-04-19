@@ -56,4 +56,20 @@ index = <integerValue>
 Block : <bb 12>
 if index<= <integerValue>, goto <bb 11>,else, goto <bb 13>
 Block : <bb 13>
-EEK, parse error!  Message: syntax error
+printf(...)
+Symbol table : -
+Symbol 0 : temp, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : index, Value : <integerValue>
+Symbol 3 : a[5], Value : <integerValue>
+Symbol 4 : D.1727, Value : <integerValue>
+Symbol 5 : index.6, Value : <integerValue>
+Symbol 6 : j.5, Value : <integerValue>
+Symbol 7 : D.1723, Value : <integerValue>
+Symbol 8 : j.4, Value : <integerValue>
+Symbol 9 : index.3, Value : <integerValue>
+Symbol 10 : index.2, Value : <integerValue>
+Symbol 11 : D.1717, Value : <integerValue>
+Symbol 12 : j.1, Value : <integerValue>
+Symbol 13 : D.1715, Value : <integerValue>
+Symbol 14 : index.0, Value : <integerValue>

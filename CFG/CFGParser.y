@@ -323,7 +323,7 @@ printing:
 
 ifelse:
     IF IDENTIFIER comparison number GOTO ';' ELSE GOTO 
-    { cout <<"if "<<$2<<$3<<$<nval.displayNumber()>4<<", "<<$5<<",else, "<<$8<<endl; }
+    { cout <<"if "<<$2<<$3<<" "<<$<nval.displayNumber()>4<<", "<<$5<<",else, "<<$8<<endl; }
     ;
 
 comparison:

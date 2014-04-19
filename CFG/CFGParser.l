@@ -36,6 +36,7 @@
 "return" { return RETURN; }
 "printf (".*")"   { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
 "__builtin_puts (".*"[0])" { /*cout<<"Puts : "<<yytext<<endl;*/ return PRINT; }
+"__builtin_putchar (".*")" { return PRINT; }
 "switch (".*">>" { /*cout<<"Switch Case : "<<yytext<<endl;*/ yylval.sval = strdup(yytext); return SWITCH; }
 "=" { return EQUALTO; }
 "+" { return ADD; }
@@ -52,6 +53,10 @@
 
 [a-zA-Z_][a-zA-Z_0-9]* { yylval.sval = strdup(yytext); return IDENTIFIER; }
 "D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]*"["[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
+
 [ \t \n] ;
 .        ;
 %%

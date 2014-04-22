@@ -4,11 +4,9 @@ int main()
 {
 	int a[]={5,3,1,4,2};
 	int index,j;
-	index=0;
-	while(index<5)
+	for(index=0;index<5;index++)
 	{
-		j=index+1;
-		while(j<5)
+		for(j=index+1;j<5;j++)
 		{
 			if(a[index]>=a[j])
 			{
@@ -16,11 +14,9 @@ int main()
 				a[index]=a[j];
 				a[j]=temp;
 			}
-			j++;
 		}
-		index++;
 	}
-	printf("The sorted array using while loops is : ");
+	printf("The sorted array is : ");
 	for(index=0;index<5;index++)
 	{
 		printf("%d ",a[index]);
@@ -104,7 +100,7 @@ main ()
     goto <bb 10>;
 
 <bb 10>:
-  D.1725 = (const char * restrict) "The sorted array using while loops is : ";
+  D.1725 = (const char * restrict) "The sorted array is : ";
   printf (D.1725);
   index = 0;
   goto <bb 12>;

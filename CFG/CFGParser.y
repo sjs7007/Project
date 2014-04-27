@@ -2,6 +2,7 @@
 	#include <cstdio>
 	#include <iostream>
 	#include <sstream>
+	#include <fstream> //for file writing
 	using namespace std;
    
 	//stuff from flex that bison needs to know about
@@ -65,6 +66,7 @@
 	Symbol symbolTable[100];
 	int nSymbols=0;
 	int getSymbolTableId(string input);
+	void writeOut(string x);
 %}
 
 //Bison asks flex to get next token which is returned as an object of yystype.
@@ -404,6 +406,8 @@ int main()
         cout<<"Symbol "<<i<<" : "<<symbolTable[i].name;
         cout<<", Value : "<<symbolTable[i].displayNumber()<<endl;
 	}
+
+	writeOut("greef\n");
 }
 
 void yyerror(const char *s) 
@@ -426,3 +430,12 @@ int getSymbolTableId(string input)
 	}
 	return loc;
 }
+
+void writeOut(string x)
+{
+	ofstream myfile;
+	myfile.open("CFGStructure.txt");
+	myfile << x;
+	myfile.close();
+}
+

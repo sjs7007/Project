@@ -143,6 +143,7 @@
 %token intDECL floatDECL doubleDECL // for int declaration like, int a;
 %type <nval> expression
 %type <sval> operator
+%type <sval> goto
 
 //for switch case
 %token <sval> SWITCH 
@@ -160,8 +161,15 @@ start:
     ;
 
 block:
-    BLOCK { cout<<endl<<"Block : "<<$1<<endl; }
-    ;
+    BLOCK 
+	{ 
+		cout<<endl<<"Block : "<<$1<<endl; 
+		string temp="\n";
+		temp.append($1);
+		temp.append(":");
+		writeOut(temp);
+	}
+	;
 
 number:
     INTEGER { $$=$1 }
@@ -330,8 +338,16 @@ printing:
     PRINT { cout<<"printf(...)"<<endl; }
     ;
 
+goto:
+    GOTO
+    {
+        //cout<<$1<<endl; 
+        $$=$1;
+        writeOut($1); 
+    };
+
 ifelse:
-    IF IDENTIFIER comparison number GOTO ';' ELSE GOTO 
+    IF IDENTIFIER comparison number goto ';' ELSE goto 
     { cout <<"if "<<$2<<$3<<" "<<$<nval.displayNumber()>4<<", "<<$5<<",else, "<<$8<<endl; }
     ;
 
@@ -366,7 +382,7 @@ statement:
 	 declaration  
     |initialization 
     | printing 
-    | GOTO { cout<<$1<<endl; }  
+    | goto
     | ifelse 
     | RETURN 
     ;
@@ -407,7 +423,7 @@ int main()
         cout<<", Value : "<<symbolTable[i].displayNumber()<<endl;
 	}
 
-	writeOut("greef\n");
+	//writeOut("greef\n");
 }
 
 void yyerror(const char *s) 
@@ -434,7 +450,8 @@ int getSymbolTableId(string input)
 void writeOut(string x)
 {
 	ofstream myfile;
-	myfile.open("CFGStructure.txt");
+	myfile.open("CFGStructure.txt", std::ios_base::app);
+	x = x.append("\n");
 	myfile << x;
 	myfile.close();
 }

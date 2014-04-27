@@ -12,6 +12,7 @@ runCFG:
 
 testCFG: genCFG runCFG
 	 ./CFGParser | tee testOutput/$(f).txt
+	 cp CFGStructure.txt testStructure/$(f).txt
 	 sh combineAll.sh $(f)
 
 runTest: runCFG
@@ -27,7 +28,7 @@ cleanOutput:
 	rm -rf testOutput/*
 
 clean: 
-	rm -rf CFGParser.tab.c CFGParser.tab.h somename a.out lex.yy.c CFGParser test/a.out 
+	rm -rf CFGParser.tab.c CFGParser.tab.h somename a.out lex.yy.c CFGParser test/a.out CFGStructure.txt 
 
 createDirectory:
 	mkdir -p testCFG testOutput testCombined #create directory if not present

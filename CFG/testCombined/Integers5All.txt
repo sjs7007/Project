@@ -152,11 +152,9 @@ a[2] = <integerValue>
 a[3] = <integerValue>
 a[4] = <integerValue>
 index = <integerValue>
-goto <bb 9>
 
 Block : <bb 3>
 j = <integerValue>
-goto <bb 7>
 
 Block : <bb 4>
 index.0 = <integerValue>
@@ -190,7 +188,6 @@ if index<= <integerValue>, goto <bb 3>,else, goto <bb 10>
 Block : <bb 10>
 printf(...)
 index = <integerValue>
-goto <bb 12>
 
 Block : <bb 11>
 index.6 = <integerValue>
@@ -219,3 +216,40 @@ Symbol 10 : D.1717, Value : <integerValue>
 Symbol 11 : j.1, Value : <integerValue>
 Symbol 12 : D.1715, Value : <integerValue>
 Symbol 13 : index.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 9>
+
+<bb 3>:
+goto <bb 7>
+
+<bb 4>:
+goto <bb 5>
+goto <bb 6>
+
+<bb 5>:
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 4>
+goto <bb 8>
+
+<bb 8>:
+
+<bb 9>:
+goto <bb 3>
+goto <bb 10>
+
+<bb 10>:
+goto <bb 12>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 11>
+goto <bb 13>
+
+<bb 13>:

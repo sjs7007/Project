@@ -101,3 +101,25 @@ Symbol 0 : k, Value : <integerValue>
 Symbol 1 : j, Value : <integerValue>
 Symbol 2 : i, Value : <integerValue>
 Symbol 3 : D.1710, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:

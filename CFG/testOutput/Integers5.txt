@@ -21,11 +21,9 @@ a[2] = <integerValue>
 a[3] = <integerValue>
 a[4] = <integerValue>
 index = <integerValue>
-goto <bb 9>
 
 Block : <bb 3>
 j = <integerValue>
-goto <bb 7>
 
 Block : <bb 4>
 index.0 = <integerValue>
@@ -59,7 +57,6 @@ if index<= <integerValue>, goto <bb 3>,else, goto <bb 10>
 Block : <bb 10>
 printf(...)
 index = <integerValue>
-goto <bb 12>
 
 Block : <bb 11>
 index.6 = <integerValue>

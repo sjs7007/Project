@@ -207,11 +207,9 @@ Identifier of type integer found : D.1726
 
 Block : <bb 2>
 i = <integerValue>
-goto <bb 7>
 
 Block : <bb 3>
 j = <integerValue>
-goto <bb 5>
 
 Block : <bb 4>
 D.1726 = <integerValue>
@@ -231,7 +229,6 @@ if i<= <integerValue>, goto <bb 3>,else, goto <bb 8>
 
 Block : <bb 8>
 x = <integerValue>
-goto <bb 10>
 
 Block : <bb 9>
 x = <integerValue>
@@ -245,11 +242,9 @@ Switch Case : switch (x) <default: <L12>, case 1: <L9>, case 2: <L10>, case 3: <
 
 Switch Case Block : <L9>:
 printf(...)
-goto <bb 16>
 
 Switch Case Block : <L10>:
 printf(...)
-goto <bb 16>
 
 Switch Case Block : <L11>:
 printf(...)
@@ -259,7 +254,6 @@ printf(...)
 p = <integerValue>
 q = <integerValue>
 r = <integerValue>
-goto <bb 16>
 
 Switch Case Block : <L12>:
 printf(...)
@@ -291,3 +285,51 @@ Symbol 6 : r, Value : <integerValue>
 Symbol 7 : q, Value : <integerValue>
 Symbol 8 : p, Value : <integerValue>
 Symbol 9 : D.1726, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 10>
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 9>
+goto <bb 11>
+
+<bb 11>:
+goto <bb 16>
+goto <bb 16>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 17>:
+goto <bb 17>
+goto <bb 18>
+
+<bb 18>:
+goto <bb 19>
+goto <bb 20>
+
+<bb 19>:
+
+<bb 20>:

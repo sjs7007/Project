@@ -90,11 +90,9 @@ k = <integerValue>
 f = <floatValue>
 g = <floatValue>
 i = <integerValue>
-goto <bb 7>
 
 Block : <bb 3>
 j = <integerValue>
-goto <bb 5>
 
 Block : <bb 4>
 k = <integerValue>
@@ -125,3 +123,25 @@ Symbol 4 : i, Value : <integerValue>
 Symbol 5 : D.1715, Value : <doubleValue>
 Symbol 6 : D.1714, Value : <doubleValue>
 Symbol 7 : D.1713, Value : <doubleValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:

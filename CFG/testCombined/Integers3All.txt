@@ -132,7 +132,6 @@ Identifier of type integer found : x
 
 Block : <bb 2>
 x = <integerValue>
-goto <bb 4>
 
 Block : <bb 3>
 printf(...)
@@ -148,11 +147,9 @@ Switch Case : switch (x) <default: <L6>, case 1: <L3>, case 2: <L4>, case 3: <L5
 
 Switch Case Block : <L3>:
 printf(...)
-goto <bb 10>
 
 Switch Case Block : <L4>:
 printf(...)
-goto <bb 10>
 
 Switch Case Block : <L5>:
 printf(...)
@@ -162,7 +159,6 @@ printf(...)
 p = <integerValue>
 q = <integerValue>
 r = <integerValue>
-goto <bb 10>
 
 Switch Case Block : <L6>:
 printf(...)
@@ -174,3 +170,21 @@ Symbol 0 : r, Value : <integerValue>
 Symbol 1 : q, Value : <integerValue>
 Symbol 2 : p, Value : <integerValue>
 Symbol 3 : x, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 10>
+goto <bb 10>
+goto <bb 10>
+
+<bb 10>:

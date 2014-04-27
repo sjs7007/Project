@@ -5,7 +5,6 @@ Identifier of type integer found : x
 
 Block : <bb 2>
 x = <integerValue>
-goto <bb 4>
 
 Block : <bb 3>
 printf(...)
@@ -21,11 +20,9 @@ Switch Case : switch (x) <default: <L6>, case 1: <L3>, case 2: <L4>, case 3: <L5
 
 Switch Case Block : <L3>:
 printf(...)
-goto <bb 10>
 
 Switch Case Block : <L4>:
 printf(...)
-goto <bb 10>
 
 Switch Case Block : <L5>:
 printf(...)
@@ -35,7 +32,6 @@ printf(...)
 p = <integerValue>
 q = <integerValue>
 r = <integerValue>
-goto <bb 10>
 
 Switch Case Block : <L6>:
 printf(...)

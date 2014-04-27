@@ -168,8 +168,7 @@ block:
 		temp.append($1);
 		temp.append(":");
 		writeOut(temp);
-	}
-	;
+	};
 
 number:
     INTEGER { $$=$1 }
@@ -369,7 +368,11 @@ switchblock:
     switchBLOCK 
     {
         cout<<endl<<"Switch Case Block : "<<$1<<endl; 
-    };
+    	string temp="\n";
+		temp.append($1);
+		//temp.append(":");
+		writeOut(temp);
+	};
 
 switchCase:
     switch switchBlocks

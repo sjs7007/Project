@@ -183,8 +183,16 @@ goto <bb 3>
 goto <bb 5>
 
 <bb 5>:
+
+<L3>:
 goto <bb 10>
+
+<L4>:
 goto <bb 10>
+
+<L5>:
 goto <bb 10>
+
+<L6>:
 
 <bb 10>:

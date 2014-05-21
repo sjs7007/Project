@@ -16,12 +16,16 @@
 "char" ;
 "Function" ;
 "main" ;
+"unsigned" ;
 ^.*restrict.*$ ;
+^.*Merging.*$ ; 
 
-"int" { return intDECL; } 
+"int "[*]? { return intDECL; } 
 "int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
 "float" { return floatDECL; };
 "double" { return doubleDECL; };
+"(unsigned int)" {;}
+"(int)" {;}
 "(float)" {;}
 "(double)" {;}
 
@@ -34,8 +38,9 @@
 "goto <bb "[0-9]+">" { yylval.sval = strdup(yytext); return GOTO; }
 "if" { return IF; }
 "else" { return ELSE; }
-"return" { return RETURN; }
+"return D."[0-9]+ { return RETURN; }
 "printf (".*")"   { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
+"scanf (".*")"   { /*cout<<"Print : "<<yytext<<endl;*/ return PRINT; }
 "__builtin_puts (".*"[0])" { /*cout<<"Puts : "<<yytext<<endl;*/ return PRINT; }
 "__builtin_putchar (".*")" { return PRINT; }
 "switch (".*">>" { /*cout<<"Switch Case : "<<yytext<<endl;*/ yylval.sval = strdup(yytext); return SWITCH; }

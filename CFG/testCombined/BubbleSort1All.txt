@@ -1,0 +1,797 @@
+// http://www.programmingsimplified.com/c/source-code/c-program-bubble-sort
+
+/* Bubble sort code */
+ 
+#include <stdio.h>
+ 
+int main()
+{
+  int array[100], n, c, d, swap;
+ 
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+ 
+  printf("Enter %d integers\n", n);
+ 
+  for (c = 0; c < n; c++)
+    scanf("%d", &array[c]);
+ 
+  for (c = 0 ; c < ( n - 1 ); c++)
+  {
+    for (d = 0 ; d < n - c - 1; d++)
+    {
+      if (array[d] > array[d+1]) /* For decreasing order use < */
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+      }
+    }
+  }
+ 
+  printf("Sorted list in ascending order:\n");
+ 
+  for ( c = 0 ; c < n ; c++ )
+     printf("%d\n", array[c]);
+ 
+  return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 16 and 17
+main ()
+{
+  int swap;
+  int d;
+  int c;
+  int n;
+  int array[100];
+  int D.1746;
+  int n.9;
+  const char * restrict D.1744;
+  int D.1743;
+  int c.8;
+  int D.1741;
+  int n.7;
+  int D.1739;
+  int D.1738;
+  int n.6;
+  int D.1736;
+  int D.1735;
+  int D.1734;
+  int d.5;
+  int d.4;
+  int D.1729;
+  int D.1728;
+  int D.1727;
+  int d.3;
+  int n.2;
+  const char * restrict D.1724;
+  int * D.1723;
+  unsigned int D.1722;
+  unsigned int c.1;
+  const char * restrict D.1720;
+  int n.0;
+  const char * restrict D.1718;
+
+<bb 2>:
+  __builtin_puts (&"Enter number of elements"[0]);
+  D.1718 = (const char * restrict) "%d";
+  scanf (D.1718, &n);
+  n.0 = n;
+  D.1720 = (const char * restrict) "Enter %d integers\n";
+  printf (D.1720, n.0);
+  c = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  c.1 = (unsigned int) c;
+  D.1722 = c.1 * 4;
+  D.1723 = &array + D.1722;
+  D.1724 = (const char * restrict) "%d";
+  scanf (D.1724, D.1723);
+  c = c + 1;
+
+<bb 4>:
+  n.2 = n;
+  if (c < n.2)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  c = 0;
+  goto <bb 12>;
+
+<bb 6>:
+  d = 0;
+  goto <bb 10>;
+
+<bb 7>:
+  d.3 = d;
+  D.1727 = array[d.3];
+  D.1728 = d + 1;
+  D.1729 = array[D.1728];
+  if (D.1727 > D.1729)
+    goto <bb 8>;
+  else
+    goto <bb 9>;
+
+<bb 8>:
+  d.4 = d;
+  swap = array[d.4];
+  d.5 = d;
+  D.1734 = d + 1;
+  D.1735 = array[D.1734];
+  array[d.5] = D.1735;
+  D.1736 = d + 1;
+  array[D.1736] = swap;
+
+<bb 9>:
+  d = d + 1;
+
+<bb 10>:
+  n.6 = n;
+  D.1738 = n.6 - c;
+  D.1739 = D.1738 + -1;
+  if (D.1739 > d)
+    goto <bb 7>;
+  else
+    goto <bb 11>;
+
+<bb 11>:
+  c = c + 1;
+
+<bb 12>:
+  n.7 = n;
+  D.1741 = n.7 + -1;
+  if (D.1741 > c)
+    goto <bb 6>;
+  else
+    goto <bb 13>;
+
+<bb 13>:
+  __builtin_puts (&"Sorted list in ascending order:"[0]);
+  c = 0;
+  goto <bb 15>;
+
+<bb 14>:
+  c.8 = c;
+  D.1743 = array[c.8];
+  D.1744 = (const char * restrict) "%d\n";
+  printf (D.1744, D.1743);
+  c = c + 1;
+
+<bb 15>:
+  n.9 = n;
+  if (c < n.9)
+    goto <bb 14>;
+  else
+    goto <bb 16>;
+
+<bb 16>:
+  D.1746 = 0;
+  return D.1746;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : swap
+Identifier of type integer found : d
+Identifier of type integer found : c
+Identifier of type integer found : n
+Integer Array Declaration : int array[100]
+Identifier of type integer found : D.1746
+Identifier of type integer found : n.9
+Identifier of type integer found : D.1743
+Identifier of type integer found : c.8
+Identifier of type integer found : D.1741
+Identifier of type integer found : n.7
+Identifier of type integer found : D.1739
+Identifier of type integer found : D.1738
+Identifier of type integer found : n.6
+Identifier of type integer found : D.1736
+Identifier of type integer found : D.1735
+Identifier of type integer found : D.1734
+Identifier of type integer found : d.5
+Identifier of type integer found : d.4
+Identifier of type integer found : D.1729
+Identifier of type integer found : D.1728
+Identifier of type integer found : D.1727
+Identifier of type integer found : d.3
+Identifier of type integer found : n.2
+Identifier of type integer found : D.1723
+Identifier of type integer found : D.1722
+Identifier of type integer found : c.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+n.0 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 3>
+c.1 = <integerValue>
+D.1722 = <integerValue>
+D.1723 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 4>
+n.2 = <integerValue>
+if c< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+c = <integerValue>
+
+Block : <bb 6>
+d = <integerValue>
+
+Block : <bb 7>
+d.3 = <integerValue>
+D.1727 = <integerValue>
+D.1728 = <integerValue>
+D.1729 = <integerValue>
+if D.1727> <integerValue>, goto <bb 8>,else, goto <bb 9>
+
+Block : <bb 8>
+d.4 = <integerValue>
+swap = <integerValue>
+d.5 = <integerValue>
+D.1734 = <integerValue>
+D.1735 = <integerValue>
+array[d.5] = <integerValue>
+D.1736 = <integerValue>
+array[D.1736] = <integerValue>
+
+Block : <bb 9>
+d = <integerValue>
+
+Block : <bb 10>
+n.6 = <integerValue>
+D.1738 = <integerValue>
+D.1739 = <integerValue>
+if D.1739> <integerValue>, goto <bb 7>,else, goto <bb 11>
+
+Block : <bb 11>
+c = <integerValue>
+
+Block : <bb 12>
+n.7 = <integerValue>
+D.1741 = <integerValue>
+if D.1741> <integerValue>, goto <bb 6>,else, goto <bb 13>
+
+Block : <bb 13>
+printf(...)
+c = <integerValue>
+
+Block : <bb 14>
+c.8 = <integerValue>
+D.1743 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 15>
+n.9 = <integerValue>
+if c< <integerValue>, goto <bb 14>,else, goto <bb 16>
+
+Block : <bb 16>
+D.1746 = <integerValue>
+
+Symbol table : -
+Symbol 0 : swap, Value : <integerValue>
+Symbol 1 : d, Value : <integerValue>
+Symbol 2 : c, Value : <integerValue>
+Symbol 3 : n, Value : <integerValue>
+Symbol 4 : D.1746, Value : <integerValue>
+Symbol 5 : n.9, Value : <integerValue>
+Symbol 6 : D.1743, Value : <integerValue>
+Symbol 7 : c.8, Value : <integerValue>
+Symbol 8 : D.1741, Value : <integerValue>
+Symbol 9 : n.7, Value : <integerValue>
+Symbol 10 : D.1739, Value : <integerValue>
+Symbol 11 : D.1738, Value : <integerValue>
+Symbol 12 : n.6, Value : <integerValue>
+Symbol 13 : D.1736, Value : <integerValue>
+Symbol 14 : D.1735, Value : <integerValue>
+Symbol 15 : D.1734, Value : <integerValue>
+Symbol 16 : d.5, Value : <integerValue>
+Symbol 17 : d.4, Value : <integerValue>
+Symbol 18 : D.1729, Value : <integerValue>
+Symbol 19 : D.1728, Value : <integerValue>
+Symbol 20 : D.1727, Value : <integerValue>
+Symbol 21 : d.3, Value : <integerValue>
+Symbol 22 : n.2, Value : <integerValue>
+Symbol 23 : D.1723, Value : <integerValue>
+Symbol 24 : D.1722, Value : <integerValue>
+Symbol 25 : c.1, Value : <integerValue>
+Symbol 26 : n.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 12>
+
+<bb 6>:
+goto <bb 10>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 7>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 6>
+goto <bb 13>
+
+<bb 13>:
+goto <bb 15>
+
+<bb 14>:
+
+<bb 15>:
+goto <bb 14>
+goto <bb 16>
+
+<bb 16>:

@@ -1,0 +1,109 @@
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : temp
+Identifier of type integer found : n
+Integer Array Declaration : int data[100]
+Identifier of type integer found : D.1740
+Identifier of type integer found : n.7
+Identifier of type integer found : D.1737
+Identifier of type integer found : i.6
+Identifier of type integer found : n.5
+Identifier of type integer found : D.1733
+Identifier of type integer found : D.1731
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1729
+Identifier of type integer found : j.3
+Identifier of type integer found : D.1727
+Identifier of type integer found : i.2
+Identifier of type integer found : n.1
+Identifier of type integer found : D.1723
+Identifier of type integer found : D.1722
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+D.1722 = <integerValue>
+D.1723 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 4>
+n.1 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+i.2 = <integerValue>
+temp = <integerValue>
+j = <integerValue>
+
+Block : <bb 7>
+D.1727 = <integerValue>
+j.3 = <integerValue>
+D.1729 = <integerValue>
+data[D.1727] = <integerValue>
+j = <integerValue>
+
+Block : <bb 8>
+j.4 = <integerValue>
+D.1731 = <integerValue>
+if D.1731> <integerValue>, goto <bb 9>,else, goto <bb 10>
+
+Block : <bb 9>
+if j>= <integerValue>, goto <bb 7>,else, goto <bb 10>
+
+Block : <bb 10>
+D.1733 = <integerValue>
+data[D.1733] = <integerValue>
+i = <integerValue>
+
+Block : <bb 11>
+n.5 = <integerValue>
+if i< <integerValue>, goto <bb 6>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+i.6 = <integerValue>
+D.1737 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 14>
+n.7 = <integerValue>
+if i< <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+D.1740 = <integerValue>
+
+Symbol table : -
+Symbol 0 : j, Value : <integerValue>
+Symbol 1 : i, Value : <integerValue>
+Symbol 2 : temp, Value : <integerValue>
+Symbol 3 : n, Value : <integerValue>
+Symbol 4 : D.1740, Value : <integerValue>
+Symbol 5 : n.7, Value : <integerValue>
+Symbol 6 : D.1737, Value : <integerValue>
+Symbol 7 : i.6, Value : <integerValue>
+Symbol 8 : n.5, Value : <integerValue>
+Symbol 9 : D.1733, Value : <integerValue>
+Symbol 10 : D.1731, Value : <integerValue>
+Symbol 11 : j.4, Value : <integerValue>
+Symbol 12 : D.1729, Value : <integerValue>
+Symbol 13 : j.3, Value : <integerValue>
+Symbol 14 : D.1727, Value : <integerValue>
+Symbol 15 : i.2, Value : <integerValue>
+Symbol 16 : n.1, Value : <integerValue>
+Symbol 17 : D.1723, Value : <integerValue>
+Symbol 18 : D.1722, Value : <integerValue>
+Symbol 19 : i.0, Value : <integerValue>

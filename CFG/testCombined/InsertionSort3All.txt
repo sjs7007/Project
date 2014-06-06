@@ -1,0 +1,321 @@
+/* http://www.c4learn.com/c-programs/program-to-implement-insertion-sort-in-c-programming.html */
+
+#include<stdio.h>
+int main(){
+
+  int i,j,num,temp,a[20];
+
+  printf("Enter total elements: ");
+  scanf("%d",&num);
+
+  printf("Enter %d elements: ",num);
+  for(i=0;i<num;i++)
+      scanf("%d",&a[i]);
+
+  for(i=1;i<num;i++){
+      temp=a[i];
+      j=i-1;
+      while((temp<a[j])&&(j>=0)){
+      a[j+1]=a[j];
+          j=j-1;
+      }
+      a[j+1]=temp;
+  }
+
+  printf("After Sorting: ");
+  for(i=0;i<num;i++)
+      printf("%d",a[i]);
+
+  return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 15 and 16
+main ()
+{
+  int a[20];
+  int temp;
+  int num;
+  int j;
+  int i;
+  int D.1741;
+  int num.8;
+  const char * restrict D.1739;
+  int D.1738;
+  int i.7;
+  const char * restrict D.1736;
+  int num.6;
+  int D.1734;
+  int D.1732;
+  int j.5;
+  int D.1730;
+  int j.4;
+  int D.1728;
+  int i.3;
+  int num.2;
+  const char * restrict D.1725;
+  int * D.1724;
+  unsigned int D.1723;
+  unsigned int i.1;
+  const char * restrict D.1721;
+  int num.0;
+  const char * restrict D.1719;
+  const char * restrict D.1718;
+
+<bb 2>:
+  D.1718 = (const char * restrict) "Enter total elements: ";
+  printf (D.1718);
+  D.1719 = (const char * restrict) "%d";
+  scanf (D.1719, &num);
+  num.0 = num;
+  D.1721 = (const char * restrict) "Enter %d elements: ";
+  printf (D.1721, num.0);
+  i = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  i.1 = (unsigned int) i;
+  D.1723 = i.1 * 4;
+  D.1724 = &a + D.1723;
+  D.1725 = (const char * restrict) "%d";
+  scanf (D.1725, D.1724);
+  i = i + 1;
+
+<bb 4>:
+  num.2 = num;
+  if (i < num.2)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  i = 1;
+  goto <bb 11>;
+
+<bb 6>:
+  i.3 = i;
+  temp = a[i.3];
+  j = i + -1;
+  goto <bb 8>;
+
+<bb 7>:
+  D.1728 = j + 1;
+  j.4 = j;
+  D.1730 = a[j.4];
+  a[D.1728] = D.1730;
+  j = j + -1;
+
+<bb 8>:
+  j.5 = j;
+  D.1732 = a[j.5];
+  if (D.1732 > temp)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+<bb 9>:
+  if (j >= 0)
+    goto <bb 7>;
+  else
+    goto <bb 10>;
+
+<bb 10>:
+  D.1734 = j + 1;
+  a[D.1734] = temp;
+  i = i + 1;
+
+<bb 11>:
+  num.6 = num;
+  if (i < num.6)
+    goto <bb 6>;
+  else
+    goto <bb 12>;
+
+<bb 12>:
+  D.1736 = (const char * restrict) "After Sorting: ";
+  printf (D.1736);
+  i = 0;
+  goto <bb 14>;
+
+<bb 13>:
+  i.7 = i;
+  D.1738 = a[i.7];
+  D.1739 = (const char * restrict) "%d";
+  printf (D.1739, D.1738);
+  i = i + 1;
+
+<bb 14>:
+  num.8 = num;
+  if (i < num.8)
+    goto <bb 13>;
+  else
+    goto <bb 15>;
+
+<bb 15>:
+  D.1741 = 0;
+  return D.1741;
+
+}
+
+
+
+--------------------------------------------------
+Integer Array Declaration : int a[20]
+Identifier of type integer found : temp
+Identifier of type integer found : num
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : D.1741
+Identifier of type integer found : num.8
+Identifier of type integer found : D.1738
+Identifier of type integer found : i.7
+Identifier of type integer found : num.6
+Identifier of type integer found : D.1734
+Identifier of type integer found : D.1732
+Identifier of type integer found : j.5
+Identifier of type integer found : D.1730
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1728
+Identifier of type integer found : i.3
+Identifier of type integer found : num.2
+Identifier of type integer found : D.1724
+Identifier of type integer found : D.1723
+Identifier of type integer found : i.1
+Identifier of type integer found : num.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+num.0 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.1 = <integerValue>
+D.1723 = <integerValue>
+D.1724 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 4>
+num.2 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+i.3 = <integerValue>
+temp = <integerValue>
+j = <integerValue>
+
+Block : <bb 7>
+D.1728 = <integerValue>
+j.4 = <integerValue>
+D.1730 = <integerValue>
+a[D.1728] = <integerValue>
+j = <integerValue>
+
+Block : <bb 8>
+j.5 = <integerValue>
+D.1732 = <integerValue>
+if D.1732> <integerValue>, goto <bb 9>,else, goto <bb 10>
+
+Block : <bb 9>
+if j>= <integerValue>, goto <bb 7>,else, goto <bb 10>
+
+Block : <bb 10>
+D.1734 = <integerValue>
+a[D.1734] = <integerValue>
+i = <integerValue>
+
+Block : <bb 11>
+num.6 = <integerValue>
+if i< <integerValue>, goto <bb 6>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+i.7 = <integerValue>
+D.1738 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 14>
+num.8 = <integerValue>
+if i< <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+D.1741 = <integerValue>
+
+Symbol table : -
+Symbol 0 : temp, Value : <integerValue>
+Symbol 1 : num, Value : <integerValue>
+Symbol 2 : j, Value : <integerValue>
+Symbol 3 : i, Value : <integerValue>
+Symbol 4 : D.1741, Value : <integerValue>
+Symbol 5 : num.8, Value : <integerValue>
+Symbol 6 : D.1738, Value : <integerValue>
+Symbol 7 : i.7, Value : <integerValue>
+Symbol 8 : num.6, Value : <integerValue>
+Symbol 9 : D.1734, Value : <integerValue>
+Symbol 10 : D.1732, Value : <integerValue>
+Symbol 11 : j.5, Value : <integerValue>
+Symbol 12 : D.1730, Value : <integerValue>
+Symbol 13 : j.4, Value : <integerValue>
+Symbol 14 : D.1728, Value : <integerValue>
+Symbol 15 : i.3, Value : <integerValue>
+Symbol 16 : num.2, Value : <integerValue>
+Symbol 17 : D.1724, Value : <integerValue>
+Symbol 18 : D.1723, Value : <integerValue>
+Symbol 19 : i.1, Value : <integerValue>
+Symbol 20 : num.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 11>
+
+<bb 6>:
+goto <bb 8>
+
+<bb 7>:
+
+<bb 8>:
+goto <bb 9>
+goto <bb 10>
+
+<bb 9>:
+goto <bb 7>
+goto <bb 10>
+
+<bb 10>:
+
+<bb 11>:
+goto <bb 6>
+goto <bb 12>
+
+<bb 12>:
+goto <bb 14>
+
+<bb 13>:
+
+<bb 14>:
+goto <bb 13>
+goto <bb 15>
+
+<bb 15>:

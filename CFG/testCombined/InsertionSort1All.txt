@@ -1,0 +1,346 @@
+/*http://www.programmingsimplified.com/c/source-code/c-program-insertion-sort*/
+
+/* insertion sort ascending order */
+ 
+#include <stdio.h>
+ 
+int main()
+{
+  int n, array[1000], c, d, t;
+ 
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+ 
+  printf("Enter %d integers\n", n);
+ 
+  for (c = 0; c < n; c++) {
+    scanf("%d", &array[c]);
+  }
+ 
+  for (c = 1 ; c <= n - 1; c++) {
+    d = c;
+ 
+    while ( d > 0 && array[d] < array[d-1]) {
+      t          = array[d];
+      array[d]   = array[d-1];
+      array[d-1] = t;
+ 
+      d--;
+    }
+  }
+ 
+  printf("Sorted list in ascending order:\n");
+ 
+  for (c = 0; c <= n - 1; c++) {
+    printf("%d\n", array[c]);
+  }
+ 
+  return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 15 and 16
+main ()
+{
+  int t;
+  int d;
+  int c;
+  int array[1000];
+  int n;
+  int D.1743;
+  int D.1742;
+  int n.8;
+  const char * restrict D.1740;
+  int D.1739;
+  int c.7;
+  int D.1737;
+  int n.6;
+  int D.1735;
+  int D.1734;
+  int D.1733;
+  int d.5;
+  int D.1730;
+  int D.1729;
+  int D.1728;
+  int d.4;
+  int d.3;
+  int n.2;
+  const char * restrict D.1724;
+  int * D.1723;
+  unsigned int D.1722;
+  unsigned int c.1;
+  const char * restrict D.1720;
+  int n.0;
+  const char * restrict D.1718;
+
+<bb 2>:
+  __builtin_puts (&"Enter number of elements"[0]);
+  D.1718 = (const char * restrict) "%d";
+  scanf (D.1718, &n);
+  n.0 = n;
+  D.1720 = (const char * restrict) "Enter %d integers\n";
+  printf (D.1720, n.0);
+  c = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  c.1 = (unsigned int) c;
+  D.1722 = c.1 * 4;
+  D.1723 = &array + D.1722;
+  D.1724 = (const char * restrict) "%d";
+  scanf (D.1724, D.1723);
+  c = c + 1;
+
+<bb 4>:
+  n.2 = n;
+  if (c < n.2)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  c = 1;
+  goto <bb 11>;
+
+<bb 6>:
+  d = c;
+  goto <bb 8>;
+
+<bb 7>:
+  d.3 = d;
+  t = array[d.3];
+  d.4 = d;
+  D.1728 = d + -1;
+  D.1729 = array[D.1728];
+  array[d.4] = D.1729;
+  D.1730 = d + -1;
+  array[D.1730] = t;
+  d = d + -1;
+
+<bb 8>:
+  if (d > 0)
+    goto <bb 9>;
+  else
+    goto <bb 10>;
+
+<bb 9>:
+  d.5 = d;
+  D.1733 = array[d.5];
+  D.1734 = d + -1;
+  D.1735 = array[D.1734];
+  if (D.1733 < D.1735)
+    goto <bb 7>;
+  else
+    goto <bb 10>;
+
+<bb 10>:
+  c = c + 1;
+
+<bb 11>:
+  n.6 = n;
+  D.1737 = n.6 + -1;
+  if (D.1737 >= c)
+    goto <bb 6>;
+  else
+    goto <bb 12>;
+
+<bb 12>:
+  __builtin_puts (&"Sorted list in ascending order:"[0]);
+  c = 0;
+  goto <bb 14>;
+
+<bb 13>:
+  c.7 = c;
+  D.1739 = array[c.7];
+  D.1740 = (const char * restrict) "%d\n";
+  printf (D.1740, D.1739);
+  c = c + 1;
+
+<bb 14>:
+  n.8 = n;
+  D.1742 = n.8 + -1;
+  if (D.1742 >= c)
+    goto <bb 13>;
+  else
+    goto <bb 15>;
+
+<bb 15>:
+  D.1743 = 0;
+  return D.1743;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : t
+Identifier of type integer found : d
+Identifier of type integer found : c
+Integer Array Declaration : int array[1000]
+Identifier of type integer found : n
+Identifier of type integer found : D.1743
+Identifier of type integer found : D.1742
+Identifier of type integer found : n.8
+Identifier of type integer found : D.1739
+Identifier of type integer found : c.7
+Identifier of type integer found : D.1737
+Identifier of type integer found : n.6
+Identifier of type integer found : D.1735
+Identifier of type integer found : D.1734
+Identifier of type integer found : D.1733
+Identifier of type integer found : d.5
+Identifier of type integer found : D.1730
+Identifier of type integer found : D.1729
+Identifier of type integer found : D.1728
+Identifier of type integer found : d.4
+Identifier of type integer found : d.3
+Identifier of type integer found : n.2
+Identifier of type integer found : D.1723
+Identifier of type integer found : D.1722
+Identifier of type integer found : c.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+n.0 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 3>
+c.1 = <integerValue>
+D.1722 = <integerValue>
+D.1723 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 4>
+n.2 = <integerValue>
+if c< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+c = <integerValue>
+
+Block : <bb 6>
+d = <integerValue>
+
+Block : <bb 7>
+d.3 = <integerValue>
+t = <integerValue>
+d.4 = <integerValue>
+D.1728 = <integerValue>
+D.1729 = <integerValue>
+array[d.4] = <integerValue>
+D.1730 = <integerValue>
+array[D.1730] = <integerValue>
+d = <integerValue>
+
+Block : <bb 8>
+if d> <integerValue>, goto <bb 9>,else, goto <bb 10>
+
+Block : <bb 9>
+d.5 = <integerValue>
+D.1733 = <integerValue>
+D.1734 = <integerValue>
+D.1735 = <integerValue>
+if D.1733< <integerValue>, goto <bb 7>,else, goto <bb 10>
+
+Block : <bb 10>
+c = <integerValue>
+
+Block : <bb 11>
+n.6 = <integerValue>
+D.1737 = <integerValue>
+if D.1737>= <integerValue>, goto <bb 6>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+c = <integerValue>
+
+Block : <bb 13>
+c.7 = <integerValue>
+D.1739 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 14>
+n.8 = <integerValue>
+D.1742 = <integerValue>
+if D.1742>= <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+D.1743 = <integerValue>
+
+Symbol table : -
+Symbol 0 : t, Value : <integerValue>
+Symbol 1 : d, Value : <integerValue>
+Symbol 2 : c, Value : <integerValue>
+Symbol 3 : n, Value : <integerValue>
+Symbol 4 : D.1743, Value : <integerValue>
+Symbol 5 : D.1742, Value : <integerValue>
+Symbol 6 : n.8, Value : <integerValue>
+Symbol 7 : D.1739, Value : <integerValue>
+Symbol 8 : c.7, Value : <integerValue>
+Symbol 9 : D.1737, Value : <integerValue>
+Symbol 10 : n.6, Value : <integerValue>
+Symbol 11 : D.1735, Value : <integerValue>
+Symbol 12 : D.1734, Value : <integerValue>
+Symbol 13 : D.1733, Value : <integerValue>
+Symbol 14 : d.5, Value : <integerValue>
+Symbol 15 : D.1730, Value : <integerValue>
+Symbol 16 : D.1729, Value : <integerValue>
+Symbol 17 : D.1728, Value : <integerValue>
+Symbol 18 : d.4, Value : <integerValue>
+Symbol 19 : d.3, Value : <integerValue>
+Symbol 20 : n.2, Value : <integerValue>
+Symbol 21 : D.1723, Value : <integerValue>
+Symbol 22 : D.1722, Value : <integerValue>
+Symbol 23 : c.1, Value : <integerValue>
+Symbol 24 : n.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 11>
+
+<bb 6>:
+goto <bb 8>
+
+<bb 7>:
+
+<bb 8>:
+goto <bb 9>
+goto <bb 10>
+
+<bb 9>:
+goto <bb 7>
+goto <bb 10>
+
+<bb 10>:
+
+<bb 11>:
+goto <bb 6>
+goto <bb 12>
+
+<bb 12>:
+goto <bb 14>
+
+<bb 13>:
+
+<bb 14>:
+goto <bb 13>
+goto <bb 15>
+
+<bb 15>:

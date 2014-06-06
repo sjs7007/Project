@@ -22,10 +22,12 @@
 
 "int "[*]? { return intDECL; } 
 "int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
+"int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
 "float" { return floatDECL; };
 "double" { return doubleDECL; };
 "(unsigned int)" {;}
 "(int)" {;}
+"(int *)" {;}
 "(float)" {;}
 "(double)" {;}
 
@@ -53,6 +55,8 @@
 "<=" { return LESSTHANEQUALTO; }
 ">" { return GREATERTHAN; }
 ">=" { return GREATERTHANEQUALTO;}
+"!=" { return NOTEQUALTO; }
+"==" { return EQUALTO; }
 ";" { return yytext[0]; }
 ";;" {}
 
@@ -61,7 +65,9 @@
 "D."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; }
 [a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+ { yylval.sval = strdup(yytext); return IDENTIFIER; } //of type a[j.5]
 [a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; } //of type a[2]
+[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]["[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; } //of type a[2][3]
 [a-zA-Z_][a-zA-Z_0-9]*"["[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
+[a-zA-Z_][a-zA-Z_0-9]*"["[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+"]["[a-zA-Z_][a-zA-Z_0-9]*"."[0-9]+"]" { yylval.sval = strdup(yytext); return IDENTIFIER; }
 
 [ \t \n] ;
 .        ;

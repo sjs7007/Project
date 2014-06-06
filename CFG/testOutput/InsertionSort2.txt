@@ -1,0 +1,112 @@
+Integer Array Declaration : int a[20]
+Identifier of type integer found : temp
+Identifier of type integer found : s
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : D.1741
+Identifier of type integer found : s.8
+Identifier of type integer found : D.1738
+Identifier of type integer found : i.7
+Identifier of type integer found : s.6
+Identifier of type integer found : D.1734
+Identifier of type integer found : D.1732
+Identifier of type integer found : j.5
+Identifier of type integer found : D.1730
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1728
+Identifier of type integer found : i.3
+Identifier of type integer found : s.2
+Identifier of type integer found : D.1724
+Identifier of type integer found : D.1723
+Identifier of type integer found : i.1
+Identifier of type integer found : s.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+s.0 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.1 = <integerValue>
+D.1723 = <integerValue>
+D.1724 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 4>
+s.2 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+i.3 = <integerValue>
+temp = <integerValue>
+j = <integerValue>
+
+Block : <bb 7>
+D.1728 = <integerValue>
+j.4 = <integerValue>
+D.1730 = <integerValue>
+a[D.1728] = <integerValue>
+j = <integerValue>
+
+Block : <bb 8>
+j.5 = <integerValue>
+D.1732 = <integerValue>
+if D.1732> <integerValue>, goto <bb 9>,else, goto <bb 10>
+
+Block : <bb 9>
+if j>= <integerValue>, goto <bb 7>,else, goto <bb 10>
+
+Block : <bb 10>
+D.1734 = <integerValue>
+a[D.1734] = <integerValue>
+i = <integerValue>
+
+Block : <bb 11>
+s.6 = <integerValue>
+if i< <integerValue>, goto <bb 6>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+i.7 = <integerValue>
+D.1738 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 14>
+s.8 = <integerValue>
+if i< <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+D.1741 = <integerValue>
+
+Symbol table : -
+Symbol 0 : temp, Value : <integerValue>
+Symbol 1 : s, Value : <integerValue>
+Symbol 2 : j, Value : <integerValue>
+Symbol 3 : i, Value : <integerValue>
+Symbol 4 : D.1741, Value : <integerValue>
+Symbol 5 : s.8, Value : <integerValue>
+Symbol 6 : D.1738, Value : <integerValue>
+Symbol 7 : i.7, Value : <integerValue>
+Symbol 8 : s.6, Value : <integerValue>
+Symbol 9 : D.1734, Value : <integerValue>
+Symbol 10 : D.1732, Value : <integerValue>
+Symbol 11 : j.5, Value : <integerValue>
+Symbol 12 : D.1730, Value : <integerValue>
+Symbol 13 : j.4, Value : <integerValue>
+Symbol 14 : D.1728, Value : <integerValue>
+Symbol 15 : i.3, Value : <integerValue>
+Symbol 16 : s.2, Value : <integerValue>
+Symbol 17 : D.1724, Value : <integerValue>
+Symbol 18 : D.1723, Value : <integerValue>
+Symbol 19 : i.1, Value : <integerValue>
+Symbol 20 : s.0, Value : <integerValue>

@@ -1,0 +1,123 @@
+Identifier of type integer found : temp
+Identifier of type integer found : steps
+Identifier of type integer found : n
+Identifier of type integer found : i
+Integer Array Declaration : int data[100]
+Identifier of type integer found : D.1745
+Identifier of type integer found : n.11
+Identifier of type integer found : D.1742
+Identifier of type integer found : i.10
+Identifier of type integer found : n.9
+Identifier of type integer found : n.8
+Identifier of type integer found : i.7
+Identifier of type integer found : D.1736
+Identifier of type integer found : i.6
+Identifier of type integer found : steps.5
+Identifier of type integer found : steps.4
+Identifier of type integer found : D.1730
+Identifier of type integer found : i.3
+Identifier of type integer found : D.1728
+Identifier of type integer found : steps.2
+Identifier of type integer found : n.1
+Identifier of type integer found : D.1724
+Identifier of type integer found : D.1723
+Identifier of type integer found : i.0
+Identifier of type integer found : D.1720
+
+Block : <bb 2>
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+D.1720 = <integerValue>
+printf(...)
+i.0 = <integerValue>
+D.1723 = <integerValue>
+D.1724 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 4>
+n.1 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+steps = <integerValue>
+
+Block : <bb 6>
+i = <integerValue>
+
+Block : <bb 7>
+steps.2 = <integerValue>
+D.1728 = <integerValue>
+i.3 = <integerValue>
+D.1730 = <integerValue>
+if D.1728> <integerValue>, goto <bb 8>,else, goto <bb 9>
+
+Block : <bb 8>
+steps.4 = <integerValue>
+temp = <integerValue>
+steps.5 = <integerValue>
+i.6 = <integerValue>
+D.1736 = <integerValue>
+data[steps.5] = <integerValue>
+i.7 = <integerValue>
+data[i.7] = <integerValue>
+
+Block : <bb 9>
+i = <integerValue>
+
+Block : <bb 10>
+n.8 = <integerValue>
+if i< <integerValue>, goto <bb 7>,else, goto <bb 11>
+
+Block : <bb 11>
+steps = <integerValue>
+
+Block : <bb 12>
+n.9 = <integerValue>
+if steps< <integerValue>, goto <bb 6>,else, goto <bb 13>
+
+Block : <bb 13>
+printf(...)
+i = <integerValue>
+
+Block : <bb 14>
+i.10 = <integerValue>
+D.1742 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 15>
+n.11 = <integerValue>
+if i< <integerValue>, goto <bb 14>,else, goto <bb 16>
+
+Block : <bb 16>
+D.1745 = <integerValue>
+
+Symbol table : -
+Symbol 0 : temp, Value : <integerValue>
+Symbol 1 : steps, Value : <integerValue>
+Symbol 2 : n, Value : <integerValue>
+Symbol 3 : i, Value : <integerValue>
+Symbol 4 : D.1745, Value : <integerValue>
+Symbol 5 : n.11, Value : <integerValue>
+Symbol 6 : D.1742, Value : <integerValue>
+Symbol 7 : i.10, Value : <integerValue>
+Symbol 8 : n.9, Value : <integerValue>
+Symbol 9 : n.8, Value : <integerValue>
+Symbol 10 : i.7, Value : <integerValue>
+Symbol 11 : D.1736, Value : <integerValue>
+Symbol 12 : i.6, Value : <integerValue>
+Symbol 13 : steps.5, Value : <integerValue>
+Symbol 14 : steps.4, Value : <integerValue>
+Symbol 15 : D.1730, Value : <integerValue>
+Symbol 16 : i.3, Value : <integerValue>
+Symbol 17 : D.1728, Value : <integerValue>
+Symbol 18 : steps.2, Value : <integerValue>
+Symbol 19 : n.1, Value : <integerValue>
+Symbol 20 : D.1724, Value : <integerValue>
+Symbol 21 : D.1723, Value : <integerValue>
+Symbol 22 : i.0, Value : <integerValue>
+Symbol 23 : D.1720, Value : <integerValue>

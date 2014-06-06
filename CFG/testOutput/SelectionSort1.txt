@@ -1,0 +1,135 @@
+Identifier of type integer found : swap
+Identifier of type integer found : position
+Identifier of type integer found : d
+Identifier of type integer found : c
+Identifier of type integer found : n
+Integer Array Declaration : int array[100]
+Identifier of type integer found : D.1747
+Identifier of type integer found : n.12
+Identifier of type integer found : D.1744
+Identifier of type integer found : c.11
+Identifier of type integer found : D.1742
+Identifier of type integer found : n.10
+Identifier of type integer found : position.9
+Identifier of type integer found : D.1739
+Identifier of type integer found : position.8
+Identifier of type integer found : c.7
+Identifier of type integer found : c.6
+Identifier of type integer found : n.5
+Identifier of type integer found : D.1730
+Identifier of type integer found : d.4
+Identifier of type integer found : D.1728
+Identifier of type integer found : position.3
+Identifier of type integer found : n.2
+Identifier of type integer found : D.1724
+Identifier of type integer found : D.1723
+Identifier of type integer found : c.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+n.0 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 3>
+c.1 = <integerValue>
+D.1723 = <integerValue>
+D.1724 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 4>
+n.2 = <integerValue>
+if c< <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+c = <integerValue>
+
+Block : <bb 6>
+position = <integerValue>
+d = <integerValue>
+
+Block : <bb 7>
+position.3 = <integerValue>
+D.1728 = <integerValue>
+d.4 = <integerValue>
+D.1730 = <integerValue>
+if D.1728> <integerValue>, goto <bb 8>,else, goto <bb 9>
+
+Block : <bb 8>
+position = <integerValue>
+
+Block : <bb 9>
+d = <integerValue>
+
+Block : <bb 10>
+n.5 = <integerValue>
+if d< <integerValue>, goto <bb 7>,else, goto <bb 11>
+
+Block : <bb 11>
+if position!= <integerValue>, goto <bb 12>,else, goto <bb 13>
+
+Block : <bb 12>
+c.6 = <integerValue>
+swap = <integerValue>
+c.7 = <integerValue>
+position.8 = <integerValue>
+D.1739 = <integerValue>
+array[c.7] = <integerValue>
+position.9 = <integerValue>
+array[position.9] = <integerValue>
+
+Block : <bb 13>
+c = <integerValue>
+
+Block : <bb 14>
+n.10 = <integerValue>
+D.1742 = <integerValue>
+if D.1742> <integerValue>, goto <bb 6>,else, goto <bb 15>
+
+Block : <bb 15>
+printf(...)
+c = <integerValue>
+
+Block : <bb 16>
+c.11 = <integerValue>
+D.1744 = <integerValue>
+printf(...)
+c = <integerValue>
+
+Block : <bb 17>
+n.12 = <integerValue>
+if c< <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+D.1747 = <integerValue>
+
+Symbol table : -
+Symbol 0 : swap, Value : <integerValue>
+Symbol 1 : position, Value : <integerValue>
+Symbol 2 : d, Value : <integerValue>
+Symbol 3 : c, Value : <integerValue>
+Symbol 4 : n, Value : <integerValue>
+Symbol 5 : D.1747, Value : <integerValue>
+Symbol 6 : n.12, Value : <integerValue>
+Symbol 7 : D.1744, Value : <integerValue>
+Symbol 8 : c.11, Value : <integerValue>
+Symbol 9 : D.1742, Value : <integerValue>
+Symbol 10 : n.10, Value : <integerValue>
+Symbol 11 : position.9, Value : <integerValue>
+Symbol 12 : D.1739, Value : <integerValue>
+Symbol 13 : position.8, Value : <integerValue>
+Symbol 14 : c.7, Value : <integerValue>
+Symbol 15 : c.6, Value : <integerValue>
+Symbol 16 : n.5, Value : <integerValue>
+Symbol 17 : D.1730, Value : <integerValue>
+Symbol 18 : d.4, Value : <integerValue>
+Symbol 19 : D.1728, Value : <integerValue>
+Symbol 20 : position.3, Value : <integerValue>
+Symbol 21 : n.2, Value : <integerValue>
+Symbol 22 : D.1724, Value : <integerValue>
+Symbol 23 : D.1723, Value : <integerValue>
+Symbol 24 : c.1, Value : <integerValue>
+Symbol 25 : n.0, Value : <integerValue>

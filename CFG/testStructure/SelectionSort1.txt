@@ -9,7 +9,7 @@ goto <bb 3>
 goto <bb 5>
 
 <bb 5>:
-goto <bb 12>
+goto <bb 14>
 
 <bb 6>:
 goto <bb 10>
@@ -27,18 +27,24 @@ goto <bb 7>
 goto <bb 11>
 
 <bb 11>:
-
-<bb 12>:
-goto <bb 6>
+goto <bb 12>
 goto <bb 13>
 
+<bb 12>:
+
 <bb 13>:
-goto <bb 15>
 
 <bb 14>:
+goto <bb 6>
+goto <bb 15>
 
 <bb 15>:
-goto <bb 14>
-goto <bb 16>
+goto <bb 17>
 
 <bb 16>:
+
+<bb 17>:
+goto <bb 16>
+goto <bb 18>
+
+<bb 18>:

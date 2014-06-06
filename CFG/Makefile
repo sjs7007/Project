@@ -19,7 +19,7 @@ runTest: runCFG
 	./CFGParser | tee testOutput/$(f).txt
 	sh combineAll.sh $(f)
 	
-testAll: createDirectory testCFG 
+testAll: createDirectory testCFG clean
 	
 cleanCFG:
 	rm -rf testCFG/*

@@ -135,7 +135,7 @@
 %token <sval> BLOCK
 %token <sval> GOTO
 %token PRINT IF ELSE RETURN
-%token LESSTHAN LESSTHANEQUALTO GREATERTHAN GREATERTHANEQUALTO EQUALTO
+%token LESSTHAN LESSTHANEQUALTO GREATERTHAN GREATERTHANEQUALTO EQUALTO NOTEQUALTO EQUALTO
 %token ADD SUB MUL DIV
 %token <sval> IDENTIFIER 
 %type <sval> comparison
@@ -355,6 +355,8 @@ comparison:
     | LESSTHANEQUALTO { $$="<=" }
     | GREATERTHAN { $$=">" }
     | GREATERTHANEQUALTO { $$=">=" }
+    | NOTEQUALTO { $$="!=" }
+    | EQUALTO { $$="=="}
     ;
 
 //Switch case addition starts

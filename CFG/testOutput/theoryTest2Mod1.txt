@@ -1,0 +1,38 @@
+Integer Array Declaration : int prod[5]
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1711
+Identifier of type integer found : D.1710
+Identifier of type integer found : D.1709
+Identifier of type integer found : i.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+i.1 = <integerValue>
+D.1709 = <integerValue>
+D.1710 = <integerValue>
+prod[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+D.1711 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : D.1711, Value : <integerValue>
+Symbol 2 : D.1710, Value : <integerValue>
+Symbol 3 : D.1709, Value : <integerValue>
+Symbol 4 : i.1, Value : <integerValue>
+Symbol 5 : i.0, Value : <integerValue>

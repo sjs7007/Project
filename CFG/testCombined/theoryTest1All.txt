@@ -1,0 +1,273 @@
+#include<stdio.h>
+int main()
+{
+	int a[5],i,prod[5];
+
+	for(i=0;i<5;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+
+	printf("The numbers entered are :- \n");
+
+	for(i=0;i<5;i++)
+	{
+		printf("%d ",a[i]);
+	}
+	printf("\n");
+
+	for(i=0;i<5;i++)
+	{
+		prod[i] = a[i] * 5;
+	}
+
+	for(i=0;i<5;i++)
+	{
+		printf("5 times %d is : %d \n",a[i],prod[i]);
+	}
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 14 and 15
+main ()
+{
+  int prod[5];
+  int i;
+  int a[5];
+  int D.1732;
+  const char * restrict D.1731;
+  int D.1730;
+  int i.5;
+  int D.1728;
+  int i.4;
+  int D.1726;
+  int D.1725;
+  int i.3;
+  int i.2;
+  const char * restrict D.1722;
+  int D.1721;
+  int i.1;
+  const char * restrict D.1719;
+  int * D.1718;
+  unsigned int D.1717;
+  unsigned int i.0;
+
+<bb 2>:
+  i = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  i.0 = (unsigned int) i;
+  D.1717 = i.0 * 4;
+  D.1718 = &a + D.1717;
+  D.1719 = (const char * restrict) "%d";
+  scanf (D.1719, D.1718);
+  i = i + 1;
+
+<bb 4>:
+  if (i <= 4)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  __builtin_puts (&"The numbers entered are :- "[0]);
+  i = 0;
+  goto <bb 7>;
+
+<bb 6>:
+  i.1 = i;
+  D.1721 = a[i.1];
+  D.1722 = (const char * restrict) "%d ";
+  printf (D.1722, D.1721);
+  i = i + 1;
+
+<bb 7>:
+  if (i <= 4)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  __builtin_putchar (10);
+  i = 0;
+  goto <bb 10>;
+
+<bb 9>:
+  i.2 = i;
+  i.3 = i;
+  D.1725 = a[i.3];
+  D.1726 = D.1725 * 5;
+  prod[i.2] = D.1726;
+  i = i + 1;
+
+<bb 10>:
+  if (i <= 4)
+    goto <bb 9>;
+  else
+    goto <bb 11>;
+
+<bb 11>:
+  i = 0;
+  goto <bb 13>;
+
+<bb 12>:
+  i.4 = i;
+  D.1728 = prod[i.4];
+  i.5 = i;
+  D.1730 = a[i.5];
+  D.1731 = (const char * restrict) "5 times %d is : %d \n";
+  printf (D.1731, D.1730, D.1728);
+  i = i + 1;
+
+<bb 13>:
+  if (i <= 4)
+    goto <bb 12>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  D.1732 = 0;
+  return D.1732;
+
+}
+
+
+
+--------------------------------------------------
+Integer Array Declaration : int prod[5]
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1732
+Identifier of type integer found : D.1730
+Identifier of type integer found : i.5
+Identifier of type integer found : D.1728
+Identifier of type integer found : i.4
+Identifier of type integer found : D.1726
+Identifier of type integer found : D.1725
+Identifier of type integer found : i.3
+Identifier of type integer found : i.2
+Identifier of type integer found : D.1721
+Identifier of type integer found : i.1
+Identifier of type integer found : D.1718
+Identifier of type integer found : D.1717
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+D.1717 = <integerValue>
+D.1718 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+printf(...)
+i = <integerValue>
+
+Block : <bb 6>
+i.1 = <integerValue>
+D.1721 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 7>
+if i<= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+printf(...)
+i = <integerValue>
+
+Block : <bb 9>
+i.2 = <integerValue>
+i.3 = <integerValue>
+D.1725 = <integerValue>
+D.1726 = <integerValue>
+prod[i.2] = <integerValue>
+i = <integerValue>
+
+Block : <bb 10>
+if i<= <integerValue>, goto <bb 9>,else, goto <bb 11>
+
+Block : <bb 11>
+i = <integerValue>
+
+Block : <bb 12>
+i.4 = <integerValue>
+D.1728 = <integerValue>
+i.5 = <integerValue>
+D.1730 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+if i<= <integerValue>, goto <bb 12>,else, goto <bb 14>
+
+Block : <bb 14>
+D.1732 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : D.1732, Value : <integerValue>
+Symbol 2 : D.1730, Value : <integerValue>
+Symbol 3 : i.5, Value : <integerValue>
+Symbol 4 : D.1728, Value : <integerValue>
+Symbol 5 : i.4, Value : <integerValue>
+Symbol 6 : D.1726, Value : <integerValue>
+Symbol 7 : D.1725, Value : <integerValue>
+Symbol 8 : i.3, Value : <integerValue>
+Symbol 9 : i.2, Value : <integerValue>
+Symbol 10 : D.1721, Value : <integerValue>
+Symbol 11 : i.1, Value : <integerValue>
+Symbol 12 : D.1718, Value : <integerValue>
+Symbol 13 : D.1717, Value : <integerValue>
+Symbol 14 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 7>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 6>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 10>
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 9>
+goto <bb 11>
+
+<bb 11>:
+goto <bb 13>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 12>
+goto <bb 14>
+
+<bb 14>:

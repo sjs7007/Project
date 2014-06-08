@@ -1,0 +1,126 @@
+#include<stdio.h>
+int main()
+{
+	int a[5],i,prod[5];
+
+/*	for(i=0;i<5;i++)
+	{
+		scanf("%d",&a[i]);
+	}
+*/
+
+	printf("The numbers entered are :- \n");
+
+/*	for(i=0;i<5;i++)
+	{
+		printf("%d ",a[i]);
+	}
+*/
+	printf("\n");
+
+	for(i=0;i<5;i++)
+	{
+		prod[i] = a[i] * 5;
+	}
+
+/*	for(i=0;i<5;i++)
+	{
+		printf("5 times %d is : %d \n",a[i],prod[i]);
+	}
+*/
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 5 and 6
+main ()
+{
+  int prod[5];
+  int i;
+  int a[5];
+  int D.1711;
+  int D.1710;
+  int D.1709;
+  int i.1;
+  int i.0;
+
+<bb 2>:
+  __builtin_puts (&"The numbers entered are :- "[0]);
+  __builtin_putchar (10);
+  i = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  i.0 = i;
+  i.1 = i;
+  D.1709 = a[i.1];
+  D.1710 = D.1709 * 5;
+  prod[i.0] = D.1710;
+  i = i + 1;
+
+<bb 4>:
+  if (i <= 4)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  D.1711 = 0;
+  return D.1711;
+
+}
+
+
+
+--------------------------------------------------
+Integer Array Declaration : int prod[5]
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1711
+Identifier of type integer found : D.1710
+Identifier of type integer found : D.1709
+Identifier of type integer found : i.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+i.1 = <integerValue>
+D.1709 = <integerValue>
+D.1710 = <integerValue>
+prod[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+D.1711 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : D.1711, Value : <integerValue>
+Symbol 2 : D.1710, Value : <integerValue>
+Symbol 3 : D.1709, Value : <integerValue>
+Symbol 4 : i.1, Value : <integerValue>
+Symbol 5 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:

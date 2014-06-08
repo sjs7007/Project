@@ -1,0 +1,60 @@
+Integer Array Declaration : int prod[5]
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1719
+Identifier of type integer found : D.1717
+Identifier of type integer found : i.3
+Identifier of type integer found : D.1715
+Identifier of type integer found : i.2
+Identifier of type integer found : D.1713
+Identifier of type integer found : D.1712
+Identifier of type integer found : i.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+i.1 = <integerValue>
+D.1712 = <integerValue>
+D.1713 = <integerValue>
+prod[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+i.2 = <integerValue>
+D.1715 = <integerValue>
+i.3 = <integerValue>
+D.1717 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 7>
+if i<= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+D.1719 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : D.1719, Value : <integerValue>
+Symbol 2 : D.1717, Value : <integerValue>
+Symbol 3 : i.3, Value : <integerValue>
+Symbol 4 : D.1715, Value : <integerValue>
+Symbol 5 : i.2, Value : <integerValue>
+Symbol 6 : D.1713, Value : <integerValue>
+Symbol 7 : D.1712, Value : <integerValue>
+Symbol 8 : i.1, Value : <integerValue>
+Symbol 9 : i.0, Value : <integerValue>

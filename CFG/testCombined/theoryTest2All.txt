@@ -1,0 +1,171 @@
+#include<stdio.h>
+int main()
+{
+	int a[5]={3,4,5,6,7},i,prod[5];
+
+	for(i=0;i<5;i++)
+	{
+		prod[i] = a[i] * 5;
+	}
+
+	for(i=0;i<5;i++)
+	{
+		printf("5 times %d is : %d \n",a[i],prod[i]);
+	}
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 8 and 9
+main ()
+{
+  int prod[5];
+  int i;
+  int a[5];
+  int D.1719;
+  const char * restrict D.1718;
+  int D.1717;
+  int i.3;
+  int D.1715;
+  int i.2;
+  int D.1713;
+  int D.1712;
+  int i.1;
+  int i.0;
+
+<bb 2>:
+  a[0] = 3;
+  a[1] = 4;
+  a[2] = 5;
+  a[3] = 6;
+  a[4] = 7;
+  i = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  i.0 = i;
+  i.1 = i;
+  D.1712 = a[i.1];
+  D.1713 = D.1712 * 5;
+  prod[i.0] = D.1713;
+  i = i + 1;
+
+<bb 4>:
+  if (i <= 4)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  i = 0;
+  goto <bb 7>;
+
+<bb 6>:
+  i.2 = i;
+  D.1715 = prod[i.2];
+  i.3 = i;
+  D.1717 = a[i.3];
+  D.1718 = (const char * restrict) "5 times %d is : %d \n";
+  printf (D.1718, D.1717, D.1715);
+  i = i + 1;
+
+<bb 7>:
+  if (i <= 4)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  D.1719 = 0;
+  return D.1719;
+
+}
+
+
+
+--------------------------------------------------
+Integer Array Declaration : int prod[5]
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1719
+Identifier of type integer found : D.1717
+Identifier of type integer found : i.3
+Identifier of type integer found : D.1715
+Identifier of type integer found : i.2
+Identifier of type integer found : D.1713
+Identifier of type integer found : D.1712
+Identifier of type integer found : i.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+i.1 = <integerValue>
+D.1712 = <integerValue>
+D.1713 = <integerValue>
+prod[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+i.2 = <integerValue>
+D.1715 = <integerValue>
+i.3 = <integerValue>
+D.1717 = <integerValue>
+printf(...)
+i = <integerValue>
+
+Block : <bb 7>
+if i<= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+D.1719 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : D.1719, Value : <integerValue>
+Symbol 2 : D.1717, Value : <integerValue>
+Symbol 3 : i.3, Value : <integerValue>
+Symbol 4 : D.1715, Value : <integerValue>
+Symbol 5 : i.2, Value : <integerValue>
+Symbol 6 : D.1713, Value : <integerValue>
+Symbol 7 : D.1712, Value : <integerValue>
+Symbol 8 : i.1, Value : <integerValue>
+Symbol 9 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 7>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 6>
+goto <bb 8>
+
+<bb 8>:

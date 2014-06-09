@@ -493,9 +493,17 @@ char *yytext;
 #line 1 "test.l"
 #line 4 "test.l"
     #include <iostream>
+    #include <fstream>
+    #include <string>
     using namespace std;
     #define YY_DECL extern "C" int yylex()
-#line 499 "lex.yy.c"
+
+    int endPosList[1000]; //contain ending line number of blocks to be commented out
+    int expandedList[3000]; //actual line numbers to be commented out
+    void addLineNo(int n,int endPosList[]);
+    void calcExpandedList(int endPosList[], int expandedList[]); //for now exp list = line number in epl - 3 to line number in epl
+    void commentOut(int expandedList[]); //will produce the preprocessed file
+#line 507 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -682,10 +690,10 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 9 "test.l"
+#line 17 "test.l"
 
 
-#line 689 "lex.yy.c"
+#line 697 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -780,32 +788,32 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 11 "test.l"
+#line 19 "test.l"
 ;
 	YY_BREAK
 case 2:
 /* rule 2 can match eol */
 YY_RULE_SETUP
-#line 12 "test.l"
+#line 20 "test.l"
 ;
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 13 "test.l"
+#line 21 "test.l"
 ; //ignore any other char
 	YY_BREAK
 case 4:
 /* rule 4 can match eol */
 YY_RULE_SETUP
-#line 18 "test.l"
-{ cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; }
+#line 26 "test.l"
+{ cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; addLineNo(yylineno,endPosList); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 19 "test.l"
+#line 27 "test.l"
 ECHO;
 	YY_BREAK
-#line 809 "lex.yy.c"
+#line 817 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1815,7 +1823,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 19 "test.l"
+#line 27 "test.l"
 
 
 
@@ -1823,7 +1831,7 @@ void yyfree (void * ptr )
 main() {
     
     // open a file handle to a particular file:
-    FILE *myfile = fopen("theoryTest1.c", "r");
+    FILE *myfile = fopen("testInput.c", "r");
     // make sure it's valid:
     if (!myfile) {
         cout << "Can't open c." << "";
@@ -1832,37 +1840,90 @@ main() {
     // set lex to read from it instead of defaulting to STDIN:
     yyin = myfile;
     
+    //init array
+    for(int i=0;i<1000;i++)
+    {
+        endPosList[i]=-1;
+    }
+
+    for(int i=0;i<3000;i++)
+    {
+        expandedList[i]=-1;
+    }
+
     // lex through the input:
     yylex();
 
-    /*
-    "+" { cout<<yytext<<""; }
-"-" { cout<<yytext<<""; }
-"*" { cout<<yytext<<""; }
-"/" { cout<<yytext<<""; }
-"^" { cout<<yytext<<""; }
-[0-9]+ { cout<<yytext<<""; }
-"print" { }
-[a-zA-Z] {}
-"=" { cout<<yytext<<""; }
+    cout<<"End Pos List : ";
+    for(int i=0;endPosList[i]!=-1;i++)
+    {
+        cout<<endPosList[i]<<" ";
+    }
 
+    calcExpandedList(endPosList,expandedList);
+    cout<<"Expanded List : ";
+    for(int i=0;expandedList[i]!=-1;i++)
+    {
+        cout<<expandedList[i]<<" ";
+    }
+    cout<<endl;
 
-"for" {cout<<"For loop found!"<<endl; }
+    commentOut(expandedList);
+ 
+}
 
-"{\n".*"\n}" { cout<<yytext<<endl; }
-"\t{\n".*"\n\t}" { cout<<yytext<<endl; }
+void addLineNo(int n,int endPosList[])
+{
+    int i=0;
+    while(endPosList[i]!=-1)
+    {
+        i++;
+    }
+    endPosList[i]=n;
+}
 
-"for(".*")"   { cout<<"For loop : "<<yytext<<endl; }
-"printf(".*")" { cout <<yytext<<endl;}
-"\t{\n".*"\n\t}" { cout<<yytext<<endl; }
+void calcExpandedList(int endPosList[],int expandedList[])
+{
+    int expPointer=0;;
+    for(int i=0;endPosList[i]!=-1;i++)
+    {
+        for(int j=3;j>=0;j--)
+        {
+            expandedList[expPointer]=endPosList[i]-j;
+            expPointer++;
+        }
+    }
+}
 
+void commentOut(int expandedList[])
+{
+    string line;
+    int expPointer=0;
+    ifstream myfile("testInput.c");
 
-"\t{\n\t\tprintf(".*"\n\t}" { cout<<yytext<<endl; }
+    ofstream preProcessedFile;
+    preProcessedFile.open("testResult.c");
 
-"\tfor(".*")""\n\t{\n\t\tprintf(".*"\n\t}" { cout<<yytext<<endl; }
-*/
+    if (myfile.is_open())
+    {
+        int n=0;
+        while (getline(myfile,line))
+        {
+            n++;
+            cout <<"Line no " <<n <<" : " <<line << '\n';
+            if(n==expandedList[expPointer])
+            {
+                preProcessedFile <<"//";
+                expPointer++;
+            }
+            preProcessedFile << line<<'\n';
+        }
+        myfile.close();
+        preProcessedFile.close();
+    }
+
+    else cout << "Unable to open file"; 
 }
 
 
-
-
+ 

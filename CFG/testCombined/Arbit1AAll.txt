@@ -1,0 +1,348 @@
+#include<stdio.h>
+
+int main()
+{
+	int a[100][100],i=1,j=1; //array size cannot be variable in C, therefore 100
+	
+	int SIZE=10;
+
+	for(i=0;i<SIZE;i++)
+	{
+		for(j=0;j<SIZE;j++)
+		{
+			a[i][j]=0;
+		}
+	}
+	a[1][1]=1;
+	for(i=2;i<=SIZE;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			a[i][j]=a[i-1][j-1]+a[i-1][j];
+		}
+	}
+	for(i=1;i<=SIZE;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			printf("%d ",a[i][j]);
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 20 and 21
+main ()
+{
+  int SIZE;
+  int j;
+  int i;
+  int a[100][100];
+  int D.1738;
+  const char * restrict D.1737;
+  int D.1736;
+  int j.6;
+  int i.5;
+  int D.1733;
+  int D.1732;
+  int j.4;
+  int D.1730;
+  int D.1729;
+  int D.1728;
+  int D.1727;
+  int j.3;
+  int i.2;
+  int j.1;
+  int i.0;
+
+<bb 2>:
+  i = 1;
+  j = 1;
+  SIZE = 10;
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  i.0 = i;
+  j.1 = j;
+  a[i.0][j.1] = 0;
+  j = j + 1;
+
+<bb 5>:
+  if (j < SIZE)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  if (i < SIZE)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  a[1][1] = 1;
+  i = 2;
+  goto <bb 13>;
+
+<bb 9>:
+  j = 1;
+  goto <bb 11>;
+
+<bb 10>:
+  i.2 = i;
+  j.3 = j;
+  D.1727 = i + -1;
+  D.1728 = j + -1;
+  D.1729 = a[D.1727][D.1728];
+  D.1730 = i + -1;
+  j.4 = j;
+  D.1732 = a[D.1730][j.4];
+  D.1733 = D.1729 + D.1732;
+  a[i.2][j.3] = D.1733;
+  j = j + 1;
+
+<bb 11>:
+  if (j <= i)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+<bb 12>:
+  i = i + 1;
+
+<bb 13>:
+  if (i <= SIZE)
+    goto <bb 9>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  i = 1;
+  goto <bb 19>;
+
+<bb 15>:
+  j = 1;
+  goto <bb 17>;
+
+<bb 16>:
+  i.5 = i;
+  j.6 = j;
+  D.1736 = a[i.5][j.6];
+  D.1737 = (const char * restrict) "%d ";
+  printf (D.1737, D.1736);
+  j = j + 1;
+
+<bb 17>:
+  if (j <= i)
+    goto <bb 16>;
+  else
+    goto <bb 18>;
+
+<bb 18>:
+  __builtin_putchar (10);
+  i = i + 1;
+
+<bb 19>:
+  if (i <= SIZE)
+    goto <bb 15>;
+  else
+    goto <bb 20>;
+
+<bb 20>:
+  D.1738 = 0;
+  return D.1738;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : SIZE
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int a[100][100]
+Identifier of type integer found : D.1738
+Identifier of type integer found : D.1736
+Identifier of type integer found : j.6
+Identifier of type integer found : i.5
+Identifier of type integer found : D.1733
+Identifier of type integer found : D.1732
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1730
+Identifier of type integer found : D.1729
+Identifier of type integer found : D.1728
+Identifier of type integer found : D.1727
+Identifier of type integer found : j.3
+Identifier of type integer found : i.2
+Identifier of type integer found : j.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+i = <integerValue>
+j = <integerValue>
+SIZE = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+i.0 = <integerValue>
+j.1 = <integerValue>
+a[i.0][j.1] = <integerValue>
+j = <integerValue>
+
+Block : <bb 5>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+i = <integerValue>
+
+Block : <bb 7>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+a[1][1] = <integerValue>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+i.2 = <integerValue>
+j.3 = <integerValue>
+D.1727 = <integerValue>
+D.1728 = <integerValue>
+D.1729 = <integerValue>
+D.1730 = <integerValue>
+j.4 = <integerValue>
+D.1732 = <integerValue>
+D.1733 = <integerValue>
+a[i.2][j.3] = <integerValue>
+j = <integerValue>
+
+Block : <bb 11>
+if j<= <integerValue>, goto <bb 10>,else, goto <bb 12>
+
+Block : <bb 12>
+i = <integerValue>
+
+Block : <bb 13>
+if i<= <integerValue>, goto <bb 9>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+j = <integerValue>
+
+Block : <bb 16>
+i.5 = <integerValue>
+j.6 = <integerValue>
+D.1736 = <integerValue>
+printf(...)
+j = <integerValue>
+
+Block : <bb 17>
+if j<= <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+printf(...)
+i = <integerValue>
+
+Block : <bb 19>
+if i<= <integerValue>, goto <bb 15>,else, goto <bb 20>
+
+Block : <bb 20>
+D.1738 = <integerValue>
+
+Symbol table : -
+Symbol 0 : SIZE, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : D.1738, Value : <integerValue>
+Symbol 4 : D.1736, Value : <integerValue>
+Symbol 5 : j.6, Value : <integerValue>
+Symbol 6 : i.5, Value : <integerValue>
+Symbol 7 : D.1733, Value : <integerValue>
+Symbol 8 : D.1732, Value : <integerValue>
+Symbol 9 : j.4, Value : <integerValue>
+Symbol 10 : D.1730, Value : <integerValue>
+Symbol 11 : D.1729, Value : <integerValue>
+Symbol 12 : D.1728, Value : <integerValue>
+Symbol 13 : D.1727, Value : <integerValue>
+Symbol 14 : j.3, Value : <integerValue>
+Symbol 15 : i.2, Value : <integerValue>
+Symbol 16 : j.1, Value : <integerValue>
+Symbol 17 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 13>
+
+<bb 9>:
+goto <bb 11>
+
+<bb 10>:
+
+<bb 11>:
+goto <bb 10>
+goto <bb 12>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 9>
+goto <bb 14>
+
+<bb 14>:
+goto <bb 19>
+
+<bb 15>:
+goto <bb 17>
+
+<bb 16>:
+
+<bb 17>:
+goto <bb 16>
+goto <bb 18>
+
+<bb 18>:
+
+<bb 19>:
+goto <bb 15>
+goto <bb 20>
+
+<bb 20>:

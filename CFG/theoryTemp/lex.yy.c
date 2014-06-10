@@ -381,8 +381,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 5
-#define YY_END_OF_BUFFER 6
+#define YY_NUM_RULES 6
+#define YY_END_OF_BUFFER 7
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -390,11 +390,12 @@ struct yy_trans_info
 	flex_int32_t yy_verify;
 	flex_int32_t yy_nxt;
 	};
-static yyconst flex_int16_t yy_accept[31] =
+static yyconst flex_int16_t yy_accept[41] =
     {   0,
-        0,    0,    6,    3,    1,    2,    0,    0,    0,    0,
+        0,    0,    7,    3,    1,    2,    0,    0,    0,    0,
         0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
-        0,    0,    0,    0,    0,    0,    0,    0,    4,    0
+        0,    0,    0,    0,    0,    0,    0,    0,    0,    0,
+        0,    0,    0,    0,    0,    0,    0,    5,    4,    0
     } ;
 
 static yyconst flex_int32_t yy_ec[256] =
@@ -408,11 +409,11 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
+        1,    1,    1,    1,    1,    1,    6,    1,    7,    1,
 
-        1,    6,    1,    1,    7,    1,    1,    1,    1,    8,
-        9,   10,    1,   11,    1,   12,    1,    1,    1,    1,
-        1,    1,   13,    1,   14,    1,    1,    1,    1,    1,
+        1,    8,    1,    1,    9,    1,    1,    1,    1,   10,
+       11,   12,    1,   13,   14,   15,    1,    1,    1,    1,
+        1,    1,   16,    1,   17,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -429,52 +430,56 @@ static yyconst flex_int32_t yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int32_t yy_meta[15] =
+static yyconst flex_int32_t yy_meta[18] =
     {   0,
         1,    1,    2,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,    1
+        1,    1,    1,    1,    1,    1,    1
     } ;
 
-static yyconst flex_int16_t yy_base[34] =
+static yyconst flex_int16_t yy_base[45] =
     {   0,
-        0,    2,   36,   37,   29,   37,   25,   22,   28,   26,
-       25,    3,   27,   15,   24,   24,   23,   14,   12,   15,
-       13,    8,   13,   14,   14,   13,   13,    0,   37,   37,
-        8,    0,   10
+        0,    2,   51,   52,   42,   52,   38,   35,   43,   41,
+       40,    3,   42,   27,   39,   39,   38,    0,   26,   31,
+       28,   30,   25,   24,   18,   24,   23,   26,   25,   25,
+       24,   23,   23,   21,   21,    5,    4,   52,   52,   52,
+       14,    0,   16,   18
     } ;
 
-static yyconst flex_int16_t yy_def[34] =
+static yyconst flex_int16_t yy_def[45] =
     {   0,
-       31,   31,   30,   30,   30,   30,   30,   30,   30,   32,
-       32,   32,   30,   30,   30,   30,   30,   30,   30,   30,
-       30,   30,   30,   30,   33,   33,   30,   30,   30,    0,
-       30,   30,   30
+       41,   41,   40,   40,   40,   40,   40,   40,   40,   42,
+       42,   42,   40,   40,   40,   40,   40,   40,   40,   40,
+       40,   40,   40,   40,   40,   40,   40,   40,   40,   43,
+       44,   43,   40,   44,   40,   40,   40,   40,   40,    0,
+       40,   40,   40,   40
     } ;
 
-static yyconst flex_int16_t yy_nxt[52] =
+static yyconst flex_int16_t yy_nxt[70] =
     {   0,
-       11,    5,    6,    5,    6,   13,   30,   12,    4,    4,
-       26,   26,   30,   29,   28,   27,   27,   25,   24,   23,
-       22,   21,   20,   19,   18,   17,   16,   15,   14,   12,
-       12,   10,    9,    8,    7,   30,    3,   30,   30,   30,
-       30,   30,   30,   30,   30,   30,   30,   30,   30,   30,
-       30
+       11,    5,    6,    5,    6,   13,   40,   12,   40,   40,
+       40,   19,   40,   20,    4,    4,   32,   32,   34,   34,
+       39,   38,   37,   35,   36,   33,   35,   33,   31,   30,
+       29,   28,   27,   26,   25,   24,   23,   22,   21,   18,
+       17,   16,   15,   14,   12,   12,   10,    9,    8,    7,
+       40,    3,   40,   40,   40,   40,   40,   40,   40,   40,
+       40,   40,   40,   40,   40,   40,   40,   40,   40
     } ;
 
-static yyconst flex_int16_t yy_chk[52] =
+static yyconst flex_int16_t yy_chk[70] =
     {   0,
-       32,    1,    1,    2,    2,   12,    0,   12,   31,   31,
-       33,   33,    0,   28,   27,   26,   25,   24,   23,   22,
-       21,   20,   19,   18,   17,   16,   15,   14,   13,   11,
-       10,    9,    8,    7,    5,    3,   30,   30,   30,   30,
-       30,   30,   30,   30,   30,   30,   30,   30,   30,   30,
-       30
+       42,    1,    1,    2,    2,   12,    0,   12,    0,    0,
+        0,   18,    0,   18,   41,   41,   43,   43,   44,   44,
+       37,   36,   35,   34,   33,   32,   31,   30,   29,   28,
+       27,   26,   25,   24,   23,   22,   21,   20,   19,   17,
+       16,   15,   14,   13,   11,   10,    9,    8,    7,    5,
+        3,   40,   40,   40,   40,   40,   40,   40,   40,   40,
+       40,   40,   40,   40,   40,   40,   40,   40,   40
     } ;
 
 /* Table of booleans, true if rule could match eol. */
-static yyconst flex_int32_t yy_rule_can_match_eol[6] =
+static yyconst flex_int32_t yy_rule_can_match_eol[7] =
     {   0,
-0, 1, 0, 1, 0,     };
+0, 1, 0, 1, 1, 0,     };
 
 static yy_state_type yy_last_accepting_state;
 static char *yy_last_accepting_cpos;
@@ -503,7 +508,7 @@ char *yytext;
     void addLineNo(int n,int endPosList[]);
     void calcExpandedList(int endPosList[], int expandedList[]); //for now exp list = line number in epl - 3 to line number in epl
     void commentOut(int expandedList[]); //will produce the preprocessed file
-#line 507 "lex.yy.c"
+#line 512 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -693,7 +698,7 @@ YY_DECL
 #line 17 "test.l"
 
 
-#line 697 "lex.yy.c"
+#line 702 "lex.yy.c"
 
 	if ( !(yy_init) )
 		{
@@ -746,13 +751,13 @@ yy_match:
 			while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 				{
 				yy_current_state = (int) yy_def[yy_current_state];
-				if ( yy_current_state >= 31 )
+				if ( yy_current_state >= 41 )
 					yy_c = yy_meta[(unsigned int) yy_c];
 				}
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 37 );
+		while ( yy_base[yy_current_state] != 52 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -809,11 +814,17 @@ YY_RULE_SETUP
 { cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; addLineNo(yylineno,endPosList); }
 	YY_BREAK
 case 5:
+/* rule 5 can match eol */
 YY_RULE_SETUP
 #line 27 "test.l"
+{ cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; addLineNo(yylineno,endPosList); }
+	YY_BREAK
+case 6:
+YY_RULE_SETUP
+#line 28 "test.l"
 ECHO;
 	YY_BREAK
-#line 817 "lex.yy.c"
+#line 828 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1105,7 +1116,7 @@ static int yy_get_next_buffer (void)
 		while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 			{
 			yy_current_state = (int) yy_def[yy_current_state];
-			if ( yy_current_state >= 31 )
+			if ( yy_current_state >= 41 )
 				yy_c = yy_meta[(unsigned int) yy_c];
 			}
 		yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
@@ -1133,11 +1144,11 @@ static int yy_get_next_buffer (void)
 	while ( yy_chk[yy_base[yy_current_state] + yy_c] != yy_current_state )
 		{
 		yy_current_state = (int) yy_def[yy_current_state];
-		if ( yy_current_state >= 31 )
+		if ( yy_current_state >= 41 )
 			yy_c = yy_meta[(unsigned int) yy_c];
 		}
 	yy_current_state = yy_nxt[yy_base[yy_current_state] + (unsigned int) yy_c];
-	yy_is_jam = (yy_current_state == 30);
+	yy_is_jam = (yy_current_state == 40);
 
 	return yy_is_jam ? 0 : yy_current_state;
 }
@@ -1823,7 +1834,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 27 "test.l"
+#line 28 "test.l"
 
 
 

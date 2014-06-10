@@ -24,6 +24,7 @@
 
 
 "\tfor(".*")""\n\t{\n\t\tprintf(".*"\n\t}" { cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; addLineNo(yylineno,endPosList); }
+"\tfor(".*")""\n\t{\n\t\tscanf(".*"\n\t}" { cout<<"Found for block on line :"<<yylineno<<endl<<yytext<<endl; addLineNo(yylineno,endPosList); }
 %%
 
 

@@ -1,0 +1,272 @@
+#include<stdio.h>
+
+int main()
+{
+	int SIZE=10,i,j;
+
+	for(i=0;i<SIZE;i++)
+	{
+		for(j=0;j<i;j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+
+	for(i=0;i<SIZE;i++)
+	{
+		for(j=i;j>=0;j--)
+		{
+			printf("^");
+		}
+		printf("\n");
+	}
+	for(i=1;i<=SIZE;i++)
+	{
+		for(j=1;j<=i;j++)
+		{
+			printf("#");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 20 and 21
+main ()
+{
+  int j;
+  int i;
+  int SIZE;
+  int D.1722;
+
+<bb 2>:
+  SIZE = 10;
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  __builtin_putchar (42);
+  j = j + 1;
+
+<bb 5>:
+  if (j < i)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  __builtin_putchar (10);
+  i = i + 1;
+
+<bb 7>:
+  if (i < SIZE)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  i = 0;
+  goto <bb 13>;
+
+<bb 9>:
+  j = i;
+  goto <bb 11>;
+
+<bb 10>:
+  __builtin_putchar (94);
+  j = j + -1;
+
+<bb 11>:
+  if (j >= 0)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+<bb 12>:
+  __builtin_putchar (10);
+  i = i + 1;
+
+<bb 13>:
+  if (i < SIZE)
+    goto <bb 9>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  i = 1;
+  goto <bb 19>;
+
+<bb 15>:
+  j = 1;
+  goto <bb 17>;
+
+<bb 16>:
+  __builtin_putchar (35);
+  j = j + 1;
+
+<bb 17>:
+  if (j <= i)
+    goto <bb 16>;
+  else
+    goto <bb 18>;
+
+<bb 18>:
+  __builtin_putchar (10);
+  i = i + 1;
+
+<bb 19>:
+  if (i <= SIZE)
+    goto <bb 15>;
+  else
+    goto <bb 20>;
+
+<bb 20>:
+  D.1722 = 0;
+  return D.1722;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : SIZE
+Identifier of type integer found : D.1722
+
+Block : <bb 2>
+SIZE = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+printf(...)
+j = <integerValue>
+
+Block : <bb 5>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+printf(...)
+i = <integerValue>
+
+Block : <bb 7>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+printf(...)
+j = <integerValue>
+
+Block : <bb 11>
+if j>= <integerValue>, goto <bb 10>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+if i< <integerValue>, goto <bb 9>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+j = <integerValue>
+
+Block : <bb 16>
+printf(...)
+j = <integerValue>
+
+Block : <bb 17>
+if j<= <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+printf(...)
+i = <integerValue>
+
+Block : <bb 19>
+if i<= <integerValue>, goto <bb 15>,else, goto <bb 20>
+
+Block : <bb 20>
+D.1722 = <integerValue>
+
+Symbol table : -
+Symbol 0 : j, Value : <integerValue>
+Symbol 1 : i, Value : <integerValue>
+Symbol 2 : SIZE, Value : <integerValue>
+Symbol 3 : D.1722, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 13>
+
+<bb 9>:
+goto <bb 11>
+
+<bb 10>:
+
+<bb 11>:
+goto <bb 10>
+goto <bb 12>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 9>
+goto <bb 14>
+
+<bb 14>:
+goto <bb 19>
+
+<bb 15>:
+goto <bb 17>
+
+<bb 16>:
+
+<bb 17>:
+goto <bb 16>
+goto <bb 18>
+
+<bb 18>:
+
+<bb 19>:
+goto <bb 15>
+goto <bb 20>
+
+<bb 20>:

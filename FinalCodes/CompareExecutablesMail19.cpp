@@ -18,13 +18,14 @@ double confidenceValue(int n);
 
 int main(int argc, char* argv[])
 {
-	string cmd1=(argv[1]);
-	string cmd2=(argv[2]);
+	string cmd1="./",cmd2="./";
+	cmd1.append(argv[1]);
+	cmd2.append(argv[2]);
 	cmd1.append(" ");
 	cmd2.append(" ");
 	int n = atoi(argv[3]);
 	compareExecutables(cmd1,cmd2,n); 
-	confidenceValue(n);
+	//confidenceValue(n);
 }
 
 int getOutput(string commandInput) //run given command and return its stdout converted as int type
@@ -63,7 +64,7 @@ bool compareExecutables(string ip1,string ip2,int nTestCases)
 		
 		int temp1 = getOutput(cmd1.c_str());
 		int temp2 = getOutput(cmd2.c_str());
-		cout<<temp1<<" "<<temp2<<endl;
+		//cout<<temp1<<" "<<temp2<<endl;
 
 		if(temp1!=temp2)
 		{
@@ -75,11 +76,12 @@ bool compareExecutables(string ip1,string ip2,int nTestCases)
 	if(flag==0)
 	{
 		cout<<"Passed for all "<<nTestCases<<" test cases."<<endl;
-		return false; //the functions are not same
+		confidenceValue(nTestCases);
+		return true; //the functions are same
 	}
 	else
 	{
-		return true; //the functions are same
+		return true; //the functions are not same
 	}
 }
 

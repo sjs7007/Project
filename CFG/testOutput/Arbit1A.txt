@@ -1,0 +1,118 @@
+Identifier of type integer found : SIZE
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int a[100][100]
+Identifier of type integer found : D.1738
+Identifier of type integer found : D.1736
+Identifier of type integer found : j.6
+Identifier of type integer found : i.5
+Identifier of type integer found : D.1733
+Identifier of type integer found : D.1732
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1730
+Identifier of type integer found : D.1729
+Identifier of type integer found : D.1728
+Identifier of type integer found : D.1727
+Identifier of type integer found : j.3
+Identifier of type integer found : i.2
+Identifier of type integer found : j.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+i = <integerValue>
+j = <integerValue>
+SIZE = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+i.0 = <integerValue>
+j.1 = <integerValue>
+a[i.0][j.1] = <integerValue>
+j = <integerValue>
+
+Block : <bb 5>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+i = <integerValue>
+
+Block : <bb 7>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+a[1][1] = <integerValue>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+i.2 = <integerValue>
+j.3 = <integerValue>
+D.1727 = <integerValue>
+D.1728 = <integerValue>
+D.1729 = <integerValue>
+D.1730 = <integerValue>
+j.4 = <integerValue>
+D.1732 = <integerValue>
+D.1733 = <integerValue>
+a[i.2][j.3] = <integerValue>
+j = <integerValue>
+
+Block : <bb 11>
+if j<= <integerValue>, goto <bb 10>,else, goto <bb 12>
+
+Block : <bb 12>
+i = <integerValue>
+
+Block : <bb 13>
+if i<= <integerValue>, goto <bb 9>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+j = <integerValue>
+
+Block : <bb 16>
+i.5 = <integerValue>
+j.6 = <integerValue>
+D.1736 = <integerValue>
+printf(...)
+j = <integerValue>
+
+Block : <bb 17>
+if j<= <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+printf(...)
+i = <integerValue>
+
+Block : <bb 19>
+if i<= <integerValue>, goto <bb 15>,else, goto <bb 20>
+
+Block : <bb 20>
+D.1738 = <integerValue>
+
+Symbol table : -
+Symbol 0 : SIZE, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : D.1738, Value : <integerValue>
+Symbol 4 : D.1736, Value : <integerValue>
+Symbol 5 : j.6, Value : <integerValue>
+Symbol 6 : i.5, Value : <integerValue>
+Symbol 7 : D.1733, Value : <integerValue>
+Symbol 8 : D.1732, Value : <integerValue>
+Symbol 9 : j.4, Value : <integerValue>
+Symbol 10 : D.1730, Value : <integerValue>
+Symbol 11 : D.1729, Value : <integerValue>
+Symbol 12 : D.1728, Value : <integerValue>
+Symbol 13 : D.1727, Value : <integerValue>
+Symbol 14 : j.3, Value : <integerValue>
+Symbol 15 : i.2, Value : <integerValue>
+Symbol 16 : j.1, Value : <integerValue>
+Symbol 17 : i.0, Value : <integerValue>

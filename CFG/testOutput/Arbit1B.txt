@@ -1,0 +1,74 @@
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : SIZE
+Identifier of type integer found : D.1722
+
+Block : <bb 2>
+SIZE = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+printf(...)
+j = <integerValue>
+
+Block : <bb 5>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+printf(...)
+i = <integerValue>
+
+Block : <bb 7>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+printf(...)
+j = <integerValue>
+
+Block : <bb 11>
+if j>= <integerValue>, goto <bb 10>,else, goto <bb 12>
+
+Block : <bb 12>
+printf(...)
+i = <integerValue>
+
+Block : <bb 13>
+if i< <integerValue>, goto <bb 9>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+j = <integerValue>
+
+Block : <bb 16>
+printf(...)
+j = <integerValue>
+
+Block : <bb 17>
+if j<= <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+printf(...)
+i = <integerValue>
+
+Block : <bb 19>
+if i<= <integerValue>, goto <bb 15>,else, goto <bb 20>
+
+Block : <bb 20>
+D.1722 = <integerValue>
+
+Symbol table : -
+Symbol 0 : j, Value : <integerValue>
+Symbol 1 : i, Value : <integerValue>
+Symbol 2 : SIZE, Value : <integerValue>
+Symbol 3 : D.1722, Value : <integerValue>

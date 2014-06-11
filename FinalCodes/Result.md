@@ -237,6 +237,7 @@
 
 	+ **An example for a simple program**
 		+ **Code**  
+
 			```C
 			#include<stdio.h>
 			void main()
@@ -252,6 +253,7 @@
 				}
 			}
 			```
+			
 		+ **CFG Generation**
 			
 			```

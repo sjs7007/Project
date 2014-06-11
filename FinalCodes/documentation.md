@@ -3,7 +3,7 @@
 
 + **Description** 
 
-	A set of function used to calculate the memory usage of a program, i.e. how much memory is consumed by each of the program segements. To get this data from the OS [procfs](http://linux.die.net/man/5/proc) is used. 
+	A set of functions used to calculate the memory usage of a program, i.e. how much memory is consumed by each of the program segements. To get this data from the OS [procfs](http://linux.die.net/man/5/proc) is used. 
 
 + **Input**
 

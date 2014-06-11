@@ -7,12 +7,12 @@ int main(){
   scanf("%d %d",&m,&n);
   printf("\nEnter the row and column of second matrix");
   scanf("%d %d",&o,&p);
-/*  if(n!=o){
+  if(n!=o){
       printf("Matrix mutiplication is not possible");
       printf("\nColumn of first matrix must be same as row of second matrix");
   }
   else{
-  *//*    printf("\nEnter the First matrix->");
+      printf("\nEnter the First matrix->");
       for(i=0;i<m;i++)
       for(j=0;j<n;j++)
            scanf("%d",&a[i][j]);
@@ -33,7 +33,7 @@ int main(){
       for(j=0;j<p;j++){
            printf("%d\t",b[i][j]);
       }       
-      }*/
+      }
       for(i=0;i<m;i++)
       for(j=0;j<p;j++)
            c[i][j]=0;
@@ -45,15 +45,13 @@ int main(){
            c[i][j]=sum;
       }
       }
-/*  }
+  }
   printf("\nThe multiplication of two matrix is\n");
   for(i=0;i<m;i++){
       printf("\n");
       for(j=0;j<p;j++){
            printf("%d\t",c[i][j]);
       }
-  }*/
+  }
   return 0;
 }
-
-

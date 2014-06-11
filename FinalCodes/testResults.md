@@ -27,7 +27,7 @@ Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lin
 ----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
 [MatrixMul1Mod.c](test/MatrixMul1Mod.c) | [MatrixMul2Mod.c](test/MatrixMul2Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul2Mod.txt](testStructure/MatrixMul2Mod.txt) | 38 | 54 | 36 |
 [MatrixMul1Mod.c](test/MatrixMul1Mod.c) | [MatrixMul3Mod.c](test/MatrixMul3Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul3Mod.txt](testStructure/MatrixMul3Mod.txt) | 38 | 47 | 31 |
-[MatrixMul2Mod.c](test/MatrixMul2Mod.c) | [MatrixMul3Mod.c](test/MatrixMul3Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul3Mod.txt](testStructure/MatrixMul3Mod.txt) | 54 | 47 | 31 |
+[MatrixMul2Mod.c](test/MatrixMul2Mod.c) | [MatrixMul3Mod.c](test/MatrixMul3Mod.c) | [MatrixMul2Mod.txt](testStructure/MatrixMul2Mod.txt) |[MatrixMul3Mod.txt](testStructure/MatrixMul3Mod.txt) | 54 | 47 | 31 |
 
 3.Results for Arbitrarily Different Programs
 ----------

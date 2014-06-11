@@ -1,0 +1,38 @@
+
+<bb 2>:
+goto <bb 3>
+goto <bb 4>
+
+<bb 3>:
+goto <bb 14>
+
+<bb 4>:
+goto <bb 12>
+
+<bb 5>:
+goto <bb 10>
+
+<bb 6>:
+goto <bb 8>
+
+<bb 7>:
+
+<bb 8>:
+goto <bb 7>
+goto <bb 9>
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 6>
+goto <bb 11>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 5>
+goto <bb 13>
+
+<bb 13>:
+
+<bb 14>:

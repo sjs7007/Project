@@ -1,4 +1,4 @@
-/* http://www.programmingsimplified.com/c-program-multiply-matrices */
+// Matrix Multipilication : http://www.programmingsimplified.com/c-program-multiply-matrices */
 
 #include <stdio.h>
  

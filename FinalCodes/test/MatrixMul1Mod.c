@@ -11,10 +11,11 @@ int main()
   scanf("%d%d", &m, &n);
   printf("Enter the elements of first matrix\n");
  
-  for (  c = 0 ; c < m ; c++ )
+  /*for (  c = 0 ; c < m ; c++ )
     for ( d = 0 ; d < n ; d++ )
       scanf("%d", &first[c][d]);
- 
+  */ 
+
   printf("Enter the number of rows and columns of second matrix\n");
   scanf("%d%d", &p, &q);
  
@@ -24,9 +25,9 @@ int main()
   {
     printf("Enter the elements of second matrix\n");
  
-    for ( c = 0 ; c < p ; c++ )
+    /*for ( c = 0 ; c < p ; c++ )
       for ( d = 0 ; d < q ; d++ )
-        scanf("%d", &second[c][d]);
+        scanf("%d", &second[c][d]);*/
  
     for ( c = 0 ; c < m ; c++ )
     {
@@ -44,13 +45,13 @@ int main()
  
     printf("Product of entered matrices:-\n");
  
-    for ( c = 0 ; c < m ; c++ )
+   /* for ( c = 0 ; c < m ; c++ )
     {
       for ( d = 0 ; d < q ; d++ )
         printf("%d\t", multiply[c][d]);
  
       printf("\n");
-    }
+    }*/
   }
  
   return 0;

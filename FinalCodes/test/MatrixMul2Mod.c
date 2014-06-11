@@ -13,7 +13,7 @@ int main(){
   }
   else{
       printf("\nEnter the First matrix->");
-      for(i=0;i<m;i++)
+     /* for(i=0;i<m;i++)
       for(j=0;j<n;j++)
            scanf("%d",&a[i][j]);
       printf("\nEnter the Second matrix->");
@@ -33,7 +33,7 @@ int main(){
       for(j=0;j<p;j++){
            printf("%d\t",b[i][j]);
       }       
-      }
+      }*/
       for(i=0;i<m;i++)
       for(j=0;j<p;j++)
            c[i][j]=0;
@@ -47,11 +47,11 @@ int main(){
       }
   }
   printf("\nThe multiplication of two matrix is\n");
-  for(i=0;i<m;i++){
+  /*for(i=0;i<m;i++){
       printf("\n");
       for(j=0;j<p;j++){
            printf("%d\t",c[i][j]);
       }
-  }
+  }*/
   return 0;
 }

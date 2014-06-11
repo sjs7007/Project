@@ -236,7 +236,7 @@
 	Here the structure of the [Control Flow Graph(CFG)](http://en.wikipedia.org/wiki/Control_flow_graph) is compared to determine the similarity between two programs. The CFG is extracted from the C programs using the **-fdump-tree-cfg** option which gives a **.cfg** file as output.
 
 	+ **An example for a simple program**
-		+ **Code**
+		+ **Code**  
 			```C
 			#include<stdio.h>
 			void main()

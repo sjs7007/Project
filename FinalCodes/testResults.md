@@ -34,7 +34,7 @@ Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lin
 
 Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |
 ----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
-[Linear Search in Array](test/Arbit2A.c) | [Sum of all elements in Array](test/Arbit2B) | [Search](testStructure/Arbit2B.txt) |[Sum](testStructure/Arbit2B.txt) | 26 | 11 | 21 |
+[Linear Search in Array](test/Arbit2A.c) | [Sum of all elements in Array](test/Arbit2B) | [Search](testStructure/Arbit2A.txt) |[Sum](testStructure/Arbit2B.txt) | 26 | 11 | 21 |
 [Matrix Multiplication](test/Arbit3A.c) | [Matrix Addition](test/Arbit3B.c) | [Mul](testStructure/Arbit3A.txt) |[Add](testStructure/Arbit3B.txt) | 74 | 90 | 50 |
 [String Concatenation](test/Arbit4A.c) | [Find Substring](test/Arbit4B.c) | [Concatenation](testStructure/Arbit4A.txt) |[Search](testStructure/Arbit4B.txt) | 54 | 47 | 31 |
 [Pascal Tringle](test/Arbit1A.c) | [Pattern Generator](test/Arbit1B.c) | [Pascal Triangle](testStructure/Arbit1A.txt) |[Pattern Generator](testStructure/Arbit1B.txt) | 56 | 56 | 0 |

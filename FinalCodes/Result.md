@@ -137,7 +137,7 @@
 	It is used to determine a confidence value for whether two programs compute the same function or not. To determine the confidence value we compare the output of the two executables for a fixed number of inputs(,say n). Even if one mismatch is obtained in between the n comparisions, we stop the comparision there and declare them as programs not computing the same function. Else, we return a confidence value at the end which is calculted as follows :
 
 	```
-	Confidence Value = $-b \pm \sqrt{b^2 - 4ac} \over 2a$
+	Confidence Value = 1 - 1/2^n
 	```
 
 + **Input**
@@ -209,7 +209,7 @@
 		}
 		```
 
-		*+ *Code for Executable 2**
+		+ **Code for Executable 2**
 
 		```C++
 		#include <iostream>
@@ -229,4 +229,7 @@
 		Failed for test case i= 1.
 		```
 
-3. Comparing Control Flow Graphs
+3.Comparing Control Flow Graph Structures
+-------
+
+

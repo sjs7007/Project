@@ -8,101 +8,243 @@ Identifier of type integer found : r1
 Integer Array Declaration : int mult[10][10]
 Integer Array Declaration : int b[10][10]
 Integer Array Declaration : int a[10][10]
-Identifier of type integer found : D.1750
-Identifier of type integer found : r1.14
-Identifier of type integer found : c2.13
-Identifier of type integer found : c1.12
-Identifier of type integer found : D.1746
-Identifier of type integer found : D.1745
-Identifier of type integer found : D.1744
-Identifier of type integer found : j.11
-Identifier of type integer found : k.10
-Identifier of type integer found : D.1741
-Identifier of type integer found : k.9
+Identifier of type integer found : D.1813
+Identifier of type integer found : r1.31
+Identifier of type integer found : c2.30
+Identifier of type integer found : D.1808
+Identifier of type integer found : c2.29
+Identifier of type integer found : D.1805
+Identifier of type integer found : j.28
+Identifier of type integer found : i.27
+Identifier of type integer found : r1.26
+Identifier of type integer found : c2.25
+Identifier of type integer found : c1.24
+Identifier of type integer found : D.1799
+Identifier of type integer found : D.1798
+Identifier of type integer found : D.1797
+Identifier of type integer found : j.23
+Identifier of type integer found : k.22
+Identifier of type integer found : D.1794
+Identifier of type integer found : k.21
+Identifier of type integer found : i.20
+Identifier of type integer found : D.1791
+Identifier of type integer found : j.19
+Identifier of type integer found : i.18
+Identifier of type integer found : j.17
+Identifier of type integer found : i.16
+Identifier of type integer found : r1.15
+Identifier of type integer found : c2.14
+Identifier of type integer found : j.13
+Identifier of type integer found : i.12
+Identifier of type integer found : r2.11
+Identifier of type integer found : c2.10
+Identifier of type integer found : D.1779
+Identifier of type integer found : D.1778
+Identifier of type integer found : D.1777
+Identifier of type integer found : j.9
+Identifier of type integer found : D.1775
 Identifier of type integer found : i.8
-Identifier of type integer found : D.1738
-Identifier of type integer found : j.7
-Identifier of type integer found : i.6
-Identifier of type integer found : j.5
-Identifier of type integer found : i.4
-Identifier of type integer found : r1.3
-Identifier of type integer found : c2.2
-Identifier of type integer found : j.1
-Identifier of type integer found : i.0
+Identifier of type integer found : b.7
+Identifier of type integer found : D.1771
+Identifier of type integer found : D.1770
+Identifier of type integer found : r1.6
+Identifier of type integer found : c1.5
+Identifier of type integer found : D.1766
+Identifier of type integer found : D.1765
+Identifier of type integer found : D.1764
+Identifier of type integer found : j.4
+Identifier of type integer found : D.1762
+Identifier of type integer found : i.3
+Identifier of type integer found : a.2
+Identifier of type integer found : D.1758
+Identifier of type integer found : D.1757
+Identifier of type integer found : r2.1
+Identifier of type integer found : c1.0
 
 Block : <bb 2>
 printf(...)
 printf(...)
 printf(...)
 printf(...)
-i = <integerValue>
 
 Block : <bb 3>
-j = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+printf(...)
 
 Block : <bb 4>
-i.0 = <integerValue>
-j.1 = <integerValue>
-mult[i.0][j.1] = <integerValue>
-j = <integerValue>
+c1.0 = <integerValue>
+r2.1 = <integerValue>
+if c1.0!= <integerValue>, goto <bb 3>,else, goto <bb 5>
 
 Block : <bb 5>
-c2.2 = <integerValue>
-if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+printf(...)
+i = <integerValue>
 
 Block : <bb 6>
-i = <integerValue>
-
-Block : <bb 7>
-r1.3 = <integerValue>
-if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
-
-Block : <bb 8>
-i = <integerValue>
-
-Block : <bb 9>
 j = <integerValue>
 
+Block : <bb 7>
+D.1757 = <integerValue>
+D.1758 = <integerValue>
+printf(...)
+a.2 = <integerValue>
+i.3 = <integerValue>
+D.1762 = <integerValue>
+j.4 = <integerValue>
+D.1764 = <integerValue>
+D.1765 = <integerValue>
+D.1766 = <integerValue>
+printf(...)
+j = <integerValue>
+
+Block : <bb 8>
+c1.5 = <integerValue>
+if j< <integerValue>, goto <bb 7>,else, goto <bb 9>
+
+Block : <bb 9>
+i = <integerValue>
+
 Block : <bb 10>
-k = <integerValue>
+r1.6 = <integerValue>
+if i< <integerValue>, goto <bb 6>,else, goto <bb 11>
 
 Block : <bb 11>
-i.4 = <integerValue>
-j.5 = <integerValue>
-i.6 = <integerValue>
-j.7 = <integerValue>
-D.1738 = <integerValue>
-i.8 = <integerValue>
-k.9 = <integerValue>
-D.1741 = <integerValue>
-k.10 = <integerValue>
-j.11 = <integerValue>
-D.1744 = <integerValue>
-D.1745 = <integerValue>
-D.1746 = <integerValue>
-mult[i.4][j.5] = <integerValue>
-k = <integerValue>
+printf(...)
+i = <integerValue>
 
 Block : <bb 12>
-c1.12 = <integerValue>
-if k< <integerValue>, goto <bb 11>,else, goto <bb 13>
+j = <integerValue>
 
 Block : <bb 13>
+D.1770 = <integerValue>
+D.1771 = <integerValue>
+printf(...)
+b.7 = <integerValue>
+i.8 = <integerValue>
+D.1775 = <integerValue>
+j.9 = <integerValue>
+D.1777 = <integerValue>
+D.1778 = <integerValue>
+D.1779 = <integerValue>
+printf(...)
 j = <integerValue>
 
 Block : <bb 14>
-c2.13 = <integerValue>
-if j< <integerValue>, goto <bb 10>,else, goto <bb 15>
+c2.10 = <integerValue>
+if j< <integerValue>, goto <bb 13>,else, goto <bb 15>
 
 Block : <bb 15>
 i = <integerValue>
 
 Block : <bb 16>
-r1.14 = <integerValue>
-if i< <integerValue>, goto <bb 9>,else, goto <bb 17>
+r2.11 = <integerValue>
+if i< <integerValue>, goto <bb 12>,else, goto <bb 17>
 
 Block : <bb 17>
-D.1750 = <integerValue>
+i = <integerValue>
+
+Block : <bb 18>
+j = <integerValue>
+
+Block : <bb 19>
+i.12 = <integerValue>
+j.13 = <integerValue>
+mult[i.12][j.13] = <integerValue>
+j = <integerValue>
+
+Block : <bb 20>
+c2.14 = <integerValue>
+if j< <integerValue>, goto <bb 19>,else, goto <bb 21>
+
+Block : <bb 21>
+i = <integerValue>
+
+Block : <bb 22>
+r1.15 = <integerValue>
+if i< <integerValue>, goto <bb 18>,else, goto <bb 23>
+
+Block : <bb 23>
+i = <integerValue>
+
+Block : <bb 24>
+j = <integerValue>
+
+Block : <bb 25>
+k = <integerValue>
+
+Block : <bb 26>
+i.16 = <integerValue>
+j.17 = <integerValue>
+i.18 = <integerValue>
+j.19 = <integerValue>
+D.1791 = <integerValue>
+i.20 = <integerValue>
+k.21 = <integerValue>
+D.1794 = <integerValue>
+k.22 = <integerValue>
+j.23 = <integerValue>
+D.1797 = <integerValue>
+D.1798 = <integerValue>
+D.1799 = <integerValue>
+mult[i.16][j.17] = <integerValue>
+k = <integerValue>
+
+Block : <bb 27>
+c1.24 = <integerValue>
+if k< <integerValue>, goto <bb 26>,else, goto <bb 28>
+
+Block : <bb 28>
+j = <integerValue>
+
+Block : <bb 29>
+c2.25 = <integerValue>
+if j< <integerValue>, goto <bb 25>,else, goto <bb 30>
+
+Block : <bb 30>
+i = <integerValue>
+
+Block : <bb 31>
+r1.26 = <integerValue>
+if i< <integerValue>, goto <bb 24>,else, goto <bb 32>
+
+Block : <bb 32>
+printf(...)
+i = <integerValue>
+
+Block : <bb 33>
+j = <integerValue>
+
+Block : <bb 34>
+i.27 = <integerValue>
+j.28 = <integerValue>
+D.1805 = <integerValue>
+printf(...)
+c2.29 = <integerValue>
+D.1808 = <integerValue>
+if D.1808== <integerValue>, goto <bb 35>,else, goto <bb 36>
+
+Block : <bb 35>
+printf(...)
+
+Block : <bb 36>
+j = <integerValue>
+
+Block : <bb 37>
+c2.30 = <integerValue>
+if j< <integerValue>, goto <bb 34>,else, goto <bb 38>
+
+Block : <bb 38>
+i = <integerValue>
+
+Block : <bb 39>
+r1.31 = <integerValue>
+if i< <integerValue>, goto <bb 33>,else, goto <bb 40>
+
+Block : <bb 40>
+D.1813 = <integerValue>
 
 Symbol table : -
 Symbol 0 : k, Value : <integerValue>
@@ -112,24 +254,55 @@ Symbol 3 : c2, Value : <integerValue>
 Symbol 4 : r2, Value : <integerValue>
 Symbol 5 : c1, Value : <integerValue>
 Symbol 6 : r1, Value : <integerValue>
-Symbol 7 : D.1750, Value : <integerValue>
-Symbol 8 : r1.14, Value : <integerValue>
-Symbol 9 : c2.13, Value : <integerValue>
-Symbol 10 : c1.12, Value : <integerValue>
-Symbol 11 : D.1746, Value : <integerValue>
-Symbol 12 : D.1745, Value : <integerValue>
-Symbol 13 : D.1744, Value : <integerValue>
-Symbol 14 : j.11, Value : <integerValue>
-Symbol 15 : k.10, Value : <integerValue>
-Symbol 16 : D.1741, Value : <integerValue>
-Symbol 17 : k.9, Value : <integerValue>
-Symbol 18 : i.8, Value : <integerValue>
-Symbol 19 : D.1738, Value : <integerValue>
-Symbol 20 : j.7, Value : <integerValue>
-Symbol 21 : i.6, Value : <integerValue>
-Symbol 22 : j.5, Value : <integerValue>
-Symbol 23 : i.4, Value : <integerValue>
-Symbol 24 : r1.3, Value : <integerValue>
-Symbol 25 : c2.2, Value : <integerValue>
-Symbol 26 : j.1, Value : <integerValue>
-Symbol 27 : i.0, Value : <integerValue>
+Symbol 7 : D.1813, Value : <integerValue>
+Symbol 8 : r1.31, Value : <integerValue>
+Symbol 9 : c2.30, Value : <integerValue>
+Symbol 10 : D.1808, Value : <integerValue>
+Symbol 11 : c2.29, Value : <integerValue>
+Symbol 12 : D.1805, Value : <integerValue>
+Symbol 13 : j.28, Value : <integerValue>
+Symbol 14 : i.27, Value : <integerValue>
+Symbol 15 : r1.26, Value : <integerValue>
+Symbol 16 : c2.25, Value : <integerValue>
+Symbol 17 : c1.24, Value : <integerValue>
+Symbol 18 : D.1799, Value : <integerValue>
+Symbol 19 : D.1798, Value : <integerValue>
+Symbol 20 : D.1797, Value : <integerValue>
+Symbol 21 : j.23, Value : <integerValue>
+Symbol 22 : k.22, Value : <integerValue>
+Symbol 23 : D.1794, Value : <integerValue>
+Symbol 24 : k.21, Value : <integerValue>
+Symbol 25 : i.20, Value : <integerValue>
+Symbol 26 : D.1791, Value : <integerValue>
+Symbol 27 : j.19, Value : <integerValue>
+Symbol 28 : i.18, Value : <integerValue>
+Symbol 29 : j.17, Value : <integerValue>
+Symbol 30 : i.16, Value : <integerValue>
+Symbol 31 : r1.15, Value : <integerValue>
+Symbol 32 : c2.14, Value : <integerValue>
+Symbol 33 : j.13, Value : <integerValue>
+Symbol 34 : i.12, Value : <integerValue>
+Symbol 35 : r2.11, Value : <integerValue>
+Symbol 36 : c2.10, Value : <integerValue>
+Symbol 37 : D.1779, Value : <integerValue>
+Symbol 38 : D.1778, Value : <integerValue>
+Symbol 39 : D.1777, Value : <integerValue>
+Symbol 40 : j.9, Value : <integerValue>
+Symbol 41 : D.1775, Value : <integerValue>
+Symbol 42 : i.8, Value : <integerValue>
+Symbol 43 : b.7, Value : <integerValue>
+Symbol 44 : D.1771, Value : <integerValue>
+Symbol 45 : D.1770, Value : <integerValue>
+Symbol 46 : r1.6, Value : <integerValue>
+Symbol 47 : c1.5, Value : <integerValue>
+Symbol 48 : D.1766, Value : <integerValue>
+Symbol 49 : D.1765, Value : <integerValue>
+Symbol 50 : D.1764, Value : <integerValue>
+Symbol 51 : j.4, Value : <integerValue>
+Symbol 52 : D.1762, Value : <integerValue>
+Symbol 53 : i.3, Value : <integerValue>
+Symbol 54 : a.2, Value : <integerValue>
+Symbol 55 : D.1758, Value : <integerValue>
+Symbol 56 : D.1757, Value : <integerValue>
+Symbol 57 : r2.1, Value : <integerValue>
+Symbol 58 : c1.0, Value : <integerValue>

@@ -232,4 +232,80 @@
 3.Comparing Control Flow Graph Structures
 -------
 
++ **Description**
+	Here the structure of the [Control Flow Graph(CFG)](http://en.wikipedia.org/wiki/Control_flow_graph) is compared to determine the similarity between two programs. The CFG is extracted from the C programs using the **-fdump-tree-cfg** option which gives a **.cfg** file as output.
+
+	+ **An example for a simple program**
+		+ **Code**
+			```C
+			#include<stdio.h>
+			void main()
+			{
+				int i,j,k=0;
+				for(i=0;i<3;i++)
+				{
+					for(j=0;j<=3;j++)
+					{
+						k = 5;
+						printf("%d %d",i,j);
+					}
+				}
+			}
+			```
+		+ **CFG Generation**
+			
+			```
+			gcc -fdump-tree-cfg example.c -o example
+			```
+		+ **CFG Generated**
+			
+			```
+			;; Function main (main)
+
+			main ()
+			{
+			  int k;
+			  int j;
+			  int i;
+			  const char * restrict D.1710;
+
+			<bb 2>:
+			  k = 0;
+			  i = 0;
+			  goto <bb 7>;
+
+			<bb 3>:
+			  j = 0;
+			  goto <bb 5>;
+
+			<bb 4>:
+			  k = 5;
+			  D.1710 = (const char * restrict) "%d %d";
+			  printf (D.1710, i, j);
+			  j = j + 1;
+
+			<bb 5>:
+			  if (j <= 3)
+			    goto <bb 4>;
+			  else
+			    goto <bb 6>;
+
+			<bb 6>:
+			  i = i + 1;
+
+			<bb 7>:
+			  if (i <= 2)
+			    goto <bb 3>;
+			  else
+			    goto <bb 8>;
+
+			<bb 8>:
+			  return;
+
+			}
+			```
+
+	A parser is then used along with a lexical analyzer to extract the structure from the  .cfg file. The lexical analyzer is made using [flex](http://en.wikipedia.org/wiki/Flex_lexical_analyser) and the parser using [bison](http://en.wikipedia.org/wiki/GNU_bison).
+
+	
 

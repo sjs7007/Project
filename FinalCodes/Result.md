@@ -148,6 +148,7 @@
 	Confidence Value
 
 + **Usage** 
+
 	```
 	g++ CompareExeuctables.cpp 
 	./a.out <Exec1Name> <Exec2Name> <nTestCases>
@@ -158,7 +159,7 @@
 
 		+ **Code for Executable 1**
 
-		```C
+		```C++
 		#include <iostream>
 		#include <stdlib.h> //for atoi
 		using namespace std;
@@ -172,7 +173,7 @@
 
 		+ **Code for Executable 2**
 
-		```C
+		```C++
 		#include <iostream>
 		#include <stdlib.h> //for atoi
 		using namespace std;
@@ -190,7 +191,7 @@
 		Passed for all 10 test cases.
 		Confidence Value calculated as 1 - (1/2^n) : 0.999023
 		```
-		
+
 2. Unsuccessful case
 
 Code for Executable 1 :

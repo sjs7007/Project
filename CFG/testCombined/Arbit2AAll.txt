@@ -1,0 +1,179 @@
+// Search for element in an array
+
+#include<stdio.h>
+
+int main()
+{
+	int a[]={5,3,1,4,2};
+	int i,j,find=7,loc=-1;
+	for(i=0;i<5;i++)
+	{
+		if(a[i]==find)
+		{
+			loc=i;
+		}		
+	}
+	if(loc>=0)
+	{
+		printf("Element found at location : %d.\n",loc);
+	}
+	else
+	{
+		printf("Element not present in array.\n" );
+	}
+	return 0;
+}	
+
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 10 and 11
+main ()
+{
+  int loc;
+  int find;
+  int j;
+  int i;
+  int a[5];
+  int D.1717;
+  const char * restrict D.1715;
+  int D.1710;
+  int i.0;
+
+<bb 2>:
+  a[0] = 5;
+  a[1] = 3;
+  a[2] = 1;
+  a[3] = 4;
+  a[4] = 2;
+  find = 7;
+  loc = -1;
+  i = 0;
+  goto <bb 6>;
+
+<bb 3>:
+  i.0 = i;
+  D.1710 = a[i.0];
+  if (D.1710 == find)
+    goto <bb 4>;
+  else
+    goto <bb 5>;
+
+<bb 4>:
+  loc = i;
+
+<bb 5>:
+  i = i + 1;
+
+<bb 6>:
+  if (i <= 4)
+    goto <bb 3>;
+  else
+    goto <bb 7>;
+
+<bb 7>:
+  if (loc >= 0)
+    goto <bb 8>;
+  else
+    goto <bb 9>;
+
+<bb 8>:
+  D.1715 = (const char * restrict) "Element found at location : %d.\n";
+  printf (D.1715, loc);
+  goto <bb 10>;
+
+<bb 9>:
+  __builtin_puts (&"Element not present in array."[0]);
+
+<bb 10>:
+  D.1717 = 0;
+  return D.1717;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : loc
+Identifier of type integer found : find
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1717
+Identifier of type integer found : D.1710
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+find = <integerValue>
+loc = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+D.1710 = <integerValue>
+if D.1710== <integerValue>, goto <bb 4>,else, goto <bb 5>
+
+Block : <bb 4>
+loc = <integerValue>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 7>
+
+Block : <bb 7>
+if loc>= <integerValue>, goto <bb 8>,else, goto <bb 9>
+
+Block : <bb 8>
+printf(...)
+
+Block : <bb 9>
+printf(...)
+
+Block : <bb 10>
+D.1717 = <integerValue>
+
+Symbol table : -
+Symbol 0 : loc, Value : <integerValue>
+Symbol 1 : find, Value : <integerValue>
+Symbol 2 : j, Value : <integerValue>
+Symbol 3 : i, Value : <integerValue>
+Symbol 4 : D.1717, Value : <integerValue>
+Symbol 5 : D.1710, Value : <integerValue>
+Symbol 6 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 6>
+
+<bb 3>:
+goto <bb 4>
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+
+<bb 6>:
+goto <bb 3>
+goto <bb 7>
+
+<bb 7>:
+goto <bb 8>
+goto <bb 9>
+
+<bb 8>:
+goto <bb 10>
+
+<bb 9>:
+
+<bb 10>:

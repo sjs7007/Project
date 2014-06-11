@@ -140,7 +140,7 @@
 %token <sval> IDENTIFIER 
 %type <sval> comparison
 %type <nval> number
-%token intDECL floatDECL doubleDECL // for int declaration like, int a;
+%token intDECL floatDECL doubleDECL charDECL // for int declaration like, int a;
 %type <nval> expression
 %type <sval> operator
 %type <sval> goto
@@ -151,6 +151,7 @@
 
 //for array
 %token <sval> intArrayDECL
+%token <sval> charArrayDECL
 
 %%
 //grammar which bison will parse
@@ -222,6 +223,14 @@ declaration:
 	{
 		cout<<"Integer Array Declaration : "<<$1<<endl;
 	};
+    | charArrayDECL
+    {
+        cout<<"Char Array Declaration : "<<$1<<endl;
+    };
+    | charDECL IDENTIFIER 
+    {
+        cout<<"Identifier of type char found : "<<$2<<endl ;
+    };
 
 initialization:
     IDENTIFIER EQUALTO expression 

@@ -1,0 +1,106 @@
+Identifier of type integer found : flag
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : count2
+Identifier of type integer found : count1
+Char Array Declaration : char search[10]
+Char Array Declaration : char str[80]
+Identifier of type integer found : D.1743
+Identifier of type integer found : D.1737
+Identifier of type integer found : D.1734
+Identifier of type char found : D.1731
+Identifier of type integer found : D.1730
+Identifier of type char found : D.1729
+Identifier of type integer found : j.2
+Identifier of type char found : D.1727
+Identifier of type integer found : count2.1
+Identifier of type char found : D.1725
+Identifier of type integer found : count1.0
+
+Block : <bb 2>
+count1 = <integerValue>
+count2 = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+
+Block : <bb 3>
+count1 = <integerValue>
+
+Block : <bb 4>
+count1.0 = <integerValue>
+D.1725 = <integerValue>
+if D.1725!= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+
+Block : <bb 6>
+count2 = <integerValue>
+
+Block : <bb 7>
+count2.1 = <integerValue>
+D.1727 = <integerValue>
+if D.1727!= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+flag = <integerValue>
+j.2 = <integerValue>
+D.1729 = <integerValue>
+D.1730 = <integerValue>
+D.1731 = <integerValue>
+if D.1729!= <integerValue>, goto <bb 11>,else, goto <bb 12>
+
+Block : <bb 11>
+flag = <integerValue>
+
+Block : <bb 12>
+j = <integerValue>
+
+Block : <bb 13>
+D.1734 = <integerValue>
+if D.1734> <integerValue>, goto <bb 10>,else, goto <bb 14>
+
+Block : <bb 14>
+if flag== <integerValue>, goto <bb 15>,else, goto <bb 16>
+
+Block : <bb 15>
+
+Block : <bb 16>
+i = <integerValue>
+
+Block : <bb 17>
+D.1737 = <integerValue>
+if D.1737>= <integerValue>, goto <bb 9>,else, goto <bb 18>
+
+Block : <bb 18>
+if flag== <integerValue>, goto <bb 19>,else, goto <bb 20>
+
+Block : <bb 19>
+printf(...)
+
+Block : <bb 20>
+printf(...)
+
+Block : <bb 21>
+D.1743 = <integerValue>
+
+Symbol table : -
+Symbol 0 : flag, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : count2, Value : <integerValue>
+Symbol 4 : count1, Value : <integerValue>
+Symbol 5 : D.1743, Value : <integerValue>
+Symbol 6 : D.1737, Value : <integerValue>
+Symbol 7 : D.1734, Value : <integerValue>
+Symbol 8 : D.1730, Value : <integerValue>
+Symbol 9 : j.2, Value : <integerValue>
+Symbol 10 : count2.1, Value : <integerValue>
+Symbol 11 : count1.0, Value : <integerValue>

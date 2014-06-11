@@ -1,0 +1,98 @@
+Identifier of type integer found : i
+Identifier of type integer found : count2
+Identifier of type integer found : count1
+Char Array Declaration : char str3[200]
+Char Array Declaration : char str2[100]
+Char Array Declaration : char str1[100]
+Identifier of type integer found : D.1738
+Identifier of type char found : D.1736
+Identifier of type integer found : i.5
+Identifier of type integer found : D.1734
+Identifier of type char found : D.1733
+Identifier of type integer found : i.4
+Identifier of type integer found : i.3
+Identifier of type char found : D.1730
+Identifier of type integer found : count2.2
+Identifier of type char found : D.1728
+Identifier of type integer found : count1.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+count1 = <integerValue>
+count2 = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+str3[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+
+Block : <bb 6>
+count1 = <integerValue>
+
+Block : <bb 7>
+count1.1 = <integerValue>
+D.1728 = <integerValue>
+if D.1728!= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+
+Block : <bb 9>
+count2 = <integerValue>
+
+Block : <bb 10>
+count2.2 = <integerValue>
+D.1730 = <integerValue>
+if D.1730!= <integerValue>, goto <bb 9>,else, goto <bb 11>
+
+Block : <bb 11>
+i = <integerValue>
+
+Block : <bb 12>
+i.3 = <integerValue>
+i.4 = <integerValue>
+D.1733 = <integerValue>
+str3[i.3] = <integerValue>
+i = <integerValue>
+
+Block : <bb 13>
+if i< <integerValue>, goto <bb 12>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+D.1734 = <integerValue>
+i.5 = <integerValue>
+D.1736 = <integerValue>
+str3[D.1734] = <integerValue>
+i = <integerValue>
+
+Block : <bb 16>
+if i< <integerValue>, goto <bb 15>,else, goto <bb 17>
+
+Block : <bb 17>
+printf(...)
+D.1738 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : count2, Value : <integerValue>
+Symbol 2 : count1, Value : <integerValue>
+Symbol 3 : D.1738, Value : <integerValue>
+Symbol 4 : i.5, Value : <integerValue>
+Symbol 5 : D.1734, Value : <integerValue>
+Symbol 6 : i.4, Value : <integerValue>
+Symbol 7 : i.3, Value : <integerValue>
+Symbol 8 : count2.2, Value : <integerValue>
+Symbol 9 : count1.1, Value : <integerValue>
+Symbol 10 : i.0, Value : <integerValue>

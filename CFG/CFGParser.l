@@ -21,7 +21,9 @@
 ^.*Merging.*$ ; 
 
 "int "[*]? { return intDECL; } 
+"char "[*]? { return charDECL; } 
 "int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
+"char "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]" { yylval.sval = strdup(yytext); return charArrayDECL; }; //char array declaration
 "int "[a-zA-Z_][a-zA-Z_0-9]*"["[0-9]+"]["[0-9]+"]" { yylval.sval = strdup(yytext); return intArrayDECL; }; //int array declaration
 "float" { return floatDECL; };
 "double" { return doubleDECL; };
@@ -32,6 +34,7 @@
 "(double)" {;}
 
 "%d" ;
+"%s" ;
 
 [-]?[0-9]+ { yylval.nval.type=yylval.nval.INTEGER; yylval.nval.ival = atoi(yytext); return INTEGER; }
 [-]?[1-9]"."[0-9]+"e"[+/-][0-9]+ { yylval.nval.type=yylval.nval.FLOAT; yylval.nval.fval = getFloat(yytext); return FLOAT; }

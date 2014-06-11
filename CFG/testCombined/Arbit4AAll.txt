@@ -1,0 +1,316 @@
+// Concatenation, modified from : http://www.engineersgarage.com/c-language-programs/check-if-sub-string-present-given-string
+
+#include<stdio.h>
+
+int main()
+{
+	char str1[100],str2[100],str3[200];	
+	int count1=0,count2=0,i;
+	
+	printf("Enter a string:");
+	scanf("%s",str1);
+
+	printf("Enter search substring:");
+	scanf("%s",str2);
+
+	for(i=0;i<200;i++)
+	{
+		str3[i]='\0';
+	}
+
+	while (str1[count1]!='\0')
+		count1++;
+
+	while (str2[count2]!='\0')
+		count2++;
+
+	for(i=0;i<count1;i++)
+	{
+		str3[i]=str1[i];
+	}
+	for(i=0;i<count2;i++)
+	{
+		str3[count1+i]=str2[i];
+	}
+
+	printf("Concatenated String : %s\n",str3 );
+
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 17 and 18
+main ()
+{
+  int i;
+  int count2;
+  int count1;
+  char str3[200];
+  char str2[100];
+  char str1[100];
+  int D.1738;
+  const char * restrict D.1737;
+  char D.1736;
+  int i.5;
+  int D.1734;
+  char D.1733;
+  int i.4;
+  int i.3;
+  char D.1730;
+  int count2.2;
+  char D.1728;
+  int count1.1;
+  int i.0;
+  const char * restrict D.1725;
+  const char * restrict D.1724;
+  const char * restrict D.1723;
+  const char * restrict D.1722;
+
+<bb 2>:
+  count1 = 0;
+  count2 = 0;
+  D.1722 = (const char * restrict) "Enter a string:";
+  printf (D.1722);
+  D.1723 = (const char * restrict) "%s";
+  scanf (D.1723, &str1);
+  D.1724 = (const char * restrict) "Enter search substring:";
+  printf (D.1724);
+  D.1725 = (const char * restrict) "%s";
+  scanf (D.1725, &str2);
+  i = 0;
+  goto <bb 4>;
+
+<bb 3>:
+  i.0 = i;
+  str3[i.0] = 0;
+  i = i + 1;
+
+<bb 4>:
+  if (i <= 199)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  goto <bb 7>;
+
+<bb 6>:
+  count1 = count1 + 1;
+
+<bb 7>:
+  count1.1 = count1;
+  D.1728 = str1[count1.1];
+  if (D.1728 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  goto <bb 10>;
+
+<bb 9>:
+  count2 = count2 + 1;
+
+<bb 10>:
+  count2.2 = count2;
+  D.1730 = str2[count2.2];
+  if (D.1730 != 0)
+    goto <bb 9>;
+  else
+    goto <bb 11>;
+
+<bb 11>:
+  i = 0;
+  goto <bb 13>;
+
+<bb 12>:
+  i.3 = i;
+  i.4 = i;
+  D.1733 = str1[i.4];
+  str3[i.3] = D.1733;
+  i = i + 1;
+
+<bb 13>:
+  if (i < count1)
+    goto <bb 12>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  i = 0;
+  goto <bb 16>;
+
+<bb 15>:
+  D.1734 = count1 + i;
+  i.5 = i;
+  D.1736 = str2[i.5];
+  str3[D.1734] = D.1736;
+  i = i + 1;
+
+<bb 16>:
+  if (i < count2)
+    goto <bb 15>;
+  else
+    goto <bb 17>;
+
+<bb 17>:
+  D.1737 = (const char * restrict) "Concatenated String : %s\n";
+  printf (D.1737, &str3);
+  D.1738 = 0;
+  return D.1738;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : i
+Identifier of type integer found : count2
+Identifier of type integer found : count1
+Char Array Declaration : char str3[200]
+Char Array Declaration : char str2[100]
+Char Array Declaration : char str1[100]
+Identifier of type integer found : D.1738
+Identifier of type char found : D.1736
+Identifier of type integer found : i.5
+Identifier of type integer found : D.1734
+Identifier of type char found : D.1733
+Identifier of type integer found : i.4
+Identifier of type integer found : i.3
+Identifier of type char found : D.1730
+Identifier of type integer found : count2.2
+Identifier of type char found : D.1728
+Identifier of type integer found : count1.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+count1 = <integerValue>
+count2 = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+str3[i.0] = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+
+Block : <bb 6>
+count1 = <integerValue>
+
+Block : <bb 7>
+count1.1 = <integerValue>
+D.1728 = <integerValue>
+if D.1728!= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+
+Block : <bb 9>
+count2 = <integerValue>
+
+Block : <bb 10>
+count2.2 = <integerValue>
+D.1730 = <integerValue>
+if D.1730!= <integerValue>, goto <bb 9>,else, goto <bb 11>
+
+Block : <bb 11>
+i = <integerValue>
+
+Block : <bb 12>
+i.3 = <integerValue>
+i.4 = <integerValue>
+D.1733 = <integerValue>
+str3[i.3] = <integerValue>
+i = <integerValue>
+
+Block : <bb 13>
+if i< <integerValue>, goto <bb 12>,else, goto <bb 14>
+
+Block : <bb 14>
+i = <integerValue>
+
+Block : <bb 15>
+D.1734 = <integerValue>
+i.5 = <integerValue>
+D.1736 = <integerValue>
+str3[D.1734] = <integerValue>
+i = <integerValue>
+
+Block : <bb 16>
+if i< <integerValue>, goto <bb 15>,else, goto <bb 17>
+
+Block : <bb 17>
+printf(...)
+D.1738 = <integerValue>
+
+Symbol table : -
+Symbol 0 : i, Value : <integerValue>
+Symbol 1 : count2, Value : <integerValue>
+Symbol 2 : count1, Value : <integerValue>
+Symbol 3 : D.1738, Value : <integerValue>
+Symbol 4 : i.5, Value : <integerValue>
+Symbol 5 : D.1734, Value : <integerValue>
+Symbol 6 : i.4, Value : <integerValue>
+Symbol 7 : i.3, Value : <integerValue>
+Symbol 8 : count2.2, Value : <integerValue>
+Symbol 9 : count1.1, Value : <integerValue>
+Symbol 10 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 7>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 6>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 10>
+
+<bb 9>:
+
+<bb 10>:
+goto <bb 9>
+goto <bb 11>
+
+<bb 11>:
+goto <bb 13>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 12>
+goto <bb 14>
+
+<bb 14>:
+goto <bb 16>
+
+<bb 15>:
+
+<bb 16>:
+goto <bb 15>
+goto <bb 17>
+
+<bb 17>:

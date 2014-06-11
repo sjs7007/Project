@@ -1,0 +1,358 @@
+// Find Substring : http://www.engineersgarage.com/c-language-programs/check-if-sub-string-present-given-string
+
+#include<stdio.h>
+
+int main()
+{
+	char str[80],search[10];	
+	int count1=0,count2=0,i,j,flag;
+	
+	printf("Enter a string:");
+	scanf("%s",str);
+
+	printf("Enter search substring:");
+	scanf("%s",search);
+
+	while (str[count1]!='\0')
+		count1++;
+
+	while (search[count2]!='\0')
+		count2++;
+
+	for(i=0;i<=count1-count2;i++)
+	{
+		for(j=i;j<i+count2;j++)
+		{
+			flag=1;
+			if (str[j]!=search[j-i])
+			{
+				flag=0;
+			   break;
+			}
+		}
+		if (flag==1)
+			break;
+	}
+	if (flag==1)
+		printf("SEARCH SUCCESSFUL!");
+	else
+		printf("SEARCH UNSUCCESSFUL!");
+
+	return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 21 and 22
+main ()
+{
+  int flag;
+  int j;
+  int i;
+  int count2;
+  int count1;
+  char search[10];
+  char str[80];
+  int D.1743;
+  const char * restrict D.1742;
+  const char * restrict D.1740;
+  int D.1737;
+  int D.1734;
+  char D.1731;
+  int D.1730;
+  char D.1729;
+  int j.2;
+  char D.1727;
+  int count2.1;
+  char D.1725;
+  int count1.0;
+  const char * restrict D.1723;
+  const char * restrict D.1722;
+  const char * restrict D.1721;
+  const char * restrict D.1720;
+
+<bb 2>:
+  count1 = 0;
+  count2 = 0;
+  D.1720 = (const char * restrict) "Enter a string:";
+  printf (D.1720);
+  D.1721 = (const char * restrict) "%s";
+  scanf (D.1721, &str);
+  D.1722 = (const char * restrict) "Enter search substring:";
+  printf (D.1722);
+  D.1723 = (const char * restrict) "%s";
+  scanf (D.1723, &search);
+  goto <bb 4>;
+
+<bb 3>:
+  count1 = count1 + 1;
+
+<bb 4>:
+  count1.0 = count1;
+  D.1725 = str[count1.0];
+  if (D.1725 != 0)
+    goto <bb 3>;
+  else
+    goto <bb 5>;
+
+<bb 5>:
+  goto <bb 7>;
+
+<bb 6>:
+  count2 = count2 + 1;
+
+<bb 7>:
+  count2.1 = count2;
+  D.1727 = search[count2.1];
+  if (D.1727 != 0)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  i = 0;
+  goto <bb 17>;
+
+<bb 9>:
+  j = i;
+  goto <bb 13>;
+
+<bb 10>:
+  flag = 1;
+  j.2 = j;
+  D.1729 = str[j.2];
+  D.1730 = j - i;
+  D.1731 = search[D.1730];
+  if (D.1729 != D.1731)
+    goto <bb 11>;
+  else
+    goto <bb 12>;
+
+<bb 11>:
+  flag = 0;
+  goto <bb 14>;
+
+<bb 12>:
+  j = j + 1;
+
+<bb 13>:
+  D.1734 = i + count2;
+  if (D.1734 > j)
+    goto <bb 10>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  if (flag == 1)
+    goto <bb 15>;
+  else
+    goto <bb 16>;
+
+<bb 15>:
+  goto <bb 18>;
+
+<bb 16>:
+  i = i + 1;
+
+<bb 17>:
+  D.1737 = count1 - count2;
+  if (D.1737 >= i)
+    goto <bb 9>;
+  else
+    goto <bb 18>;
+
+<bb 18>:
+  if (flag == 1)
+    goto <bb 19>;
+  else
+    goto <bb 20>;
+
+<bb 19>:
+  D.1740 = (const char * restrict) "SEARCH SUCCESSFUL!";
+  printf (D.1740);
+  goto <bb 21>;
+
+<bb 20>:
+  D.1742 = (const char * restrict) "SEARCH UNSUCCESSFUL!";
+  printf (D.1742);
+
+<bb 21>:
+  D.1743 = 0;
+  return D.1743;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : flag
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : count2
+Identifier of type integer found : count1
+Char Array Declaration : char search[10]
+Char Array Declaration : char str[80]
+Identifier of type integer found : D.1743
+Identifier of type integer found : D.1737
+Identifier of type integer found : D.1734
+Identifier of type char found : D.1731
+Identifier of type integer found : D.1730
+Identifier of type char found : D.1729
+Identifier of type integer found : j.2
+Identifier of type char found : D.1727
+Identifier of type integer found : count2.1
+Identifier of type char found : D.1725
+Identifier of type integer found : count1.0
+
+Block : <bb 2>
+count1 = <integerValue>
+count2 = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+
+Block : <bb 3>
+count1 = <integerValue>
+
+Block : <bb 4>
+count1.0 = <integerValue>
+D.1725 = <integerValue>
+if D.1725!= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+
+Block : <bb 6>
+count2 = <integerValue>
+
+Block : <bb 7>
+count2.1 = <integerValue>
+D.1727 = <integerValue>
+if D.1727!= <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+flag = <integerValue>
+j.2 = <integerValue>
+D.1729 = <integerValue>
+D.1730 = <integerValue>
+D.1731 = <integerValue>
+if D.1729!= <integerValue>, goto <bb 11>,else, goto <bb 12>
+
+Block : <bb 11>
+flag = <integerValue>
+
+Block : <bb 12>
+j = <integerValue>
+
+Block : <bb 13>
+D.1734 = <integerValue>
+if D.1734> <integerValue>, goto <bb 10>,else, goto <bb 14>
+
+Block : <bb 14>
+if flag== <integerValue>, goto <bb 15>,else, goto <bb 16>
+
+Block : <bb 15>
+
+Block : <bb 16>
+i = <integerValue>
+
+Block : <bb 17>
+D.1737 = <integerValue>
+if D.1737>= <integerValue>, goto <bb 9>,else, goto <bb 18>
+
+Block : <bb 18>
+if flag== <integerValue>, goto <bb 19>,else, goto <bb 20>
+
+Block : <bb 19>
+printf(...)
+
+Block : <bb 20>
+printf(...)
+
+Block : <bb 21>
+D.1743 = <integerValue>
+
+Symbol table : -
+Symbol 0 : flag, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : count2, Value : <integerValue>
+Symbol 4 : count1, Value : <integerValue>
+Symbol 5 : D.1743, Value : <integerValue>
+Symbol 6 : D.1737, Value : <integerValue>
+Symbol 7 : D.1734, Value : <integerValue>
+Symbol 8 : D.1730, Value : <integerValue>
+Symbol 9 : j.2, Value : <integerValue>
+Symbol 10 : count2.1, Value : <integerValue>
+Symbol 11 : count1.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 4>
+
+<bb 3>:
+
+<bb 4>:
+goto <bb 3>
+goto <bb 5>
+
+<bb 5>:
+goto <bb 7>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 6>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 17>
+
+<bb 9>:
+goto <bb 13>
+
+<bb 10>:
+goto <bb 11>
+goto <bb 12>
+
+<bb 11>:
+goto <bb 14>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 10>
+goto <bb 14>
+
+<bb 14>:
+goto <bb 15>
+goto <bb 16>
+
+<bb 15>:
+goto <bb 18>
+
+<bb 16>:
+
+<bb 17>:
+goto <bb 9>
+goto <bb 18>
+
+<bb 18>:
+goto <bb 19>
+goto <bb 20>
+
+<bb 19>:
+goto <bb 21>
+
+<bb 20>:
+
+<bb 21>:

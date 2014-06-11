@@ -1,0 +1,53 @@
+Identifier of type integer found : loc
+Identifier of type integer found : find
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1717
+Identifier of type integer found : D.1710
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+find = <integerValue>
+loc = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+D.1710 = <integerValue>
+if D.1710== <integerValue>, goto <bb 4>,else, goto <bb 5>
+
+Block : <bb 4>
+loc = <integerValue>
+
+Block : <bb 5>
+i = <integerValue>
+
+Block : <bb 6>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 7>
+
+Block : <bb 7>
+if loc>= <integerValue>, goto <bb 8>,else, goto <bb 9>
+
+Block : <bb 8>
+printf(...)
+
+Block : <bb 9>
+printf(...)
+
+Block : <bb 10>
+D.1717 = <integerValue>
+
+Symbol table : -
+Symbol 0 : loc, Value : <integerValue>
+Symbol 1 : find, Value : <integerValue>
+Symbol 2 : j, Value : <integerValue>
+Symbol 3 : i, Value : <integerValue>
+Symbol 4 : D.1717, Value : <integerValue>
+Symbol 5 : D.1710, Value : <integerValue>
+Symbol 6 : i.0, Value : <integerValue>

@@ -1,0 +1,531 @@
+//Matrix Addition : http://www.programmingsimplified.com/c-program-add-matrices
+
+#include <stdio.h>
+ 
+int main()
+{
+   int m, n, c, d, first[10][10], second[10][10], sum[10][10];
+ 
+   printf("Enter the number of rows and columns of matrix\n");
+   scanf("%d%d", &m, &n);
+   printf("Enter the elements of first matrix\n");
+ 
+   for ( c = 0 ; c < m ; c++ )
+      for ( d = 0 ; d < n ; d++ )
+         scanf("%d", &first[c][d]);
+ 
+   printf("Enter the elements of second matrix\n");
+ 
+   for ( c = 0 ; c < m ; c++ )
+      for ( d = 0 ; d < n ; d++ )
+            scanf("%d", &second[c][d]);
+ 
+   for ( c = 0 ; c < m ; c++ )
+      for ( d = 0 ; d < n ; d++ )
+         sum[c][d] = first[c][d] + second[c][d];
+ 
+   printf("Sum of entered matrices:-\n");
+ 
+   for ( c = 0 ; c < m ; c++ )
+   {
+      for ( d = 0 ; d < n ; d++ )
+         printf("%d\t", sum[c][d]);
+ 
+      printf("\n");
+   }
+ 
+   return 0;
+}
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 26 and 27
+main ()
+{
+  int sum[10][10];
+  int second[10][10];
+  int first[10][10];
+  int d;
+  int c;
+  int n;
+  int m;
+  int D.1770;
+  int m.21;
+  int n.20;
+  const char * restrict D.1767;
+  int D.1766;
+  int d.19;
+  int c.18;
+  int m.17;
+  int n.16;
+  int D.1761;
+  int D.1760;
+  int d.15;
+  int c.14;
+  int D.1757;
+  int d.13;
+  int c.12;
+  int d.11;
+  int c.10;
+  int m.9;
+  int n.8;
+  const char * restrict D.1750;
+  int * D.1749;
+  unsigned int D.1748;
+  unsigned int D.1747;
+  unsigned int d.7;
+  unsigned int D.1745;
+  unsigned int c.6;
+  int * second.5;
+  int m.4;
+  int n.3;
+  const char * restrict D.1740;
+  int * D.1739;
+  unsigned int D.1738;
+  unsigned int D.1737;
+  unsigned int d.2;
+  unsigned int D.1735;
+  unsigned int c.1;
+  int * first.0;
+  const char * restrict D.1732;
+
+<bb 2>:
+  __builtin_puts (&"Enter the number of rows and columns of matrix"[0]);
+  D.1732 = (const char * restrict) "%d%d";
+  scanf (D.1732, &m, &n);
+  __builtin_puts (&"Enter the elements of first matrix"[0]);
+  c = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  d = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  first.0 = (int *) &first;
+  c.1 = (unsigned int) c;
+  D.1735 = c.1 * 10;
+  d.2 = (unsigned int) d;
+  D.1737 = D.1735 + d.2;
+  D.1738 = D.1737 * 4;
+  D.1739 = first.0 + D.1738;
+  D.1740 = (const char * restrict) "%d";
+  scanf (D.1740, D.1739);
+  d = d + 1;
+
+<bb 5>:
+  n.3 = n;
+  if (d < n.3)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  c = c + 1;
+
+<bb 7>:
+  m.4 = m;
+  if (c < m.4)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  __builtin_puts (&"Enter the elements of second matrix"[0]);
+  c = 0;
+  goto <bb 13>;
+
+<bb 9>:
+  d = 0;
+  goto <bb 11>;
+
+<bb 10>:
+  second.5 = (int *) &second;
+  c.6 = (unsigned int) c;
+  D.1745 = c.6 * 10;
+  d.7 = (unsigned int) d;
+  D.1747 = D.1745 + d.7;
+  D.1748 = D.1747 * 4;
+  D.1749 = second.5 + D.1748;
+  D.1750 = (const char * restrict) "%d";
+  scanf (D.1750, D.1749);
+  d = d + 1;
+
+<bb 11>:
+  n.8 = n;
+  if (d < n.8)
+    goto <bb 10>;
+  else
+    goto <bb 12>;
+
+<bb 12>:
+  c = c + 1;
+
+<bb 13>:
+  m.9 = m;
+  if (c < m.9)
+    goto <bb 9>;
+  else
+    goto <bb 14>;
+
+<bb 14>:
+  c = 0;
+  goto <bb 19>;
+
+<bb 15>:
+  d = 0;
+  goto <bb 17>;
+
+<bb 16>:
+  c.10 = c;
+  d.11 = d;
+  c.12 = c;
+  d.13 = d;
+  D.1757 = first[c.12][d.13];
+  c.14 = c;
+  d.15 = d;
+  D.1760 = second[c.14][d.15];
+  D.1761 = D.1757 + D.1760;
+  sum[c.10][d.11] = D.1761;
+  d = d + 1;
+
+<bb 17>:
+  n.16 = n;
+  if (d < n.16)
+    goto <bb 16>;
+  else
+    goto <bb 18>;
+
+<bb 18>:
+  c = c + 1;
+
+<bb 19>:
+  m.17 = m;
+  if (c < m.17)
+    goto <bb 15>;
+  else
+    goto <bb 20>;
+
+<bb 20>:
+  __builtin_puts (&"Sum of entered matrices:-"[0]);
+  c = 0;
+  goto <bb 25>;
+
+<bb 21>:
+  d = 0;
+  goto <bb 23>;
+
+<bb 22>:
+  c.18 = c;
+  d.19 = d;
+  D.1766 = sum[c.18][d.19];
+  D.1767 = (const char * restrict) "%d\t";
+  printf (D.1767, D.1766);
+  d = d + 1;
+
+<bb 23>:
+  n.20 = n;
+  if (d < n.20)
+    goto <bb 22>;
+  else
+    goto <bb 24>;
+
+<bb 24>:
+  __builtin_putchar (10);
+  c = c + 1;
+
+<bb 25>:
+  m.21 = m;
+  if (c < m.21)
+    goto <bb 21>;
+  else
+    goto <bb 26>;
+
+<bb 26>:
+  D.1770 = 0;
+  return D.1770;
+
+}
+
+
+
+--------------------------------------------------
+Integer Array Declaration : int sum[10][10]
+Integer Array Declaration : int second[10][10]
+Integer Array Declaration : int first[10][10]
+Identifier of type integer found : d
+Identifier of type integer found : c
+Identifier of type integer found : n
+Identifier of type integer found : m
+Identifier of type integer found : D.1770
+Identifier of type integer found : m.21
+Identifier of type integer found : n.20
+Identifier of type integer found : D.1766
+Identifier of type integer found : d.19
+Identifier of type integer found : c.18
+Identifier of type integer found : m.17
+Identifier of type integer found : n.16
+Identifier of type integer found : D.1761
+Identifier of type integer found : D.1760
+Identifier of type integer found : d.15
+Identifier of type integer found : c.14
+Identifier of type integer found : D.1757
+Identifier of type integer found : d.13
+Identifier of type integer found : c.12
+Identifier of type integer found : d.11
+Identifier of type integer found : c.10
+Identifier of type integer found : m.9
+Identifier of type integer found : n.8
+Identifier of type integer found : D.1749
+Identifier of type integer found : D.1748
+Identifier of type integer found : D.1747
+Identifier of type integer found : d.7
+Identifier of type integer found : D.1745
+Identifier of type integer found : c.6
+Identifier of type integer found : second.5
+Identifier of type integer found : m.4
+Identifier of type integer found : n.3
+Identifier of type integer found : D.1739
+Identifier of type integer found : D.1738
+Identifier of type integer found : D.1737
+Identifier of type integer found : d.2
+Identifier of type integer found : D.1735
+Identifier of type integer found : c.1
+Identifier of type integer found : first.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+printf(...)
+c = <integerValue>
+
+Block : <bb 3>
+d = <integerValue>
+
+Block : <bb 4>
+first.0 = <integerValue>
+c.1 = <integerValue>
+D.1735 = <integerValue>
+d.2 = <integerValue>
+D.1737 = <integerValue>
+D.1738 = <integerValue>
+D.1739 = <integerValue>
+printf(...)
+d = <integerValue>
+
+Block : <bb 5>
+n.3 = <integerValue>
+if d< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+c = <integerValue>
+
+Block : <bb 7>
+m.4 = <integerValue>
+if c< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+printf(...)
+c = <integerValue>
+
+Block : <bb 9>
+d = <integerValue>
+
+Block : <bb 10>
+second.5 = <integerValue>
+c.6 = <integerValue>
+D.1745 = <integerValue>
+d.7 = <integerValue>
+D.1747 = <integerValue>
+D.1748 = <integerValue>
+D.1749 = <integerValue>
+printf(...)
+d = <integerValue>
+
+Block : <bb 11>
+n.8 = <integerValue>
+if d< <integerValue>, goto <bb 10>,else, goto <bb 12>
+
+Block : <bb 12>
+c = <integerValue>
+
+Block : <bb 13>
+m.9 = <integerValue>
+if c< <integerValue>, goto <bb 9>,else, goto <bb 14>
+
+Block : <bb 14>
+c = <integerValue>
+
+Block : <bb 15>
+d = <integerValue>
+
+Block : <bb 16>
+c.10 = <integerValue>
+d.11 = <integerValue>
+c.12 = <integerValue>
+d.13 = <integerValue>
+D.1757 = <integerValue>
+c.14 = <integerValue>
+d.15 = <integerValue>
+D.1760 = <integerValue>
+D.1761 = <integerValue>
+sum[c.10][d.11] = <integerValue>
+d = <integerValue>
+
+Block : <bb 17>
+n.16 = <integerValue>
+if d< <integerValue>, goto <bb 16>,else, goto <bb 18>
+
+Block : <bb 18>
+c = <integerValue>
+
+Block : <bb 19>
+m.17 = <integerValue>
+if c< <integerValue>, goto <bb 15>,else, goto <bb 20>
+
+Block : <bb 20>
+printf(...)
+c = <integerValue>
+
+Block : <bb 21>
+d = <integerValue>
+
+Block : <bb 22>
+c.18 = <integerValue>
+d.19 = <integerValue>
+D.1766 = <integerValue>
+printf(...)
+d = <integerValue>
+
+Block : <bb 23>
+n.20 = <integerValue>
+if d< <integerValue>, goto <bb 22>,else, goto <bb 24>
+
+Block : <bb 24>
+printf(...)
+c = <integerValue>
+
+Block : <bb 25>
+m.21 = <integerValue>
+if c< <integerValue>, goto <bb 21>,else, goto <bb 26>
+
+Block : <bb 26>
+D.1770 = <integerValue>
+
+Symbol table : -
+Symbol 0 : d, Value : <integerValue>
+Symbol 1 : c, Value : <integerValue>
+Symbol 2 : n, Value : <integerValue>
+Symbol 3 : m, Value : <integerValue>
+Symbol 4 : D.1770, Value : <integerValue>
+Symbol 5 : m.21, Value : <integerValue>
+Symbol 6 : n.20, Value : <integerValue>
+Symbol 7 : D.1766, Value : <integerValue>
+Symbol 8 : d.19, Value : <integerValue>
+Symbol 9 : c.18, Value : <integerValue>
+Symbol 10 : m.17, Value : <integerValue>
+Symbol 11 : n.16, Value : <integerValue>
+Symbol 12 : D.1761, Value : <integerValue>
+Symbol 13 : D.1760, Value : <integerValue>
+Symbol 14 : d.15, Value : <integerValue>
+Symbol 15 : c.14, Value : <integerValue>
+Symbol 16 : D.1757, Value : <integerValue>
+Symbol 17 : d.13, Value : <integerValue>
+Symbol 18 : c.12, Value : <integerValue>
+Symbol 19 : d.11, Value : <integerValue>
+Symbol 20 : c.10, Value : <integerValue>
+Symbol 21 : m.9, Value : <integerValue>
+Symbol 22 : n.8, Value : <integerValue>
+Symbol 23 : D.1749, Value : <integerValue>
+Symbol 24 : D.1748, Value : <integerValue>
+Symbol 25 : D.1747, Value : <integerValue>
+Symbol 26 : d.7, Value : <integerValue>
+Symbol 27 : D.1745, Value : <integerValue>
+Symbol 28 : c.6, Value : <integerValue>
+Symbol 29 : second.5, Value : <integerValue>
+Symbol 30 : m.4, Value : <integerValue>
+Symbol 31 : n.3, Value : <integerValue>
+Symbol 32 : D.1739, Value : <integerValue>
+Symbol 33 : D.1738, Value : <integerValue>
+Symbol 34 : D.1737, Value : <integerValue>
+Symbol 35 : d.2, Value : <integerValue>
+Symbol 36 : D.1735, Value : <integerValue>
+Symbol 37 : c.1, Value : <integerValue>
+Symbol 38 : first.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 13>
+
+<bb 9>:
+goto <bb 11>
+
+<bb 10>:
+
+<bb 11>:
+goto <bb 10>
+goto <bb 12>
+
+<bb 12>:
+
+<bb 13>:
+goto <bb 9>
+goto <bb 14>
+
+<bb 14>:
+goto <bb 19>
+
+<bb 15>:
+goto <bb 17>
+
+<bb 16>:
+
+<bb 17>:
+goto <bb 16>
+goto <bb 18>
+
+<bb 18>:
+
+<bb 19>:
+goto <bb 15>
+goto <bb 20>
+
+<bb 20>:
+goto <bb 25>
+
+<bb 21>:
+goto <bb 23>
+
+<bb 22>:
+
+<bb 23>:
+goto <bb 22>
+goto <bb 24>
+
+<bb 24>:
+
+<bb 25>:
+goto <bb 21>
+goto <bb 26>
+
+<bb 26>:

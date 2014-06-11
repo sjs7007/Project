@@ -1,0 +1,35 @@
+Identifier of type integer found : sum
+Identifier of type integer found : i
+Integer Array Declaration : int a[5]
+Identifier of type integer found : D.1710
+Identifier of type integer found : D.1708
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+a[0] = <integerValue>
+a[1] = <integerValue>
+a[2] = <integerValue>
+a[3] = <integerValue>
+a[4] = <integerValue>
+sum = <integerValue>
+i = <integerValue>
+
+Block : <bb 3>
+i.0 = <integerValue>
+D.1708 = <integerValue>
+sum = <integerValue>
+i = <integerValue>
+
+Block : <bb 4>
+if i<= <integerValue>, goto <bb 3>,else, goto <bb 5>
+
+Block : <bb 5>
+printf(...)
+D.1710 = <integerValue>
+
+Symbol table : -
+Symbol 0 : sum, Value : <integerValue>
+Symbol 1 : i, Value : <integerValue>
+Symbol 2 : D.1710, Value : <integerValue>
+Symbol 3 : D.1708, Value : <integerValue>
+Symbol 4 : i.0, Value : <integerValue>

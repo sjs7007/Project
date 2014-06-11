@@ -1,0 +1,423 @@
+/* http://www.cquestions.com/2008/01/write-c-program-for-multiplication-of.html */
+
+#include<stdio.h>
+int main(){
+  int a[5][5],b[5][5],c[5][5],i,j,k,sum=0,m,n,o,p;
+  printf("\nEnter the row and column of first matrix");
+  scanf("%d %d",&m,&n);
+  printf("\nEnter the row and column of second matrix");
+  scanf("%d %d",&o,&p);
+  if(n!=o){
+      printf("Matrix mutiplication is not possible");
+      printf("\nColumn of first matrix must be same as row of second matrix");
+  }
+  else{
+      printf("\nEnter the First matrix->");
+     /* for(i=0;i<m;i++)
+      for(j=0;j<n;j++)
+           scanf("%d",&a[i][j]);
+      printf("\nEnter the Second matrix->");
+      for(i=0;i<o;i++)
+      for(j=0;j<p;j++)
+           scanf("%d",&b[i][j]);
+      printf("\nThe First matrix is\n");
+      for(i=0;i<m;i++){
+      printf("\n");
+      for(j=0;j<n;j++){
+           printf("%d\t",a[i][j]);
+      }
+      }
+      printf("\nThe Second matrix is\n");
+      for(i=0;i<o;i++){
+      printf("\n");
+      for(j=0;j<p;j++){
+           printf("%d\t",b[i][j]);
+      }       
+      }*/
+      for(i=0;i<m;i++)
+      for(j=0;j<p;j++)
+           c[i][j]=0;
+      for(i=0;i<m;i++){ //row of first matrix
+      for(j=0;j<p;j++){  //column of second matrix
+           sum=0;
+           for(k=0;k<n;k++)
+               sum=sum+a[i][k]*b[k][j];
+           c[i][j]=sum;
+      }
+      }
+  }
+  printf("\nThe multiplication of two matrix is\n");
+  /*for(i=0;i<m;i++){
+      printf("\n");
+      for(j=0;j<p;j++){
+           printf("%d\t",c[i][j]);
+      }
+  }*/
+  return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 19 and 20
+main ()
+{
+  int p;
+  int o;
+  int n;
+  int m;
+  int sum;
+  int k;
+  int j;
+  int i;
+  int c[5][5];
+  int b[5][5];
+  int a[5][5];
+  int D.1755;
+  int m.14;
+  int p.13;
+  int j.12;
+  int i.11;
+  int n.10;
+  int D.1749;
+  int D.1748;
+  int j.9;
+  int k.8;
+  int D.1745;
+  int k.7;
+  int i.6;
+  int m.5;
+  int p.4;
+  int j.3;
+  int i.2;
+  const char * restrict D.1738;
+  const char * restrict D.1736;
+  const char * restrict D.1735;
+  int o.1;
+  int n.0;
+  const char * restrict D.1730;
+  const char * restrict D.1729;
+  const char * restrict D.1728;
+  const char * restrict D.1727;
+
+<bb 2>:
+  sum = 0;
+  D.1727 = (const char * restrict) "\nEnter the row and column of first matrix";
+  printf (D.1727);
+  D.1728 = (const char * restrict) "%d %d";
+  scanf (D.1728, &m, &n);
+  D.1729 = (const char * restrict) "\nEnter the row and column of second matrix";
+  printf (D.1729);
+  D.1730 = (const char * restrict) "%d %d";
+  scanf (D.1730, &o, &p);
+  n.0 = n;
+  o.1 = o;
+  if (n.0 != o.1)
+    goto <bb 3>;
+  else
+    goto <bb 4>;
+
+<bb 3>:
+  D.1735 = (const char * restrict) "Matrix mutiplication is not possible";
+  printf (D.1735);
+  D.1736 = (const char * restrict) "\nColumn of first matrix must be same as row of second matrix";
+  printf (D.1736);
+  goto <bb 19>;
+
+<bb 4>:
+  D.1738 = (const char * restrict) "\nEnter the First matrix->";
+  printf (D.1738);
+  i = 0;
+  goto <bb 9>;
+
+<bb 5>:
+  j = 0;
+  goto <bb 7>;
+
+<bb 6>:
+  i.2 = i;
+  j.3 = j;
+  c[i.2][j.3] = 0;
+  j = j + 1;
+
+<bb 7>:
+  p.4 = p;
+  if (j < p.4)
+    goto <bb 6>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  i = i + 1;
+
+<bb 9>:
+  m.5 = m;
+  if (i < m.5)
+    goto <bb 5>;
+  else
+    goto <bb 10>;
+
+<bb 10>:
+  i = 0;
+  goto <bb 18>;
+
+<bb 11>:
+  j = 0;
+  goto <bb 16>;
+
+<bb 12>:
+  sum = 0;
+  k = 0;
+  goto <bb 14>;
+
+<bb 13>:
+  i.6 = i;
+  k.7 = k;
+  D.1745 = a[i.6][k.7];
+  k.8 = k;
+  j.9 = j;
+  D.1748 = b[k.8][j.9];
+  D.1749 = D.1745 * D.1748;
+  sum = D.1749 + sum;
+  k = k + 1;
+
+<bb 14>:
+  n.10 = n;
+  if (k < n.10)
+    goto <bb 13>;
+  else
+    goto <bb 15>;
+
+<bb 15>:
+  i.11 = i;
+  j.12 = j;
+  c[i.11][j.12] = sum;
+  j = j + 1;
+
+<bb 16>:
+  p.13 = p;
+  if (j < p.13)
+    goto <bb 12>;
+  else
+    goto <bb 17>;
+
+<bb 17>:
+  i = i + 1;
+
+<bb 18>:
+  m.14 = m;
+  if (i < m.14)
+    goto <bb 11>;
+  else
+    goto <bb 19>;
+
+<bb 19>:
+  __builtin_puts (&"\nThe multiplication of two matrix is"[0]);
+  D.1755 = 0;
+  return D.1755;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : p
+Identifier of type integer found : o
+Identifier of type integer found : n
+Identifier of type integer found : m
+Identifier of type integer found : sum
+Identifier of type integer found : k
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int c[5][5]
+Integer Array Declaration : int b[5][5]
+Integer Array Declaration : int a[5][5]
+Identifier of type integer found : D.1755
+Identifier of type integer found : m.14
+Identifier of type integer found : p.13
+Identifier of type integer found : j.12
+Identifier of type integer found : i.11
+Identifier of type integer found : n.10
+Identifier of type integer found : D.1749
+Identifier of type integer found : D.1748
+Identifier of type integer found : j.9
+Identifier of type integer found : k.8
+Identifier of type integer found : D.1745
+Identifier of type integer found : k.7
+Identifier of type integer found : i.6
+Identifier of type integer found : m.5
+Identifier of type integer found : p.4
+Identifier of type integer found : j.3
+Identifier of type integer found : i.2
+Identifier of type integer found : o.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+sum = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+n.0 = <integerValue>
+o.1 = <integerValue>
+if n.0!= <integerValue>, goto <bb 3>,else, goto <bb 4>
+
+Block : <bb 3>
+printf(...)
+printf(...)
+
+Block : <bb 4>
+printf(...)
+i = <integerValue>
+
+Block : <bb 5>
+j = <integerValue>
+
+Block : <bb 6>
+i.2 = <integerValue>
+j.3 = <integerValue>
+c[i.2][j.3] = <integerValue>
+j = <integerValue>
+
+Block : <bb 7>
+p.4 = <integerValue>
+if j< <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+m.5 = <integerValue>
+if i< <integerValue>, goto <bb 5>,else, goto <bb 10>
+
+Block : <bb 10>
+i = <integerValue>
+
+Block : <bb 11>
+j = <integerValue>
+
+Block : <bb 12>
+sum = <integerValue>
+k = <integerValue>
+
+Block : <bb 13>
+i.6 = <integerValue>
+k.7 = <integerValue>
+D.1745 = <integerValue>
+k.8 = <integerValue>
+j.9 = <integerValue>
+D.1748 = <integerValue>
+D.1749 = <integerValue>
+sum = <integerValue>
+k = <integerValue>
+
+Block : <bb 14>
+n.10 = <integerValue>
+if k< <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+i.11 = <integerValue>
+j.12 = <integerValue>
+c[i.11][j.12] = <integerValue>
+j = <integerValue>
+
+Block : <bb 16>
+p.13 = <integerValue>
+if j< <integerValue>, goto <bb 12>,else, goto <bb 17>
+
+Block : <bb 17>
+i = <integerValue>
+
+Block : <bb 18>
+m.14 = <integerValue>
+if i< <integerValue>, goto <bb 11>,else, goto <bb 19>
+
+Block : <bb 19>
+printf(...)
+D.1755 = <integerValue>
+
+Symbol table : -
+Symbol 0 : p, Value : <integerValue>
+Symbol 1 : o, Value : <integerValue>
+Symbol 2 : n, Value : <integerValue>
+Symbol 3 : m, Value : <integerValue>
+Symbol 4 : sum, Value : <integerValue>
+Symbol 5 : k, Value : <integerValue>
+Symbol 6 : j, Value : <integerValue>
+Symbol 7 : i, Value : <integerValue>
+Symbol 8 : D.1755, Value : <integerValue>
+Symbol 9 : m.14, Value : <integerValue>
+Symbol 10 : p.13, Value : <integerValue>
+Symbol 11 : j.12, Value : <integerValue>
+Symbol 12 : i.11, Value : <integerValue>
+Symbol 13 : n.10, Value : <integerValue>
+Symbol 14 : D.1749, Value : <integerValue>
+Symbol 15 : D.1748, Value : <integerValue>
+Symbol 16 : j.9, Value : <integerValue>
+Symbol 17 : k.8, Value : <integerValue>
+Symbol 18 : D.1745, Value : <integerValue>
+Symbol 19 : k.7, Value : <integerValue>
+Symbol 20 : i.6, Value : <integerValue>
+Symbol 21 : m.5, Value : <integerValue>
+Symbol 22 : p.4, Value : <integerValue>
+Symbol 23 : j.3, Value : <integerValue>
+Symbol 24 : i.2, Value : <integerValue>
+Symbol 25 : o.1, Value : <integerValue>
+Symbol 26 : n.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 3>
+goto <bb 4>
+
+<bb 3>:
+goto <bb 19>
+
+<bb 4>:
+goto <bb 9>
+
+<bb 5>:
+goto <bb 7>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 6>
+goto <bb 8>
+
+<bb 8>:
+
+<bb 9>:
+goto <bb 5>
+goto <bb 10>
+
+<bb 10>:
+goto <bb 18>
+
+<bb 11>:
+goto <bb 16>
+
+<bb 12>:
+goto <bb 14>
+
+<bb 13>:
+
+<bb 14>:
+goto <bb 13>
+goto <bb 15>
+
+<bb 15>:
+
+<bb 16>:
+goto <bb 12>
+goto <bb 17>
+
+<bb 17>:
+
+<bb 18>:
+goto <bb 11>
+goto <bb 19>
+
+<bb 19>:

@@ -1,0 +1,136 @@
+Identifier of type integer found : k
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : c2
+Identifier of type integer found : r2
+Identifier of type integer found : c1
+Identifier of type integer found : r1
+Integer Array Declaration : int mult[10][10]
+Integer Array Declaration : int b[10][10]
+Integer Array Declaration : int a[10][10]
+Identifier of type integer found : D.1750
+Identifier of type integer found : r1.14
+Identifier of type integer found : c2.13
+Identifier of type integer found : c1.12
+Identifier of type integer found : D.1746
+Identifier of type integer found : D.1745
+Identifier of type integer found : D.1744
+Identifier of type integer found : j.11
+Identifier of type integer found : k.10
+Identifier of type integer found : D.1741
+Identifier of type integer found : k.9
+Identifier of type integer found : i.8
+Identifier of type integer found : D.1738
+Identifier of type integer found : j.7
+Identifier of type integer found : i.6
+Identifier of type integer found : j.5
+Identifier of type integer found : i.4
+Identifier of type integer found : r1.3
+Identifier of type integer found : c2.2
+Identifier of type integer found : j.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+i.0 = <integerValue>
+j.1 = <integerValue>
+mult[i.0][j.1] = <integerValue>
+j = <integerValue>
+
+Block : <bb 5>
+c2.2 = <integerValue>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+i = <integerValue>
+
+Block : <bb 7>
+r1.3 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+k = <integerValue>
+
+Block : <bb 11>
+i.4 = <integerValue>
+j.5 = <integerValue>
+i.6 = <integerValue>
+j.7 = <integerValue>
+D.1738 = <integerValue>
+i.8 = <integerValue>
+k.9 = <integerValue>
+D.1741 = <integerValue>
+k.10 = <integerValue>
+j.11 = <integerValue>
+D.1744 = <integerValue>
+D.1745 = <integerValue>
+D.1746 = <integerValue>
+mult[i.4][j.5] = <integerValue>
+k = <integerValue>
+
+Block : <bb 12>
+c1.12 = <integerValue>
+if k< <integerValue>, goto <bb 11>,else, goto <bb 13>
+
+Block : <bb 13>
+j = <integerValue>
+
+Block : <bb 14>
+c2.13 = <integerValue>
+if j< <integerValue>, goto <bb 10>,else, goto <bb 15>
+
+Block : <bb 15>
+i = <integerValue>
+
+Block : <bb 16>
+r1.14 = <integerValue>
+if i< <integerValue>, goto <bb 9>,else, goto <bb 17>
+
+Block : <bb 17>
+D.1750 = <integerValue>
+
+Symbol table : -
+Symbol 0 : k, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : c2, Value : <integerValue>
+Symbol 4 : r2, Value : <integerValue>
+Symbol 5 : c1, Value : <integerValue>
+Symbol 6 : r1, Value : <integerValue>
+Symbol 7 : D.1750, Value : <integerValue>
+Symbol 8 : r1.14, Value : <integerValue>
+Symbol 9 : c2.13, Value : <integerValue>
+Symbol 10 : c1.12, Value : <integerValue>
+Symbol 11 : D.1746, Value : <integerValue>
+Symbol 12 : D.1745, Value : <integerValue>
+Symbol 13 : D.1744, Value : <integerValue>
+Symbol 14 : j.11, Value : <integerValue>
+Symbol 15 : k.10, Value : <integerValue>
+Symbol 16 : D.1741, Value : <integerValue>
+Symbol 17 : k.9, Value : <integerValue>
+Symbol 18 : i.8, Value : <integerValue>
+Symbol 19 : D.1738, Value : <integerValue>
+Symbol 20 : j.7, Value : <integerValue>
+Symbol 21 : i.6, Value : <integerValue>
+Symbol 22 : j.5, Value : <integerValue>
+Symbol 23 : i.4, Value : <integerValue>
+Symbol 24 : r1.3, Value : <integerValue>
+Symbol 25 : c2.2, Value : <integerValue>
+Symbol 26 : j.1, Value : <integerValue>
+Symbol 27 : i.0, Value : <integerValue>

@@ -13,13 +13,21 @@ Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lin
 Results for Matrix Multiplication.
 ---------
 
-**1.Without any modification of Code.**  
+**1.Without any Modification of Code.**  
 
 Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |
 ----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
 [MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul2.c](test/MatrixMul2.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul2.txt](testStructure/MatrixMul2.txt) | 90 | 144 | 100 |
 [MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul3.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 90 | 116 | 72 |
-[MatrixMul1.c](test/MatrixMul2.c) | [MatrixMul2.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 114 | 116 | 98 |
+[MatrixMul2.c](test/MatrixMul2.c) | [MatrixMul3.c](test/MatrixMul3.c) | [MatrixMul2.txt](testStructure/MatrixMul2.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 114 | 116 | 98 |
+
+**2.After Manually Commenting out control blocks with only input/print statement in it.**   
+
+Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |
+----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
+[MatrixMul1Mod.c](test/MatrixMul1Mod.c) | [MatrixMul2Mod.c](test/MatrixMul2Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul2Mod.txt](testStructure/MatrixMul2Mod.txt) | 38 | 54 | 36 |
+[MatrixMul1Mod.c](test/MatrixMul1Mod.c) | [MatrixMul3Mod.c](test/MatrixMul3Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul3Mod.txt](testStructure/MatrixMul3Mod.txt) | 38 | 47 | 31 |
+[MatrixMul2Mod.c](test/MatrixMul2Mod.c) | [MatrixMul3Mod.c](test/MatrixMul3Mod.c) | [MatrixMul1Mod.txt](testStructure/MatrixMul1Mod.txt) |[MatrixMul3Mod.txt](testStructure/MatrixMul3Mod.txt) | 54 | 47 | 31 |
 
 
 

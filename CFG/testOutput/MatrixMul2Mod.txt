@@ -1,0 +1,143 @@
+Identifier of type integer found : p
+Identifier of type integer found : o
+Identifier of type integer found : n
+Identifier of type integer found : m
+Identifier of type integer found : sum
+Identifier of type integer found : k
+Identifier of type integer found : j
+Identifier of type integer found : i
+Integer Array Declaration : int c[5][5]
+Integer Array Declaration : int b[5][5]
+Integer Array Declaration : int a[5][5]
+Identifier of type integer found : D.1755
+Identifier of type integer found : m.14
+Identifier of type integer found : p.13
+Identifier of type integer found : j.12
+Identifier of type integer found : i.11
+Identifier of type integer found : n.10
+Identifier of type integer found : D.1749
+Identifier of type integer found : D.1748
+Identifier of type integer found : j.9
+Identifier of type integer found : k.8
+Identifier of type integer found : D.1745
+Identifier of type integer found : k.7
+Identifier of type integer found : i.6
+Identifier of type integer found : m.5
+Identifier of type integer found : p.4
+Identifier of type integer found : j.3
+Identifier of type integer found : i.2
+Identifier of type integer found : o.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+sum = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+n.0 = <integerValue>
+o.1 = <integerValue>
+if n.0!= <integerValue>, goto <bb 3>,else, goto <bb 4>
+
+Block : <bb 3>
+printf(...)
+printf(...)
+
+Block : <bb 4>
+printf(...)
+i = <integerValue>
+
+Block : <bb 5>
+j = <integerValue>
+
+Block : <bb 6>
+i.2 = <integerValue>
+j.3 = <integerValue>
+c[i.2][j.3] = <integerValue>
+j = <integerValue>
+
+Block : <bb 7>
+p.4 = <integerValue>
+if j< <integerValue>, goto <bb 6>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+m.5 = <integerValue>
+if i< <integerValue>, goto <bb 5>,else, goto <bb 10>
+
+Block : <bb 10>
+i = <integerValue>
+
+Block : <bb 11>
+j = <integerValue>
+
+Block : <bb 12>
+sum = <integerValue>
+k = <integerValue>
+
+Block : <bb 13>
+i.6 = <integerValue>
+k.7 = <integerValue>
+D.1745 = <integerValue>
+k.8 = <integerValue>
+j.9 = <integerValue>
+D.1748 = <integerValue>
+D.1749 = <integerValue>
+sum = <integerValue>
+k = <integerValue>
+
+Block : <bb 14>
+n.10 = <integerValue>
+if k< <integerValue>, goto <bb 13>,else, goto <bb 15>
+
+Block : <bb 15>
+i.11 = <integerValue>
+j.12 = <integerValue>
+c[i.11][j.12] = <integerValue>
+j = <integerValue>
+
+Block : <bb 16>
+p.13 = <integerValue>
+if j< <integerValue>, goto <bb 12>,else, goto <bb 17>
+
+Block : <bb 17>
+i = <integerValue>
+
+Block : <bb 18>
+m.14 = <integerValue>
+if i< <integerValue>, goto <bb 11>,else, goto <bb 19>
+
+Block : <bb 19>
+printf(...)
+D.1755 = <integerValue>
+
+Symbol table : -
+Symbol 0 : p, Value : <integerValue>
+Symbol 1 : o, Value : <integerValue>
+Symbol 2 : n, Value : <integerValue>
+Symbol 3 : m, Value : <integerValue>
+Symbol 4 : sum, Value : <integerValue>
+Symbol 5 : k, Value : <integerValue>
+Symbol 6 : j, Value : <integerValue>
+Symbol 7 : i, Value : <integerValue>
+Symbol 8 : D.1755, Value : <integerValue>
+Symbol 9 : m.14, Value : <integerValue>
+Symbol 10 : p.13, Value : <integerValue>
+Symbol 11 : j.12, Value : <integerValue>
+Symbol 12 : i.11, Value : <integerValue>
+Symbol 13 : n.10, Value : <integerValue>
+Symbol 14 : D.1749, Value : <integerValue>
+Symbol 15 : D.1748, Value : <integerValue>
+Symbol 16 : j.9, Value : <integerValue>
+Symbol 17 : k.8, Value : <integerValue>
+Symbol 18 : D.1745, Value : <integerValue>
+Symbol 19 : k.7, Value : <integerValue>
+Symbol 20 : i.6, Value : <integerValue>
+Symbol 21 : m.5, Value : <integerValue>
+Symbol 22 : p.4, Value : <integerValue>
+Symbol 23 : j.3, Value : <integerValue>
+Symbol 24 : i.2, Value : <integerValue>
+Symbol 25 : o.1, Value : <integerValue>
+Symbol 26 : n.0, Value : <integerValue>

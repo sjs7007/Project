@@ -1,0 +1,399 @@
+
+#include <stdio.h>
+int main()
+{
+    int a[10][10], b[10][10], mult[10][10], r1, c1, r2, c2, i, j, k;
+    printf("Enter rows and column for first matrix: ");
+    scanf("%d%d", &r1, &c1);
+    printf("Enter rows and column for second matrix: ");
+    scanf("%d%d",&r2, &c2);
+
+/* If colum of first matrix in not equal to row of second matrix, asking user to enter the size of matrix again. */
+    /*while (c1!=r2)
+    {
+        printf("Error! column of first matrix not equal to row of second.\n");
+        printf("Enter rows and column for first matrix: ");
+        scanf("%d%d", &r1, &c1);
+        printf("Enter rows and column for second matrix: ");
+        scanf("%d%d",&r2, &c2);
+    }*/
+
+/* Storing elements of first matrix. */
+    printf("\nEnter elements of matrix 1:\n");
+    /*for(i=0; i<r1; ++i)
+    for(j=0; j<c1; ++j)
+    {
+        printf("Enter elements a%d%d: ",i+1,j+1);
+        scanf("%d",&a[i][j]);
+    }*/
+
+/* Storing elements of second matrix. */
+   /* printf("\nEnter elements of matrix 2:\n");
+    for(i=0; i<r2; ++i)
+    for(j=0; j<c2; ++j)
+    {
+        printf("Enter elements b%d%d: ",i+1,j+1);
+        scanf("%d",&b[i][j]);
+    }*/
+
+/* Initializing elements of matrix mult to 0.*/
+    for(i=0; i<r1; ++i)
+    for(j=0; j<c2; ++j)
+    {
+       mult[i][j]=0;
+    }
+
+/* Multiplying matrix a and b and storing in array mult. */
+    for(i=0; i<r1; ++i)
+    for(j=0; j<c2; ++j)
+    for(k=0; k<c1; ++k)
+    {
+        mult[i][j]+=a[i][k]*b[k][j];
+    }
+
+/* Displaying the multiplication of two matrix. */
+  /*  printf("\nOutput Matrix:\n");
+    for(i=0; i<r1; ++i)
+    for(j=0; j<c2; ++j)
+    {
+        printf("%d  ",mult[i][j]);
+        if(j==c2-1)
+            printf("\n\n");
+    }
+	*/
+    return 0;
+}
+
+--------------------------------------------------
+
+;; Function main (main)
+
+Merging blocks 17 and 18
+main ()
+{
+  int k;
+  int j;
+  int i;
+  int c2;
+  int r2;
+  int c1;
+  int r1;
+  int mult[10][10];
+  int b[10][10];
+  int a[10][10];
+  int D.1750;
+  int r1.14;
+  int c2.13;
+  int c1.12;
+  int D.1746;
+  int D.1745;
+  int D.1744;
+  int j.11;
+  int k.10;
+  int D.1741;
+  int k.9;
+  int i.8;
+  int D.1738;
+  int j.7;
+  int i.6;
+  int j.5;
+  int i.4;
+  int r1.3;
+  int c2.2;
+  int j.1;
+  int i.0;
+  const char * restrict D.1729;
+  const char * restrict D.1728;
+  const char * restrict D.1727;
+  const char * restrict D.1726;
+
+<bb 2>:
+  D.1726 = (const char * restrict) "Enter rows and column for first matrix: ";
+  printf (D.1726);
+  D.1727 = (const char * restrict) "%d%d";
+  scanf (D.1727, &r1, &c1);
+  D.1728 = (const char * restrict) "Enter rows and column for second matrix: ";
+  printf (D.1728);
+  D.1729 = (const char * restrict) "%d%d";
+  scanf (D.1729, &r2, &c2);
+  __builtin_puts (&"\nEnter elements of matrix 1:"[0]);
+  i = 0;
+  goto <bb 7>;
+
+<bb 3>:
+  j = 0;
+  goto <bb 5>;
+
+<bb 4>:
+  i.0 = i;
+  j.1 = j;
+  mult[i.0][j.1] = 0;
+  j = j + 1;
+
+<bb 5>:
+  c2.2 = c2;
+  if (j < c2.2)
+    goto <bb 4>;
+  else
+    goto <bb 6>;
+
+<bb 6>:
+  i = i + 1;
+
+<bb 7>:
+  r1.3 = r1;
+  if (i < r1.3)
+    goto <bb 3>;
+  else
+    goto <bb 8>;
+
+<bb 8>:
+  i = 0;
+  goto <bb 16>;
+
+<bb 9>:
+  j = 0;
+  goto <bb 14>;
+
+<bb 10>:
+  k = 0;
+  goto <bb 12>;
+
+<bb 11>:
+  i.4 = i;
+  j.5 = j;
+  i.6 = i;
+  j.7 = j;
+  D.1738 = mult[i.6][j.7];
+  i.8 = i;
+  k.9 = k;
+  D.1741 = a[i.8][k.9];
+  k.10 = k;
+  j.11 = j;
+  D.1744 = b[k.10][j.11];
+  D.1745 = D.1741 * D.1744;
+  D.1746 = D.1738 + D.1745;
+  mult[i.4][j.5] = D.1746;
+  k = k + 1;
+
+<bb 12>:
+  c1.12 = c1;
+  if (k < c1.12)
+    goto <bb 11>;
+  else
+    goto <bb 13>;
+
+<bb 13>:
+  j = j + 1;
+
+<bb 14>:
+  c2.13 = c2;
+  if (j < c2.13)
+    goto <bb 10>;
+  else
+    goto <bb 15>;
+
+<bb 15>:
+  i = i + 1;
+
+<bb 16>:
+  r1.14 = r1;
+  if (i < r1.14)
+    goto <bb 9>;
+  else
+    goto <bb 17>;
+
+<bb 17>:
+  D.1750 = 0;
+  return D.1750;
+
+}
+
+
+
+--------------------------------------------------
+Identifier of type integer found : k
+Identifier of type integer found : j
+Identifier of type integer found : i
+Identifier of type integer found : c2
+Identifier of type integer found : r2
+Identifier of type integer found : c1
+Identifier of type integer found : r1
+Integer Array Declaration : int mult[10][10]
+Integer Array Declaration : int b[10][10]
+Integer Array Declaration : int a[10][10]
+Identifier of type integer found : D.1750
+Identifier of type integer found : r1.14
+Identifier of type integer found : c2.13
+Identifier of type integer found : c1.12
+Identifier of type integer found : D.1746
+Identifier of type integer found : D.1745
+Identifier of type integer found : D.1744
+Identifier of type integer found : j.11
+Identifier of type integer found : k.10
+Identifier of type integer found : D.1741
+Identifier of type integer found : k.9
+Identifier of type integer found : i.8
+Identifier of type integer found : D.1738
+Identifier of type integer found : j.7
+Identifier of type integer found : i.6
+Identifier of type integer found : j.5
+Identifier of type integer found : i.4
+Identifier of type integer found : r1.3
+Identifier of type integer found : c2.2
+Identifier of type integer found : j.1
+Identifier of type integer found : i.0
+
+Block : <bb 2>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+i = <integerValue>
+
+Block : <bb 3>
+j = <integerValue>
+
+Block : <bb 4>
+i.0 = <integerValue>
+j.1 = <integerValue>
+mult[i.0][j.1] = <integerValue>
+j = <integerValue>
+
+Block : <bb 5>
+c2.2 = <integerValue>
+if j< <integerValue>, goto <bb 4>,else, goto <bb 6>
+
+Block : <bb 6>
+i = <integerValue>
+
+Block : <bb 7>
+r1.3 = <integerValue>
+if i< <integerValue>, goto <bb 3>,else, goto <bb 8>
+
+Block : <bb 8>
+i = <integerValue>
+
+Block : <bb 9>
+j = <integerValue>
+
+Block : <bb 10>
+k = <integerValue>
+
+Block : <bb 11>
+i.4 = <integerValue>
+j.5 = <integerValue>
+i.6 = <integerValue>
+j.7 = <integerValue>
+D.1738 = <integerValue>
+i.8 = <integerValue>
+k.9 = <integerValue>
+D.1741 = <integerValue>
+k.10 = <integerValue>
+j.11 = <integerValue>
+D.1744 = <integerValue>
+D.1745 = <integerValue>
+D.1746 = <integerValue>
+mult[i.4][j.5] = <integerValue>
+k = <integerValue>
+
+Block : <bb 12>
+c1.12 = <integerValue>
+if k< <integerValue>, goto <bb 11>,else, goto <bb 13>
+
+Block : <bb 13>
+j = <integerValue>
+
+Block : <bb 14>
+c2.13 = <integerValue>
+if j< <integerValue>, goto <bb 10>,else, goto <bb 15>
+
+Block : <bb 15>
+i = <integerValue>
+
+Block : <bb 16>
+r1.14 = <integerValue>
+if i< <integerValue>, goto <bb 9>,else, goto <bb 17>
+
+Block : <bb 17>
+D.1750 = <integerValue>
+
+Symbol table : -
+Symbol 0 : k, Value : <integerValue>
+Symbol 1 : j, Value : <integerValue>
+Symbol 2 : i, Value : <integerValue>
+Symbol 3 : c2, Value : <integerValue>
+Symbol 4 : r2, Value : <integerValue>
+Symbol 5 : c1, Value : <integerValue>
+Symbol 6 : r1, Value : <integerValue>
+Symbol 7 : D.1750, Value : <integerValue>
+Symbol 8 : r1.14, Value : <integerValue>
+Symbol 9 : c2.13, Value : <integerValue>
+Symbol 10 : c1.12, Value : <integerValue>
+Symbol 11 : D.1746, Value : <integerValue>
+Symbol 12 : D.1745, Value : <integerValue>
+Symbol 13 : D.1744, Value : <integerValue>
+Symbol 14 : j.11, Value : <integerValue>
+Symbol 15 : k.10, Value : <integerValue>
+Symbol 16 : D.1741, Value : <integerValue>
+Symbol 17 : k.9, Value : <integerValue>
+Symbol 18 : i.8, Value : <integerValue>
+Symbol 19 : D.1738, Value : <integerValue>
+Symbol 20 : j.7, Value : <integerValue>
+Symbol 21 : i.6, Value : <integerValue>
+Symbol 22 : j.5, Value : <integerValue>
+Symbol 23 : i.4, Value : <integerValue>
+Symbol 24 : r1.3, Value : <integerValue>
+Symbol 25 : c2.2, Value : <integerValue>
+Symbol 26 : j.1, Value : <integerValue>
+Symbol 27 : i.0, Value : <integerValue>
+
+--------------------------------------------------
+
+<bb 2>:
+goto <bb 7>
+
+<bb 3>:
+goto <bb 5>
+
+<bb 4>:
+
+<bb 5>:
+goto <bb 4>
+goto <bb 6>
+
+<bb 6>:
+
+<bb 7>:
+goto <bb 3>
+goto <bb 8>
+
+<bb 8>:
+goto <bb 16>
+
+<bb 9>:
+goto <bb 14>
+
+<bb 10>:
+goto <bb 12>
+
+<bb 11>:
+
+<bb 12>:
+goto <bb 11>
+goto <bb 13>
+
+<bb 13>:
+
+<bb 14>:
+goto <bb 10>
+goto <bb 15>
+
+<bb 15>:
+
+<bb 16>:
+goto <bb 9>
+goto <bb 17>
+
+<bb 17>:

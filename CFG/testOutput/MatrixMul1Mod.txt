@@ -1,0 +1,114 @@
+Integer Array Declaration : int multiply[10][10]
+Integer Array Declaration : int second[10][10]
+Integer Array Declaration : int first[10][10]
+Identifier of type integer found : sum
+Identifier of type integer found : k
+Identifier of type integer found : d
+Identifier of type integer found : c
+Identifier of type integer found : q
+Identifier of type integer found : p
+Identifier of type integer found : n
+Identifier of type integer found : m
+Identifier of type integer found : D.1740
+Identifier of type integer found : m.10
+Identifier of type integer found : q.9
+Identifier of type integer found : d.8
+Identifier of type integer found : c.7
+Identifier of type integer found : p.6
+Identifier of type integer found : D.1734
+Identifier of type integer found : D.1733
+Identifier of type integer found : d.5
+Identifier of type integer found : k.4
+Identifier of type integer found : D.1730
+Identifier of type integer found : k.3
+Identifier of type integer found : c.2
+Identifier of type integer found : p.1
+Identifier of type integer found : n.0
+
+Block : <bb 2>
+sum = <integerValue>
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+printf(...)
+n.0 = <integerValue>
+p.1 = <integerValue>
+if n.0!= <integerValue>, goto <bb 3>,else, goto <bb 4>
+
+Block : <bb 3>
+printf(...)
+
+Block : <bb 4>
+printf(...)
+c = <integerValue>
+
+Block : <bb 5>
+d = <integerValue>
+
+Block : <bb 6>
+k = <integerValue>
+
+Block : <bb 7>
+c.2 = <integerValue>
+k.3 = <integerValue>
+D.1730 = <integerValue>
+k.4 = <integerValue>
+d.5 = <integerValue>
+D.1733 = <integerValue>
+D.1734 = <integerValue>
+sum = <integerValue>
+k = <integerValue>
+
+Block : <bb 8>
+p.6 = <integerValue>
+if k< <integerValue>, goto <bb 7>,else, goto <bb 9>
+
+Block : <bb 9>
+c.7 = <integerValue>
+d.8 = <integerValue>
+multiply[c.7][d.8] = <integerValue>
+sum = <integerValue>
+d = <integerValue>
+
+Block : <bb 10>
+q.9 = <integerValue>
+if d< <integerValue>, goto <bb 6>,else, goto <bb 11>
+
+Block : <bb 11>
+c = <integerValue>
+
+Block : <bb 12>
+m.10 = <integerValue>
+if c< <integerValue>, goto <bb 5>,else, goto <bb 13>
+
+Block : <bb 13>
+printf(...)
+
+Block : <bb 14>
+D.1740 = <integerValue>
+
+Symbol table : -
+Symbol 0 : sum, Value : <integerValue>
+Symbol 1 : k, Value : <integerValue>
+Symbol 2 : d, Value : <integerValue>
+Symbol 3 : c, Value : <integerValue>
+Symbol 4 : q, Value : <integerValue>
+Symbol 5 : p, Value : <integerValue>
+Symbol 6 : n, Value : <integerValue>
+Symbol 7 : m, Value : <integerValue>
+Symbol 8 : D.1740, Value : <integerValue>
+Symbol 9 : m.10, Value : <integerValue>
+Symbol 10 : q.9, Value : <integerValue>
+Symbol 11 : d.8, Value : <integerValue>
+Symbol 12 : c.7, Value : <integerValue>
+Symbol 13 : p.6, Value : <integerValue>
+Symbol 14 : D.1734, Value : <integerValue>
+Symbol 15 : D.1733, Value : <integerValue>
+Symbol 16 : d.5, Value : <integerValue>
+Symbol 17 : k.4, Value : <integerValue>
+Symbol 18 : D.1730, Value : <integerValue>
+Symbol 19 : k.3, Value : <integerValue>
+Symbol 20 : c.2, Value : <integerValue>
+Symbol 21 : p.1, Value : <integerValue>
+Symbol 22 : n.0, Value : <integerValue>

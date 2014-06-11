@@ -232,7 +232,8 @@
 3.Comparing Control Flow Graph Structures
 -------
 
-+ **Description**
++ **Description**  
+
 	Here the structure of the [Control Flow Graph(CFG)](http://en.wikipedia.org/wiki/Control_flow_graph) is compared to determine the similarity between two programs. The CFG is extracted from the C programs using the **-fdump-tree-cfg** option which gives a **.cfg** file as output.
 
 	+ **An example for a simple program**
@@ -308,6 +309,9 @@
 			```
 
 	A parser is then used along with a lexical analyzer to extract the structure from the  .cfg file. The lexical analyzer is made using [flex](http://en.wikipedia.org/wiki/Flex_lexical_analyser) and the parser using [bison](http://en.wikipedia.org/wiki/GNU_bison).
+
+	[Lexical Analyzer Code](CFGParser.l)
+	[Parser Code](CFGParser.y)
 
 	
 

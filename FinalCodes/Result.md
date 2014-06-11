@@ -24,120 +24,120 @@
 + **Usage**
 
 	```
-	g++ <inputFile>.cpp 
-	./a.out
+	g++ <inputFile>.cpp -o MemoryUsage
+	./MemoryUsage
 
 	```
 
 + **Example**
 
-+ **Input**
+	+ **Input**
 
-	```C++
-	#include<iostream>
-	#include<fstream>
-	#include<sstream>
+		```C++
+		#include<iostream>
+		#include<fstream>
+		#include<sstream>
 
-	using namespace std;
+		using namespace std;
 
-	int getMemoryUsage();
-	int getMemoryUsageHeap();
+		int getMemoryUsage();
+		int getMemoryUsageHeap();
 
-	int main()
-	{	
-		int a[21024];
-		int total=0;
-		total=getMemoryUsage()+getMemoryUsageHeap();
-		cout<<"Total Memory Used  : "<<total<<"KB.\n";
-	}
-
-	int getMemoryUsage()
-	{
-		unsigned dataSegment=0,stackSegment=0,textSegment=0,sharedLib=0;
-			
-		ifstream in("/proc/self/status");	
-		while(in)
-		{
-			string line,tag;
-			getline(in,line);	
-			istringstream iss(line);
-			iss>>tag;
-			if(tag=="VmData:")	
-			{
-				iss>>dataSegment;
-			}
-			else if(tag=="VmStk:")
-			{
-				iss>>stackSegment;
-			}
-			else if(tag=="VmExe:")
-			{
-				iss>>textSegment;
-			}
-			else if(tag=="VmLib:")
-			{
-				iss>>sharedLib;
-				break;
-			}
-
+		int main()
+		{	
+			int a[21024];
+			int total=0;
+			total=getMemoryUsage()+getMemoryUsageHeap();
+			cout<<"Total Memory Used  : "<<total<<"KB.\n";
 		}
-		in.close();
-		cerr<<"Memory used by Data Segment :  "<<dataSegment<<"KB.\n";
-		cerr<<"Memory used by Stack Segment : "<<stackSegment<<"KB.\n";
-		cerr<<"Memory used by Text Segment : "<<textSegment<<"KB.\n";
-		cerr<<"Memory used by Shared Libraries : "<<sharedLib<<"KB.\n";
-		unsigned total=dataSegment+stackSegment+textSegment+sharedLib;
-		return total;
-	}
 
-	int getMemoryUsageHeap()
-	{
-		unsigned x=0;
-		ifstream in("/proc/self/smaps");	
-		while(in)
+		int getMemoryUsage()
 		{
-			string line,tag,temp;
-			getline(in,line);	
-			istringstream iss(line);
-			for(int i=0;i<6;i++)
+			unsigned dataSegment=0,stackSegment=0,textSegment=0,sharedLib=0;
+				
+			ifstream in("/proc/self/status");	
+			while(in)
 			{
-				iss>>tag;
-			}
-			if(tag=="[heap]")	
-			{
-				getline(in,line);
+				string line,tag;
+				getline(in,line);	
 				istringstream iss(line);
-				iss>>temp;
-				iss>>x;
-				break;
+				iss>>tag;
+				if(tag=="VmData:")	
+				{
+					iss>>dataSegment;
+				}
+				else if(tag=="VmStk:")
+				{
+					iss>>stackSegment;
+				}
+				else if(tag=="VmExe:")
+				{
+					iss>>textSegment;
+				}
+				else if(tag=="VmLib:")
+				{
+					iss>>sharedLib;
+					break;
+				}
+
 			}
+			in.close();
+			cerr<<"Memory used by Data Segment :  "<<dataSegment<<"KB.\n";
+			cerr<<"Memory used by Stack Segment : "<<stackSegment<<"KB.\n";
+			cerr<<"Memory used by Text Segment : "<<textSegment<<"KB.\n";
+			cerr<<"Memory used by Shared Libraries : "<<sharedLib<<"KB.\n";
+			unsigned total=dataSegment+stackSegment+textSegment+sharedLib;
+			return total;
 		}
-		in.close();
-		cerr<<"Memory used by Heap = "<<x<<"KB.\n";
-		return x;
-	}
-	```
 
-+ **Output:**
+		int getMemoryUsageHeap()
+		{
+			unsigned x=0;
+			ifstream in("/proc/self/smaps");	
+			while(in)
+			{
+				string line,tag,temp;
+				getline(in,line);	
+				istringstream iss(line);
+				for(int i=0;i<6;i++)
+				{
+					iss>>tag;
+				}
+				if(tag=="[heap]")	
+				{
+					getline(in,line);
+					istringstream iss(line);
+					iss>>temp;
+					iss>>x;
+					break;
+				}
+			}
+			in.close();
+			cerr<<"Memory used by Heap = "<<x<<"KB.\n";
+			return x;
+		}
+		```
 
-	```
-	Memory used by Data Segment :  192KB.
-	Memory used by Stack Segment : 96KB.
-	Memory used by Text Segment : 8KB.
-	Memory used by Shared Libraries : 2684KB.
-	Memory used by Heap = 132KB.
-	Total Memory Used  : 3112KB.
-	```
+	+ **Output:**
+
+		```
+		Memory used by Data Segment :  192KB.
+		Memory used by Stack Segment : 96KB.
+		Memory used by Text Segment : 8KB.
+		Memory used by Shared Libraries : 2684KB.
+		Memory used by Heap = 132KB.
+		Total Memory Used  : 3112KB.
+		```
 
 2.Comparing Executables 
 --------
 
 + **Description** 
 
-	It is used to determine a confidence value for whether two programs compute the same function or not. To determine the confidence value we compare the output of the two executables for a fixed number of inputs(say, n). Even if one mismatch is obtained in between the n comparisions, we stop the comparision there and declare them as programs not computing the same function. Else, we return a confidence value at the end which is calculted as follows :
+	It is used to determine a confidence value for whether two programs compute the same function or not. To determine the confidence value we compare the output of the two executables for a fixed number of inputs(,say n). Even if one mismatch is obtained in between the n comparisions, we stop the comparision there and declare them as programs not computing the same function. Else, we return a confidence value at the end which is calculted as follows :
 
 	```
-	Confidence Value = 1 - 1/2^n
+	Confidence Value = $-b \pm \sqrt{b^2 - 4ac} \over 2a$
 	```
 
 + **Input**
@@ -228,5 +228,5 @@
 		```
 		Failed for test case i= 1.
 		```
-		
+
 3. Comparing Control Flow Graphs

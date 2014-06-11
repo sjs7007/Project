@@ -13,13 +13,13 @@ Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lin
 Results for Matrix Multiplication.
 ---------
 
-	**1.Without any modification of Code.**  
+**1.Without any modification of Code.**  
 
-	Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |
-	----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
-	[MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul2.c](test/MatrixMul2.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul2.txt](testStructure/MatrixMul2.txt) | 90 | 144 | 100 |
-	[MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul3.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 90 | 116 | 72 |
-	[MatrixMul1.c](test/MatrixMul2.c) | [MatrixMul2.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 114 | 116 | 98 |
+Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |
+----------|-------------|------------|------------|-----------------------|-----------------------|-------------|
+[MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul2.c](test/MatrixMul2.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul2.txt](testStructure/MatrixMul2.txt) | 90 | 144 | 100 |
+[MatrixMul1.c](test/MatrixMul1.c) | [MatrixMul3.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 90 | 116 | 72 |
+[MatrixMul1.c](test/MatrixMul2.c) | [MatrixMul2.c](test/MatrixMul3.c) | [MatrixMul1.txt](testStructure/MatrixMul1.txt) |[MatrixMul3.txt](testStructure/MatrixMul3.txt) | 114 | 116 | 98 |
 
 
 Program1  | Program2    | CFG1 		 | CFG2 	  | No. of lines in file1 | No. of lines in file2 | Diff. Count |

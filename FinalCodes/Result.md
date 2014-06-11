@@ -313,5 +313,50 @@
 	[Lexical Analyzer Code](CFGParser.l)  
 	[Parser Code](CFGParser.y)
 
+	+ **Structure Extracted from above Example**  
+
+		```
+
+		<bb 2>:
+		goto <bb 7>
+
+		<bb 3>:
+		goto <bb 5>
+
+		<bb 4>:
+
+		<bb 5>:
+		goto <bb 4>
+		goto <bb 6>
+
+		<bb 6>:
+
+		<bb 7>:
+		goto <bb 3>
+		goto <bb 8>
+
+		<bb 8>:
+
+		```
+
+	To compare the two structures we use a script using [diff](http://en.wikipedia.org/wiki/Diff) which returns the number of lines in each file and difference count.
+
+	[Difference Script Code](diffCount.sh)
+
+	+ **Input**  
+
+		Two text files containing the structure of CFG.
+
+	+ **Output**  
+
+		Difference count, number of lines in each file.
+
+	+ **Usage**
+
+		```
+			./diffCount.sh <file1> <file>
+		```
+
+
 	
 

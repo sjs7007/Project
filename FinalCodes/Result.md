@@ -310,7 +310,7 @@
 
 	A parser is then used along with a lexical analyzer to extract the structure from the  .cfg file. The lexical analyzer is made using [flex](http://en.wikipedia.org/wiki/Flex_lexical_analyser) and the parser using [bison](http://en.wikipedia.org/wiki/GNU_bison).
 
-	[Lexical Analyzer Code](CFGParser.l)
+	[Lexical Analyzer Code](CFGParser.l)  
 	[Parser Code](CFGParser.y)
 
 	

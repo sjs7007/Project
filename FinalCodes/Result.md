@@ -144,7 +144,8 @@
 
  	Two C++ executables to be compared, number of test cases
 
-+ **Output**
++ **Output**  
+
 	Confidence Value
 
 + **Usage** 
@@ -192,34 +193,40 @@
 		Confidence Value calculated as 1 - (1/2^n) : 0.999023
 		```
 
-2. Unsuccessful case
+	+ **Unsuccessful case**
 
-Code for Executable 1 :
+		+ **Code for Executable 1**
 
-#include <iostream>
-#include <stdlib.h> //for atoi
-using namespace std;
+		````C++
+		#include <iostream>
+		#include <stdlib.h> //for atoi
+		using namespace std;
 
-int main(int argc, char* argv[])
-{
-	int temp = 3*atoi(argv[1]); 
-	cout<<temp;
-}
+		int main(int argc, char* argv[])
+		{
+			int temp = 3*atoi(argv[1]); 
+			cout<<temp;
+		}
+		```
 
-Code for Executable 2 :
+		*+ *Code for Executable 2**
 
-#include <iostream>
-#include <stdlib.h> //for atoi
-using namespace std;
+		```C++
+		#include <iostream>
+		#include <stdlib.h> //for atoi
+		using namespace std;
 
-int main(int argc, char* argv[])
-{
-	int temp = 2*atoi(argv[1]); 
-	cout<<temp;
-}
+		int main(int argc, char* argv[])
+		{
+			int temp = 2*atoi(argv[1]); 
+			cout<<temp;
+		}
+		```
 
-Output:
+		+ **Output**  
 
-Failed for test case i= 1.
-
+		```
+		Failed for test case i= 1.
+		```
+		
 3. Comparing Control Flow Graphs

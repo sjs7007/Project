@@ -357,6 +357,112 @@
 			./diffCount.sh <file1> <file>
 		```
 
+	+ **Example**
+
+		+ **Input**
+
+			+ **Structure for [InsertionSort1](https://github.com/sjs7007/Project/blob/master/CFG/test/InsertionSort1.c)**
+
+				```
+					<bb 2>:
+					goto <bb 4>
+
+					<bb 3>:
+
+					<bb 4>:
+					goto <bb 3>
+					goto <bb 5>
+
+					<bb 5>:
+					goto <bb 11>
+
+					<bb 6>:
+					goto <bb 8>
+
+					<bb 7>:
+
+					<bb 8>:
+					goto <bb 9>
+					goto <bb 10>
+
+					<bb 9>:
+					goto <bb 7>
+					goto <bb 10>
+
+					<bb 10>:
+
+					<bb 11>:
+					goto <bb 6>
+					goto <bb 12>
+
+					<bb 12>:
+					goto <bb 14>
+
+					<bb 13>:
+
+					<bb 14>:
+					goto <bb 13>
+					goto <bb 15>
+
+					<bb 15>:
+				```
+
+			+ **Structure for [InsertionSort2](https://github.com/sjs7007/Project/blob/master/CFG/test/InsertionSort2.c)**
+
+				```
+					<bb 2>:
+					goto <bb 4>
+
+					<bb 3>:
+
+					<bb 4>:
+					goto <bb 3>
+					goto <bb 5>
+
+					<bb 5>:
+					goto <bb 11>
+
+					<bb 6>:
+					goto <bb 8>
+
+					<bb 7>:
+
+					<bb 8>:
+					goto <bb 9>
+					goto <bb 10>
+
+					<bb 9>:
+					goto <bb 7>
+					goto <bb 10>
+
+					<bb 10>:
+
+					<bb 11>:
+					goto <bb 6>
+					goto <bb 12>
+
+					<bb 12>:
+					goto <bb 14>
+
+					<bb 13>:
+
+					<bb 14>:
+					goto <bb 13>
+					goto <bb 15>
+
+					<bb 15>:
+				```
+
+		+ **Output**
+
+			```
+				No. of lines in file1 : 42
+				No. of lines in file2 : 42
+				Difference Count : 0
+
+			```
+
+A complete list of test cases and their results can be found [here](testResults.md).
 
 	
 

@@ -132,55 +132,65 @@
 2.Comparing Executables 
 --------
 
-**Description** 
++ **Description** 
 
-It is used to determine a confidence value for whether two programs compute the same function or not. To determine the confidence value we compare the output of the two executables for a fixed number of inputs(say, n). Even if one mismatch is obtained in between the n comparisions, we stop the comparision there and declare them as programs not computing the same function. Else, we return a confidence value at the end which is calculted as follows :
+	It is used to determine a confidence value for whether two programs compute the same function or not. To determine the confidence value we compare the output of the two executables for a fixed number of inputs(say, n). Even if one mismatch is obtained in between the n comparisions, we stop the comparision there and declare them as programs not computing the same function. Else, we return a confidence value at the end which is calculted as follows :
 
-Confidence Value = 1 - 1/2^n
+	```
+	Confidence Value = 1 - 1/2^n
+	```
 
-**Input : **
++ **Input**
 
- Two C++ executables to be compared, number of test cases
+ 	Two C++ executables to be compared, number of test cases
 
-Output : Confidence Value
++ **Output**
+	Confidence Value
 
-Usage : 
-g++ CompareExeuctables.cpp 
-./a.out <Exec1Name> <Exec2Name> <nTestCases>
++ **Usage** 
+	```
+	g++ CompareExeuctables.cpp 
+	./a.out <Exec1Name> <Exec2Name> <nTestCases>
+	```
++ **Examples**
 
-Examples :
+	+ **Successful Case**
 
-1. Successful Case
+		+ **Code for Executable 1**
 
-Code for Executable 1 :
+		```C
+		#include <iostream>
+		#include <stdlib.h> //for atoi
+		using namespace std;
 
-#include <iostream>
-#include <stdlib.h> //for atoi
-using namespace std;
+		int main(int argc, char* argv[])
+		{
+			int temp = 3*atoi(argv[1]); 
+			cout<<temp;
+		}
+		```
 
-int main(int argc, char* argv[])
-{
-	int temp = 3*atoi(argv[1]); 
-	cout<<temp;
-}
+		+ **Code for Executable 2**
 
-Code for Executable 2 :
+		```C
+		#include <iostream>
+		#include <stdlib.h> //for atoi
+		using namespace std;
 
-#include <iostream>
-#include <stdlib.h> //for atoi
-using namespace std;
+		int main(int argc, char* argv[])
+		{
+			int temp = 3*atoi(argv[1]); 
+			cout<<temp;
+		}
+		```
 
-int main(int argc, char* argv[])
-{
-	int temp = 3*atoi(argv[1]); 
-	cout<<temp;
-}
+		+ **Output**
 
-Output : 
-
-Passed for all 10 test cases.
-Confidence Value calculated as 1 - (1/2^n) : 0.999023
-
+		```
+		Passed for all 10 test cases.
+		Confidence Value calculated as 1 - (1/2^n) : 0.999023
+		```
+		
 2. Unsuccessful case
 
 Code for Executable 1 :
